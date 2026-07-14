@@ -155,20 +155,42 @@ def calc_cost():
 
 
 def fetch_realtime():
-    """获取实时行情"""
+    """获取实时行情（华尔街见闻，失败时 fallback yfinance）"""
+    # 主数据源：华尔街见闻（有 IOPV）
     url = "https://api-ddc-wscn.awtmt.com/market/real"
     params = {"fields": "prod_name,last_px,px_change,px_change_rate,high_px,low_px,open_px,preclose_px,iopv",
               "prod_code": f"{ETF_CODE}.SZ"}
     try:
-        r = requests.get(url, params=params, headers={"User-Agent": "Mozilla/5.0"}, timeout=30)
+        r = requests.get(url, params=params, headers={"User-Agent": "Mozilla/5.0"}, timeout=15)
         d = r.json()
         if d.get("code") == 20000:
             s = d["data"]["snapshot"].get(f"{ETF_CODE}.SZ", [])
             if len(s) >= 9:
                 return {"name": s[0], "price": s[1], "change": s[2], "change_pct": s[3],
-                        "high": s[4], "low": s[5], "open": s[6], "preclose": s[7], "iopv": s[8]}
+                        "high": s[4], "low": s[5], "open": s[6], "preclose": s[7], "iopv": s[8],
+                        "source": "华尔街见闻"}
     except Exception as e:
-        print(f"[ERROR] fetch_realtime: {e}")
+        print(f"[Warn] 华尔街见闻超时: {e}")
+
+    # Fallback：yfinance（无 IOPV，用前日 NAV 近似）
+    try:
+        import yfinance as yf
+        t = yf.Ticker(f"{ETF_CODE}.SZ")
+        h = t.history(period="2d")
+        if len(h) >= 1:
+            latest = h.iloc[-1]
+            prev = h.iloc[-2] if len(h) >= 2 else latest
+            return {
+                "name": "亚太精选ETF", "price": latest['Close'],
+                "change": latest['Close'] - latest['Open'],
+                "change_pct": (latest['Close'] / latest['Open'] - 1) * 100,
+                "high": latest['High'], "low": latest['Low'],
+                "open": latest['Open'], "preclose": prev['Close'],
+                "iopv": None, "source": "yfinance(无IOPV)",
+            }
+    except Exception as e:
+        print(f"[ERROR] yfinance fallback 也失败: {e}")
+
     return None
 
 
@@ -949,7 +971,7 @@ def main():
     # 数据质量标签
     data_quality = []
     if not analysis.get("iopv"):
-        data_quality.append("⚠️ IOPV缺失")
+        data_quality.append("⚠️ IOPV缺失(yf fallback)")
     if not analysis.get("nav"):
         data_quality.append("⚠️ NAV暂未公布（19:00尚早）")
     else:
