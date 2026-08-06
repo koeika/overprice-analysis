@@ -195,7 +195,7 @@ def fetch_realtime():
 
 
 def fetch_nav():
-    """获取最新净值"""
+    """获取最新净值（akshare → 失败时直连东方财富API）"""
     import akshare as ak
     try:
         today = datetime.now()
@@ -215,7 +215,32 @@ def fetch_nav():
                     "chg": float(L["日增长率"]) if L["日增长率"] else 0,
                     "prev_date": None, "prev_nav": None}
     except Exception as e:
-        print(f"[ERROR] fetch_nav: {e}")
+        print(f"[Warn] akshare: {e}")
+
+    # Fallback: 直连东方财富 API
+    try:
+        url = f"https://api.fund.eastmoney.com/f10/lsjz?fundCode={ETF_CODE}&pageIndex=1&pageSize=10"
+        r = requests.get(url, headers={
+            "User-Agent": "Mozilla/5.0",
+            "Referer": "https://fundf10.eastmoney.com/"
+        }, timeout=15)
+        data = r.json()
+        records = data.get("Data", {}).get("LSJZList", [])
+        if len(records) >= 2:
+            L, P = records[0], records[1]
+            return {
+                "date": L["FSRQ"], "nav": float(L["DWJZ"]),
+                "chg": float(L.get("JZZZL", 0) or 0),
+                "prev_date": P["FSRQ"], "prev_nav": float(P["DWJZ"]),
+            }
+        elif len(records) == 1:
+            L = records[0]
+            return {"date": L["FSRQ"], "nav": float(L["DWJZ"]),
+                    "chg": float(L.get("JZZZL", 0) or 0),
+                    "prev_date": None, "prev_nav": None}
+    except Exception as e:
+        print(f"[ERROR] 东方财富NAV也失败: {e}")
+
     return None
 
 
@@ -933,6 +958,32 @@ def save_pending_trade(analysis):
     print(f"[Trade] 待定交易已保存: {trade['date']} @ {trade['entry_price']:.3f}")
 
 
+def sync_to_github():
+    """本地数据变更后自动 push 到 GitHub（后台，不阻塞）"""
+    import subprocess
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    try:
+        # 只推送数据文件
+        subprocess.run(
+            ["git", "-C", script_dir, "add", "historical_trades.json", "pending_trade.json", "run.log"],
+            capture_output=True, timeout=10)
+        result = subprocess.run(
+            ["git", "-C", script_dir, "diff", "--cached", "--quiet"],
+            capture_output=True, timeout=10)
+        if result.returncode != 0:
+            subprocess.run(
+                ["git", "-C", script_dir, "commit", "-m", "data: local sync"],
+                capture_output=True, timeout=10)
+            subprocess.run(
+                ["git", "-C", script_dir, "push", "origin", "main"],
+                capture_output=True, timeout=30)
+            print("[Sync] ✅ 已推送到 GitHub")
+        else:
+            print("[Sync] 无变更")
+    except Exception as e:
+        print(f"[Sync] 推送失败(非致命): {e}")
+
+
 def main():
     now = datetime.now()
 
@@ -1034,6 +1085,11 @@ def main():
             print(f"  AI 分析结果: {analysis['ai_analysis'][:100]}...")
 
     send_seatalk(message, mode)
+
+    # 自动同步到 GitHub（有变更才 push）
+    if mode != "test":
+        sync_to_github()
+
     print("Done.")
 
 
