@@ -804,7 +804,7 @@ def build_evidence(a):
         if similar:
             lines.append("⑤ 最相似历史交易日:")
             for s in similar:
-                lines.append(f"   {s['date']}: Δ{s.get('delta',0):+.1f}% → "
+                lines.append(f"  {s['date']}: Δ{s.get('delta',0):+.1f}% → "
                              f"{'🟢赚' if s.get('result')=='win' else '🔴亏'}{abs(s.get('ret',0)):.2f}%"
                              f"（相似度{s.get('similarity',0)}%）")
     except:
@@ -816,12 +816,14 @@ def build_evidence(a):
         lines.append(f"⑥ 提示: 本档仅{band['n']}笔样本，统计意义有限，轻仓为宜")
     else:
         lines.append("⑥ 提示: 历史回测仅供参考，不构成投资建议")
-    # AI 推理过程节选
+    # AI 推理过程节选（内部换行替换为空格，避免 markdown 折叠成一片）
     reasoning = a.get("ai_reasoning", "")
     if reasoning:
-        brief = reasoning[:600] + ("…" if len(reasoning) > 600 else "")
-        lines.append(f"⑦ AI推理过程(节选):\n   {brief}")
-    return "\n".join(lines)
+        brief = reasoning[:400].replace("\n", " ") + ("…" if len(reasoning) > 400 else "")
+        lines.append("⑦ AI推理过程(节选):")
+        lines.append(f"  {brief}")
+    # markdown 需"两个空格+换行"才是真换行；群聊纯文本模式下无影响
+    return "  \n".join(lines)
 
 
 def get_employee_codes():
