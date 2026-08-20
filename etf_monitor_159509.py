@@ -296,21 +296,29 @@ def analyze():
 
     # 按 Δ 档位从历史数据库动态计算胜率/收益（不写死）
     def band_stats(lo, hi):
-        """返回 (笔数, 胜率%, 平均收益%)；样本不足返回 None"""
+        """返回 (笔数, 赢笔数, 输笔数, 胜率%, 平均收益%)；样本不足返回 None"""
         sub = [t for t in trades if lo <= t.get("delta", 0) < hi]
         if not sub:
             return None
         w = sum(1 for t in sub if t.get("result") == "win")
         avg = sum(t.get("ret", 0) for t in sub) / len(sub)
-        return len(sub), w / len(sub) * 100, avg
+        return len(sub), w, len(sub) - w, w / len(sub) * 100, avg
 
     def band_desc(name, lo, hi):
         """生成信号描述：真实胜率 + 样本量；无数据如实标注"""
         s = band_stats(lo, hi)
         if s is None:
             return f"{name}，该档位暂无历史样本"
-        n, wr, avg = s
-        return f"{name}，历史{n}笔胜率{wr:.0f}%（均收益{avg:+.2f}%）"
+        n, wins, losses, wr, avg = s
+        return f"{name}，历史{n}笔（赢{wins}输{losses}）胜率{wr:.0f}%（均收益{avg:+.2f}%）"
+
+    # 档位名称（推导过程用）与区间
+    BAND_NAMES = {
+        "strong_buy": "Δ<-3% 强烈抄底", "buy": "-3~-2% 抄底", "weak_buy": "-2~-1% 弱抄底",
+    }
+    BAND_RANGES = {
+        "strong_buy": (-100, -3.0), "buy": (-3.0, -2.0), "weak_buy": (-2.0, -1.0),
+    }
 
     # 159509 反向策略：Δ↓（溢价暴跌）= 抄底信号（胜率动态计算）
     signal_map = [
@@ -324,15 +332,19 @@ def analyze():
             r["signal"] = sig
             r["signal_text"] = f"{text} Δ溢价 {delta:+.2f}%"
             r["signal_conf"] = desc
+            r["total_n"] = total_n
+            r["total_wr_pct"] = round(total_wins / total_n * 100, 1) if total_n else 0
             if sig == "danger":
                 r["est_gross"] = 0
                 r["est_net"] = round(0 - cost["total_pct"], 2)
             else:
                 # 预估收益优先用本档位真实平均收益；样本不足时退回全库平均
-                bs = band_stats(*({
-                    "strong_buy": (-100, -3.0), "buy": (-3.0, -2.0), "weak_buy": (-2.0, -1.0),
-                }[sig]))
-                est = bs[2] if bs else dynamic_avg
+                bs = band_stats(*BAND_RANGES[sig])
+                if bs:
+                    n, wins, losses, wr, avg = bs
+                    r["band"] = {"name": BAND_NAMES[sig], "n": n, "wins": wins,
+                                 "losses": losses, "wr": wr, "avg": avg}
+                est = bs[4] if bs else dynamic_avg
                 r["est_gross"] = round(est, 2)
                 r["est_net"] = round(est - cost["total_pct"], 2)
             r["cost"] = cost
@@ -623,6 +635,7 @@ def ai_analyze(analysis, mode="daily"):
             content = msg.get("content", "").strip()      # 最终结论
             if reasoning:
                 print(f"[AI] 推理过程 ({len(reasoning)}字): {reasoning[:200]}...")
+                analysis["ai_reasoning"] = reasoning  # 留存推理过程，用于推导佐证
             return content or reasoning.strip()
         else:
             print(f"[AI] API 错误: {resp.status_code} {resp.text[:200]}")
@@ -725,6 +738,7 @@ def format_message(a):
 • 扣除成本净收益: **{en:+.2f}%/笔** ≈ **{net_yuan:+.2f} 元**
 {warn}
 > 🟢 14:55 尾盘买入 → 次日 9:25 开盘卖出
+> 📐 推导过程见本条消息的回复
 """
 
     # 已结算交易
@@ -760,6 +774,54 @@ def format_message(a):
         ai = _re.sub(r'\n\s*\n', '\n', ai)  # 清理空行
         m += f"\n🤖 **AI 分析**{ai}\n"
     return m
+
+
+def build_evidence(a):
+    """抄底信号时生成推导过程文本，附在信号消息的线程回复中佐证结论"""
+    band = a.get("band")
+    if not band:
+        return None
+    cost = a.get("cost", {})
+    capital = cost.get("capital", 20000)
+    lines = [
+        "📐 抄底信号推导过程（数据可核对）",
+        "━━━━━━━━━━━━━",
+        f"① 触发条件: Δ溢价 {a.get('delta', 0):+.2f}% 落入「{band['name']}」档",
+        f"② 该档位历史样本: {band['n']}笔 = 赢{band['wins']} 输{band['losses']} → 胜率 {band['wr']:.0f}%",
+        f"   该档位历史平均收益: {band['avg']:+.2f}%/笔（毛）",
+        f"③ 扣成本 {cost.get('total_pct', 0)}%/笔 → 净期望 {a.get('est_net', 0):+.2f}%/笔 ≈ ¥{a.get('est_net', 0) * capital / 100:+,.2f}（¥{capital:,.0f}/笔）",
+        f"④ 全库对比: {a.get('total_n', 0)}笔整体胜率{a.get('total_wr_pct', 0):.1f}%（仅供参考，非本档位）",
+    ]
+    # 相似日匹配（与 AI 分析同源的特征向量）
+    try:
+        trades = load_historical_trades()
+        cur = {
+            "delta": abs(a.get("delta", 0)),
+            "premium": abs(a.get("iopv_premium") or a.get("nav_premium") or 0),
+            "trend_5d": a.get("change_pct", 0),
+        }
+        similar = find_similar_days(cur, trades)
+        if similar:
+            lines.append("⑤ 最相似历史交易日:")
+            for s in similar:
+                lines.append(f"   {s['date']}: Δ{s.get('delta',0):+.1f}% → "
+                             f"{'🟢赚' if s.get('result')=='win' else '🔴亏'}{abs(s.get('ret',0)):.2f}%"
+                             f"（相似度{s.get('similarity',0)}%）")
+    except:
+        pass
+    # 边际提示（按真实样本量提示风险）
+    if band["wr"] < 55:
+        lines.append(f"⑥ 提示: 本档胜率{band['wr']:.0f}%，建议减半仓位或等待Δ跌幅更深再介入")
+    elif band["n"] < 10:
+        lines.append(f"⑥ 提示: 本档仅{band['n']}笔样本，统计意义有限，轻仓为宜")
+    else:
+        lines.append("⑥ 提示: 历史回测仅供参考，不构成投资建议")
+    # AI 推理过程节选
+    reasoning = a.get("ai_reasoning", "")
+    if reasoning:
+        brief = reasoning[:600] + ("…" if len(reasoning) > 600 else "")
+        lines.append(f"⑦ AI推理过程(节选):\n   {brief}")
+    return "\n".join(lines)
 
 
 def get_employee_codes():
@@ -807,12 +869,51 @@ def get_employee_codes():
     return SEATALK_USERS  # fallback
 
 
-def send_seatalk(message, mode="daily"):
-    """发送消息。test 模式仅通知主用户，其余通知全组"""
+def send_group_evidence(first_resp, evidence, headers):
+    """把推导过程作为线程回复发到群消息下；线程回复失败则退化为普通跟进消息"""
+    mid = first_resp.get("message_id") or (first_resp.get("data") or {}).get("message_id")
+    if mid:
+        # thread_id 字段位置有两种可能，依次尝试
+        variants = (
+            {"group_id": SEATALK_GROUP_ID,
+             "message": {"tag": "text", "text": {"format": 1, "content": evidence},
+                         "thread_id": mid}},
+            {"group_id": SEATALK_GROUP_ID, "thread_id": mid,
+             "message": {"tag": "text", "text": {"format": 1, "content": evidence}}},
+        )
+        for v in variants:
+            try:
+                r2 = requests.post(SEATALK_GROUP_API, json=v, headers=headers, timeout=15)
+                d2 = r2.json()
+                if d2.get("code") == 0:
+                    print(f"[Seatalk] ✅ 推导过程已回复到线程 (msg_id={mid})")
+                    return
+            except:
+                continue
+        print("[Seatalk] ⚠️ 线程回复失败，退化为普通跟进消息")
+    # 退化：普通跟进消息，前缀标注
+    fallback = {
+        "group_id": SEATALK_GROUP_ID,
+        "message": {"tag": "text", "text": {"format": 1,
+                    "content": "↪️ 回复上条抄底信号的分析依据：\n\n" + evidence}},
+    }
+    try:
+        resp = requests.post(SEATALK_GROUP_API, json=fallback, headers=headers, timeout=15)
+        if resp.status_code == 200 and resp.json().get("code") == 0:
+            print("[Seatalk] ✅ 推导过程已作为跟进消息发送")
+    except Exception as e:
+        print(f"[Seatalk] ⚠️ 跟进消息发送失败: {e}")
+
+
+def send_seatalk(message, mode="daily", evidence=None):
+    """发送消息。test 模式仅通知主用户，其余通知全组。
+    evidence: 抄底信号的推导过程文本，发送后作为线程回复附在信号消息下"""
     if not SEATALK_APP_ID or not SEATALK_APP_SECRET:
         print("\n⚠️  未配置 SEATALK_APP_ID / SEATALK_APP_SECRET")
         print("=" * 50)
         print(message)
+        if evidence:
+            print(evidence)
         print("=" * 50)
         return False
 
@@ -821,6 +922,8 @@ def send_seatalk(message, mode="daily"):
         print("\n⚠️  无法获取 access token")
         print("=" * 50)
         print(message)
+        if evidence:
+            print(evidence)
         print("=" * 50)
         return False
 
@@ -843,6 +946,8 @@ def send_seatalk(message, mode="daily"):
             data = resp.json()
             if data.get("code") == 0:
                 print(f"[Seatalk] ✅ 已发送到群 {SEATALK_GROUP_ID}")
+                if evidence:
+                    send_group_evidence(data, evidence, headers)
                 return True
             print(f"[Seatalk] ❌ 群发失败: {data.get('message', '')}")
         return False
@@ -893,6 +998,18 @@ def send_seatalk(message, mode="daily"):
             print(f"[Seatalk] ❌ 重试失败 {emp_code}")
         else:
             print(f"[Seatalk] ❌ 发送失败 {emp_code}: {data.get('message', '')}")
+
+    # 私聊模式下推导过程作为跟进消息发给每位收件人
+    if evidence and success_count > 0:
+        for emp_code in emp_codes:
+            try:
+                body = {"employee_code": emp_code,
+                        "message": {"tag": "markdown",
+                                    "markdown": {"content": "↪️ 推导过程：\n\n" + evidence}}}
+                requests.post(SEATALK_SINGLE_API, json=body, headers=headers, timeout=15)
+            except:
+                pass
+        print(f"[Seatalk] ✅ 推导过程已发送到 {success_count} 位收件人")
 
     if success_count > 0:
         print(f"[Seatalk] 发送完成: {success_count}/{len(emp_codes)} 成功")
@@ -1114,7 +1231,12 @@ def main():
         if analysis.get("ai_analysis"):
             print(f"  AI 分析结果: {analysis['ai_analysis'][:100]}...")
 
-    send_seatalk(message, mode)
+    # 抄底信号：生成推导过程，随消息线程回复佐证
+    evidence = None
+    if analysis.get("signal") in ("strong_buy", "buy", "weak_buy"):
+        evidence = build_evidence(analysis)
+
+    send_seatalk(message, mode, evidence)
 
     # 自动同步到 GitHub（有变更才 push）
     if mode != "test":
