@@ -776,6 +776,28 @@ def format_message(a):
     return m
 
 
+def format_ai_reasoning(text):
+    """把AI推理全文整理成可读格式：空行分段 + 长段按句拆行（每行≤120字）"""
+    import re
+    out = []
+    for para in [p.strip() for p in text.split("\n") if p.strip()]:
+        if len(para) <= 120:
+            out.append(para)
+            continue
+        # 长段按句号/问号/感叹号/分号拆行
+        cur = ""
+        for seg in re.split(r'(?<=[。！？；])', para):
+            if len(cur) + len(seg) <= 120:
+                cur += seg
+            else:
+                if cur.strip():
+                    out.append(cur.strip())
+                cur = seg
+        if cur.strip():
+            out.append(cur.strip())
+    return "\n\n".join(out)
+
+
 def build_evidence(a):
     """抄底信号时生成推导过程文本，附在信号消息的线程回复中佐证结论"""
     band = a.get("band")
@@ -816,11 +838,11 @@ def build_evidence(a):
         lines.append(f"⑥ 提示: 本档仅{band['n']}笔样本，统计意义有限，轻仓为宜")
     else:
         lines.append("⑥ 提示: 历史回测仅供参考，不构成投资建议")
-    # AI 推理过程（全文，内部换行转为 markdown 硬换行，群聊纯文本模式下无影响）
+    # AI 推理过程（全文，整理为分段可读格式）
     reasoning = a.get("ai_reasoning", "")
     if reasoning:
         lines.append("⑦ AI推理过程(全文):")
-        lines.append(reasoning.replace("\n", "  \n"))
+        lines.append(format_ai_reasoning(reasoning))
     # markdown 需"两个空格+换行"才是真换行；群聊纯文本模式下无影响
     return "  \n".join(lines)
 
