@@ -875,23 +875,18 @@ def send_group_evidence(first_resp, evidence, headers):
     """把推导过程作为线程回复发到群消息下；线程回复失败则退化为普通跟进消息"""
     mid = first_resp.get("message_id") or (first_resp.get("data") or {}).get("message_id")
     if mid:
-        # thread_id 字段位置有两种可能，依次尝试
-        variants = (
-            {"group_id": SEATALK_GROUP_ID,
-             "message": {"tag": "text", "text": {"format": 1, "content": evidence},
-                         "thread_id": mid}},
-            {"group_id": SEATALK_GROUP_ID, "thread_id": mid,
-             "message": {"tag": "text", "text": {"format": 1, "content": evidence}}},
-        )
-        for v in variants:
-            try:
-                r2 = requests.post(SEATALK_GROUP_API, json=v, headers=headers, timeout=15)
-                d2 = r2.json()
-                if d2.get("code") == 0:
-                    print(f"[Seatalk] ✅ 推导过程已回复到线程 (msg_id={mid})")
-                    return
-            except:
-                continue
+        # thread_id 必须放在 message 对象内部（已实测验证：顶层位置会被忽略）
+        try:
+            body = {"group_id": SEATALK_GROUP_ID,
+                    "message": {"tag": "text", "text": {"format": 1, "content": evidence},
+                                "thread_id": mid}}
+            r2 = requests.post(SEATALK_GROUP_API, json=body, headers=headers, timeout=15)
+            d2 = r2.json()
+            if d2.get("code") == 0:
+                print(f"[Seatalk] ✅ 推导过程已回复到线程 (msg_id={mid})")
+                return
+        except:
+            pass
         print("[Seatalk] ⚠️ 线程回复失败，退化为普通跟进消息")
     # 退化：普通跟进消息，前缀标注
     fallback = {
