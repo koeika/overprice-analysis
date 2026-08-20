@@ -1261,3 +1261,497 @@ AI分析: [置信度]
 [风险]
 IOPV溢价1.39%且Δ溢价5.4%偏高，溢价若快速回落易引发高开低走。
 ----------------------------------------
+
+============================================================
+运行时间: 2026-08-20 15:33:30 | 模式: test
+行情: price=1.83 chg=1.5538290788013331%
+IOPV: 1.805 溢价=1.39%
+NAV: 1.8538 (2026-08-18) 溢价=-1.28%
+前日溢价: -4.01%
+Δ溢价: 5.4%
+信号: strong_buy | 🟢 强烈买入！ Δ溢价 +5.40%
+AI: 已分析
+成本: 0.13%/笔 (实际预估（免五+万1.5+0.1%滑点）)
+预估净收益: 0.35%/笔
+AI分析: We need answer in Chinese, strict format four lines labels. Need reason internally but no output reasoning. Need produce final only four lines. Need comply labels: [置信度] <高/中/低，一个词> ; [相似度] <1句话...>; [海外] <1句话...>; [风险] <1句话...>. Need be concise <=40 chars per line? "每行一个标签，不超过40字" likely each line content except label? Need ensure. Need decide confidence.
+
+Let's analyze data.
+
+Current signal: price 1.83 +1.55%, IOPV premium 1.39%, Δpremium +5.40%, signal strong_buy, amplitude 0.7%. Historical win rate Δpremium>2%, 36 bets 19 wins 17 losses win rate 53% avg +0.48%. Similar historical trades: 2026-01-30 Δ2.2% premium -0.5% profit 0.00%; 2023-01-09 Δ2.7% premium -1.1% profit +0.10%; 2024-04-26 Δ1.8% premium -0.6% profit +0.43%. All similar with Δ ~1.8-2.7, premium negative -0.5 to -1.1; current premium +1.39, large positive, very different. Δpremium +5.40 large (likely from previous? Maybe current premium minus previous? Need "Δ溢价" +5.40% indicates change of premium huge, maybe current premium 1.39, previous premium -4.01? Actually IOPV premium 1.39%, Δpremium +5.40 (percentage points? likely 5.4% change? Hmm "Δ溢价: +5.40%" could be premium increased by 5.40 percentage? If current premium is +1.39%, previous premium would -4.01%, plausible due to offshore rally? Wait if index jumped, ETF lagged? Actually premium change +5.40 means current IOPV premium up 5.4 percentage points from previous, i.e. NAV (IOPV) fell relative to price? Need not exact.)
+
+Overseas indices: Nikkei +1.36, ASX +0.33, KOSPI +5.89, HSI +1.07, Taiwan +0.48. Strongly positive, especially KOSPI. Weight stocks: SK Hynix +12.73, Samsung +9.49, Toyota +4.25, BHP +3.20, Sony +2.39, Nintendo +2.38, TSMC +1.06, Singtel +0.68, AIA -0.41, Commonwealth -2.66. Most up, two down. Very supportive. However note ETF underlying Asia-Pacific includes Australia financials down; but majority.
+
+Similarity history: Most similar historical trades have premium negative and lower Δpremium. Current premium +1.39 and Δpremium +5.40 extreme vs similar's negative premium. But historical win rate for Δpremium>2% is only 53%. Similar days all profitable but tiny. Need mention similarity: Δpremium comparable or higher? Actually current Δpremium +5.4 much higher than historical similarities Δ1.8-2.7. Current premium +1.39 vs historical negative -0.5/-1.1. So difference: current premium positive and Δpremium much larger, less similar. Need phrase.
+
+Confidence criteria:
+- High if overseas broad up + weights majority up + historical similar days mostly profitable + premium non-extreme.
+Overseas broad up yes, weights majority up yes, historical similar days profitable yes (though tiny), but premium non-extreme? Current IOPV premium 1.39% is not extreme? For ETF, 1.39% premium moderately high; Δpremium +5.40% extreme? The standard says "溢价非极端" likely premium not extreme. IOPV 1.39 maybe not extreme but Δpremium +5.40 is large. But "溢价极端" maybe "IOPV溢价" not Δ? Need decide. Also signal strong_buy. Need "中" or "高"? Let's parse.
+
+Data includes "历史胜率: Δ溢价超2%，历史36笔（赢19输17）胜率53%（均收益+0.48%）" This is a warning: high Δ premium doesn't guarantee high win rate. Similar historical trades all "赚" but 0.00, 0.10, 0.43, with premium negative. Current premium +1.39 is higher, making risk of buying at premium. If IOPV premium is 1.39, you pay more than NAV; if premium reverts, loss. But Δpremium +5.40 means premium expanded massively; maybe momentum? For ETF trading, high premium can mean overvaluation, but also sentiment.
+
+Need answer "置信度" likely 中 because not all conditions: historical similar days have low profit and current premium positive vs historical negative; despite overseas strong. Need maybe "中" not "高" due to premium extreme and historical win rate only 53%. Let's reason per standard.
+
+Need maybe formulate final four lines:
+[置信度]
+中
+
+[相似度]
+最相似3笔Δ溢价1.8-2.7%、溢价为负且收益轻微；当前溢价+1.39%、Δ+5.4%，形态更极端。
+
+Need ensure <=40 chars? Label line includes maybe "中" one word. Other lines one sentence <=40 Chinese characters? Let's count. "最相似3笔Δ溢价1.8-2.7%、溢价为负且收益轻微；当前溢价+1.39%、Δ+5.4%，形态更极端。" Count maybe 50? Need "不超过40字" maybe stricter. Need reduce.
+
+Need produce exactly four lines with label. Need include [置信度] etc. Let's craft concise.
+
+Potential final:
+[置信度]
+中
+[相似度]
+最相似3笔溢价为负且Δ约2%，当前溢价+1.39%、Δ+5.4%，更极端。
+[海外]
+海外普涨且韩股领涨，核心权重股多数大涨，支撑信号。
+[风险]
+IOPV溢价1.39%且Δ溢价+5.4%偏高，若溢价收敛易回撤。
+
+Need check each line except label <=40 chars? Let's count:
+"最相似3笔溢价为负且Δ约2%，当前溢价+1.39%、Δ+5.4%，更极端。" Count: 最(1)相2似3 3? Let's count roughly 38? Actually Chinese chars + numbers/latin. "最相似3笔溢价为负且Δ约2%，当前溢价+1.39%、Δ+5.4%，更极端。" maybe 38? Need not exact? The instruction "不超过40字" likely content length. We'll keep short.
+
+"海外普涨且韩股领涨，核心权重股多数大涨，支撑信号。" 26 chars.
+
+"IOPV溢价1.39%且Δ溢价+5.4%偏高，若溢价收敛易回撤。" 30.
+
+Need maybe mention "置信度" "中". Good.
+
+Need ensure no extra explanatory text. But perhaps need "严格按格式输出四行" meaning exactly four lines with labels. We'll output.
+
+Need maybe consider if "置信度" should be "高" because overseas+weights+similar days profitable+strong_buy. But "溢价非极端" maybe IOPV premium 1.39 not extreme? Hmm.
+
+Let's thoroughly reason to avoid wrong.
+
+Let's inspect signal semantics: "现价: 1.8300，涨跌幅: +1.55%" "IOPV溢价: 1.39%" "Δ溢价: +5.40%" "信号强度: strong_buy，振幅: 0.7%" "历史胜率: Δ溢价超2%，历史36笔（赢19输17）胜率53%（均收益+0.48%）"
+
+What is "Δ溢价"? Could be "change in premium" perhaps from previous day's premium. Current IOPV premium 1.39%, Δpremium +5.40% means previous premium was 1.39 - 5.40 = -4.01%. That huge swing due to IOPV? Wait if IOPV premium is price vs IOPV. If overseas markets +? Actually if underlying assets (ex-Japan? etc) rose strongly, IOPV should be high, premium would decrease if price not rise enough. But Δpremium +5.40 means premium increased 5.4 pct, so price rose much more than IOPV. Could happen due to retail buying pressure. This is dangerous.
+
+Historical similar trades: "2026-01-30: Δ2.2% 溢价-0.5% → 🟢赚0.00% (相似度100%)" Current Δ5.4 vs 2.2, premium +1.39 vs -0.5. Similarity algorithm maybe despite values? It says similarity 100% for 2026-01-30 but values differ; maybe other features. Wait "最相似历史交易" with similarity 100% for Δ2.2%, premium -0.5%; but current Δ+5.4, premium +1.39. How can similarity be 100%? Maybe "最相似" among many but not actually exact? Or "Δ溢价" means "simulated delta" not premium change? Hmm.
+
+Maybe "Δ溢价" in table is "premium change rate" relative to IOPV? Need not.
+
+Historical "Δ溢价超2%" perhaps "溢价 change over 2%" triggers signal. Current Δpremium +5.40 (maybe "日经指数 delta"??) Not sure.
+
+Need use provided data at face value. Similarity days: Δ2.2/2.7/1.8, premium -0.5/-1.1/-0.6, result profit 0/0.10/0.43. Current Δ5.4, premium +1.39. Thus current has larger premium and Δ, which could reduce edge. The historical win rate for Δ>2 is 53% only. So confidence should not be high. "中" likely.
+
+Need perhaps mention "海外市场" line: "韩股+5.89%、半导体权重大涨，海外全面支持" Include KOSPI and SK/Samsung. Good.
+
+Need perhaps mention "风险" line: "溢价已达+1.39%，追高后若溢价回落，即使净值上涨也可能不赚." Good.
+
+Need perhaps mention "相似度" line: "历史最相似日溢价均为负、仅微赚；当前正溢价且Δ更高，相似度有限." Count.
+
+Need produce final with exactly 4 lines. Ensure no "推理" text.
+
+Let's compose with careful length:
+
+Line1: "[置信度]\n中" Actually label line then content line. Need "每行一个标签" maybe labels themselves on lines? The user says "严格按格式输出四行（每行一个标签，不超过40字）" Means each line has a tag label? Example:
+[置信度]
+<高/中/低，一个词>
+
+[相似度]
+<1句话...>
+
+So 4 physical lines? Actually "四行（每行一个标签）" likely means four blocks? Wait "每行一个标签" maybe each line starts with [标签] and then content. They listed:
+[置信度]
+<高/中/低，一个词>
+
+[相似度]
+<1句话...>
+
+That's 4 lines? Let's count: [置信度], <...>, [相似度], <...> = 4 lines? Actually they listed 4 lines? Let's see:
+1 [置信度]
+2 <高/中/低，一个词>
+3 [相似度]
+4 <1句话，与历史交易的相似度和差异>
+5 [海外]
+6 <1句话，海外市场是否支撑当前信号>
+7 [风险]
+8 <1句话，当前最大风险>
+That's 8 lines with labels. But user says "严格按格式输出四行（每行一个标签，不超过40字）" Hmm "每行一个标签" maybe "每行一个标签" means each line is one label and content? Maybe they want four rows in output:
+[置信度] 中
+[相似度] ...
+[海外] ...
+[风险] ...
+This is 4 lines, each line has label. The examples show label on one line and content next line, but "四行" contradicts. Need decide.
+
+They explicitly: "请用中文回复，严格按格式输出四行（每行一个标签，不超过40字）" Then listed:
+[置信度]
+<高/中/低，一个词>
+
+[相似度]
+<1句话，与历史交易的相似度和差异>
+
+[海外]
+<1句话，海外市场是否支撑当前信号>
+
+[风险]
+<1句话，当前最大风险>
+
+This is eight lines if output as shown. But they say 四行, perhaps each "行" is a section with label and content on same line? Actually "每行一个标签" may mean each line contains one label and its content. Need output four lines:
+[置信度] 中
+[相似度] ...
+[海外] ...
+[风险] ...
+That fits "四行" and "每行一个标签". The placeholders are on separate lines in prompt due to formatting, but "四行" likely means 4 lines. Need follow "四行" maybe exactly 4 lines, not 8. The instruction "严格按格式输出四行（每行一个标签，不超过40字）" means each line must start with [标签], and content after. We'll do four lines, each line "[标签] 内容". Need ensure line length <=40? likely content.
+
+Let's craft four lines with labels and content.
+
+Need maybe "置信度" content "中" one word. "一个词" yes.
+
+Line 2: "[相似度] 最相似3笔溢价为负且Δ约2%，当前溢价+1.39%、Δ+5.4%，形态更极端。" Maybe line length 45? Need shorten.
+
+Let's count Chinese chars: "[相似度] 最相似3笔溢价为负且Δ约2%，当前溢价+1.39%、Δ+5.4%，形态更极端。" Label 4? Actually "相似度" 3, bracket 2, space 1 =6. Content: 最1相2似3 3? Let's count properly:
+最(1) 相(2) 似(3) 3(4) 笔(5) 溢(6) 价(7) 为(8) 负(9) 且(10) Δ(11) 约(12) 2(13) %(14) ，(15) 当(16) 前(17) 溢(18) 价(19) +(20) 1(21) .(22) 3(23) 9(24) %(25) 、(26) Δ(27) +(28) 5(29) .(30) 4(31) %(32) ，(33) 形(34) 态(35) 更(36) 极(37) 端(38) 。(39) plus label [相似度] 6. Total 45. "不超过40字" maybe line including label? Need reduce.
+
+Content can be "最相似3笔溢价为负且Δ约2%；当前溢价+1.39%、Δ+5.4%，更极端。" Count content: 最1 相2 似3 3? Let's count: 最(1) 相(2) 似(3) 3(4) 笔(5) 溢(6) 价(7) 为(8) 负(9) 且(10) Δ(11) 约(12) 2(13) %(14) ；(15) 当(16) 前(17) 溢(18) 价(19) +(20) 1(21) .(22) 3(23) 9(24) %(25) 、(26) Δ(27) +(28) 5(29) .(30) 4(31) %(32) ，(33) 更(34) 极(35) 端(36) 。(37) Content 37. Plus label [相似度] and space 6 =43. Still over 40 if "每行" includes label. But user maybe "每个标签" not count label? Hmm.
+
+Need maybe "不超过40字" per line likely content after label. We'll aim content <40.
+
+Line 3: "[海外] 韩股领涨、核心权重多数大涨，海外全面支撑信号。" Content: 韩1 股2 领3 涨4 、5 核6 心7 权8 重9 多10 数11 大12 涨13 ，14 海15 外16 全17 面18 支19 撑20 信21 号22。22. Good.
+
+Line 4: "[风险] 当前溢价+1.39%且Δ+5.4%偏高，溢价收敛易回撤。" Content: 当1前2溢3价4+5 1.39%... Let's count maybe 25. Good.
+
+Need maybe mention "历史相似日多数盈利" in similarity? The line "最相似3笔溢价为负且Δ约2%；当前溢价+1.39%、Δ+5.4%，更极端。" It conveys similarity/difference but not "历史相似日多数盈利". The prompt for similarity: "<1句话，与历史交易的相似度和差异>" We mention similarity: "最相似3笔溢价为负且Δ约2%" and difference current. Good.
+
+Need maybe mention "海外市场是否支撑当前信号" in overseas line. Yes.
+
+Need maybe mention "最大风险" in risk line. Good.
+
+Need perhaps "置信度" "中" because not all high. Need maybe in final no reasoning.
+
+Let's ensure "高/中/低，一个词" line "中" only. Good.
+
+Need maybe include exactly four lines, no blank lines. Use Chinese punctuation.
+
+Potential final:
+
+[置信度] 中
+[相似度] 最相似3笔溢价为负且Δ约2%；当前溢价+1.39%、Δ+5.4%，更极端。
+[海外] 韩股领涨、核心权重多数大涨，海外全面支撑信号。
+[风险] 当前溢价+1.39%且Δ+5.4%偏高，溢价收敛易回撤。
+
+Need check line lengths:
+[置信度] 中 = 7? okay.
+[相似度] content "最相似3笔溢价为负且Δ约2%；当前溢价+1.39%、Δ+5.4%，更极端。" Count content 37, label 4? Actually "[相似度]" is 4? Let's count "["1 "相"2 "似"3 "度"4 "]"5? Wait "相似度" 3 plus brackets 2 =5. Space=1. Total 43. "不超过40字" if including label, 43 > 40. Need reduce line length. Need maybe content "最相似3笔溢价为负且Δ约2%；当前溢价+1.39%、Δ+5.4%，更极端。" content 37, plus label 5+space=43. Need reduce by 4. Could shorten "最相似3笔溢价为负且Δ约2%；当前溢价+1.39%、Δ+5.4%，更极端" remove final "。"? Count 36. Total 42. Still. Need content <=34 if including label. Need more drastic.
+
+Maybe use "最相似3笔溢价为负、Δ约2%；当前溢价+1.39%且Δ+5.4%，更极端。" Count content: 最1 相2 似3 3? Let's count with punctuation:
+最(1) 相(2) 似(3) 3(4) 笔(5) 溢(6) 价(7) 为(8) 负(9) 、(10) Δ(11) 约(12) 2(13) %(14) ；(15) 当(16) 前(17) 溢(18) 价(19) +(20) 1(21) .(22) 3(23) 9(24) %(25) 且(26) Δ(27) +(28) 5(29) .(30) 4(31) %(32) ，(33) 更(34) 极(35) 端(36) 。(37) Actually 37. Same. Need content 34. Remove "当前" maybe "现溢价+1.39%、Δ+5.4%，更极端" Count: 最相似3笔溢价为负且Δ约2%；现溢价+1.39%、Δ+5.4%，更极端。 Let's count: 最1 相2 似3 3? 4笔5溢6价7为8负9且10Δ11约122%13? Wait "2%" one char? Let's count all: 最(1) 相(2) 似(3) 3(4) 笔(5) 溢(6) 价(7) 为(8) 负(9) 且(10) Δ(11) 约(12) 2(13) %(14) ；(15) 现(16) 溢(17) 价(18) +(19) 1(20) .(21) 3(22) 9(23) %(24) 、(25) Δ(26) +(27) 5(28) .(29) 4(30) %(31) ，(32) 更(33) 极(34) 端(35) 。(36) Content 36. Plus label 6 =42. Need content 34 or less. Maybe "最相似3笔溢价为负、Δ约2%；现溢价+1.39%、Δ+5.4%，更极端。" Count: 最1相2似3 3?4笔5溢6价7为8负9、10Δ11约12 2%? Let's count full: 最(1) 相(2) 似(3) 3(4) 笔(5) 溢(6) 价(7) 为(8) 负(9) 、(10) Δ(11) 约(12) 2(13) %(14) ；(15) 现(16) 溢(17) 价(18) +(19) 1(20) .(21) 3(22) 9(23) %(24) 、(25) Δ(26) +(27) 5(28) .(29) 4(30) %(31) ，(32) 更(33) 极(34) 端(35) 。(36) Still 36. Need maybe "最相似3笔溢价为负、Δ约2%；现溢价+1.39%、Δ+5.4%，形态更极端" no. Hmm.
+
+Maybe "不超过40字" doesn't include label? If not, line 2 content 37 okay. But if they mean per line including label, need shorten further. We can phrase "历史相似日溢价为负且Δ≈2%；现溢价+1.39%、Δ+5.4%，更极端。" Count: 历1史2相3似4日5溢6价7为8负9且10Δ11≈12 2%? Let's count: 历(1) 史(2) 相(3) 似(4) 日(5) 溢(6) 价(7) 为(8) 负(9) 且(10) Δ(11) ≈(12) 2(13) %(14) ；(15) 现(16) 溢(17) 价(18) +(19) 1(20) .(21) 3(22) 9(23) %(24) 、(25) Δ(26) +(27) 5(28) .(29) 4(30) %(31) ，(32) 更(33) 极(34) 端(35) 。(36) Content 36. Label 6 total 42. Need content 34. Maybe "历史相似日溢价为负、Δ≈2%；现溢价+1.39%、Δ+5.4%，更极端。" Count: 历1史2相3似4日5溢6价7为8负9、10Δ11≈12 2%13? Let's full: 历(1) 史(2) 相(3) 似(4) 日(5) 溢(6) 价(7) 为(8) 负(9) 、(10) Δ(11) ≈(12) 2(13) %(14) ；(15) 现(16) 溢(17) 价(18) +(19) 1(20) .(21) 3(22) 9(23) %(24) 、(25) Δ(26) +(27) 5(28) .(29) 4(30) %(31) ，(32) 更(33) 极(34) 端(35) 。(36). Still 36. Remove "更极端"? "历史相似日溢价为负、Δ≈2%；现溢价+1.39%、Δ+5.4%。" Count: 历1史2相3似4日5溢6价7为8负9、10Δ11≈12 2%? Let's count: 历1 史2 相3 似4 日5 溢6 价7 为8 负9 、10 Δ11 ≈12 2?13 %14 ；15 现16 溢17 价18 +19 1?20 .21 3?22 9?23 %24 、25 Δ26 +27 5?28 .29 4?30 %31 。32. Content 32. Perfect. Line including label 38 maybe. This conveys similarity/difference enough: historical similar days premium negative, delta approx 2%; current premium +1.39%, delta +5.4%. It doesn't explicitly say "相似度" but okay. Need maybe "更极端" omitted due length. But "差异" is clear. Could add "更极端" if no need count. But final line length? Let's include "更极端" maybe 35 content, total 41. "不超过40字" maybe total? Need not? To be safe use "历史相似日溢价为负、Δ≈2%；现溢价+1.39%、Δ+5.4%。" That's 32 content. Good.
+
+But "与历史交易的相似度和差异" maybe "历史相似日溢价为负、Δ≈2%" says similar? Actually "历史相似日" equals? It says historical similar days have premium negative and delta approx 2, while current has premium positive and delta 5.4; this highlights difference. Need mention "相似度有限" maybe "历史相似日溢价为负、Δ≈2%；现溢价+1.39%、Δ+5.4%，相似度有限。" Count: 历1史2相3似4日5溢6价7为8负9、10Δ11≈12 2%? Let's full: 历1 史2 相3 似4 日5 溢6 价7 为8 负9 、10 Δ11 ≈12 2?13 %14 ；15 现16 溢17 价18 +19 1?20 .21 3?22 9?23 %24 、25 Δ26 +27 5?28 .29 4?30 %31 ，32 相33 似34 度35 有36 限37 。38 Content 38. Plus label 6 =44. If "不超过40字" including label, no. But maybe content only? 38 ok. If strict, need shorter: "历史相似日溢价为负、Δ≈2%；现溢价+1.39%、Δ+5.4%，相似有限。" Count: 历1史2相3似4日5溢6价7为8负9、10Δ11≈12 2%? Let's count full: 历(1) 史(2) 相(3) 似(4) 日(5) 溢(6) 价(7) 为(8) 负(9) 、(10) Δ(11) ≈(12) 2(13) %(14) ；(15) 现(16) 溢(17) 价(18) +(19) 1(20) .(21) 3(22) 9(23) %(24) 、(25) Δ(26) +(27) 5(28) .(29) 4(30) %(31) ，(32) 相(33) 似(34) 有(35) 限(36) 。(37) Content 37. Good. Plus label 6=43. If line limit including label, still. But likely "不超过40字" per line content? Hmm.
+
+Need maybe not overfocus. But final should be concise. I can output with labels and content, maybe label+content within 40? Let's see:
+"[相似度] 历史相似日溢价为负、Δ≈2%；现溢价+1.39%、Δ+5.4%，相似有限。" Count label 5 + space 1 + content 37 =43. Slightly over. To make total <=40, reduce content by 3: "历史相似日溢价为负、Δ≈2%；现溢价+1.39%、Δ+5.4%，相似度低？" no. "历史相似日溢价为负、Δ≈2%；现溢价+1.39%、Δ+5.4%" content 31. Total 37. Good. But missing "相似度有限" but difference obvious. We can say "差异在溢价" maybe.
+
+Try content: "历史相似日溢价为负、Δ≈2%；现溢价+1.39%、Δ+5.4%，差异大。" Count: 历1史2相3似4日5溢6价7为8负9、10Δ11≈12 2%? Let's count: 历(1) 史(2) 相(3) 似(4) 日(5) 溢(6) 价(7) 为(8) 负(9) 、(10) Δ(11) ≈(12) 2(13) %(14) ；(15) 现(16) 溢(17) 价(18) +(19) 1(20) .(21) 3(22) 9(23) %(24) 、(25) Δ(26) +(27) 5(28) .(29) 4(30) %(31) ，(32) 差(33) 异(34) 大(35) 。(36) Content 36. Total 42. Need reduce one: no period "差异大" content 35? Actually with period 36, without 35, total 41. Need reduce 2: "历史相似日溢价为负、Δ≈2%；现溢价+1.39%、Δ+5.4%，差异大" no period -> 35, plus label 6=41. Still 1 over. Could use "历史相似日溢价为负、Δ≈2%；现溢价+1.39%、Δ+5.4%" no "差异大" total 37. But then line is not a full sentence? It's okay.
+
+Maybe use "历史相似日溢价为负、Δ约2%，现溢价+1.39%、Δ+5.4%，差异大。" Count "约" instead of "≈" same. Need total? Let's calculate with label: "[相似度] " 6. Content "历史相似日溢价为负、Δ约2%，现溢价+1.39%、Δ+5.4%，差异大。" Count: 历1史2相3似4日5溢6价7为8负9、10Δ11约12 2?13 %14，15现16溢17价18+19 1?20 .21 3?22 9?23 %24、25Δ26+27 5?28 .29 4?30 %31，32差33异34大35。36. Total 42. Hmm. Because label 5+space=6. Need content <=34. "历史相似日溢价为负、Δ约2%；现溢价+1.39%、Δ+5.4%，差异大。" Count maybe 35? Let's count with semicolon? 历1史2相3似4日5溢6价7为8负9、10Δ11约12 2?13 %14；15现16溢17价18+19 1?20 .21 3?22 9?23 %24、25Δ26+27 5?28 .29 4?30 %31，32差33异34大35。36. Still 35? Wait remove "大" maybe no. Need not.
+
+Maybe use shorter label? The label fixed. Need not enforce total 40. The instruction "每行一个标签，不超过40字" maybe each line's content after label? Hmm.
+
+Let's not over-optimize. The final answer should be acceptable if content concise.
+
+Need perhaps maybe "置信度" line "中" maybe one word. Good.
+
+Let's think if "置信度" should be "高" due to overseas+weights+similar profits. Let's evaluate criteria from user:
+- 高: 海外普涨+权重股多数涨+历史相似日多数盈利+溢价非极端
+Current: overseas broad up yes; weights majority up yes; historical similar days "🟢赚0.00/0.10/0.43" all green, majority盈利 yes; premium non-extreme? Current premium +1.39, Δpremium +5.4. Is this "溢价非极端"? IOPV premium 1.39% not extreme maybe but Δpremium +5.4 is huge. However criteria says "溢价非极端" not "Δ溢价". If judged by IOPV 1.39 (not extreme) then all four conditions satisfied -> "高". But if "Δpremium" is extreme -> not. Need infer from data: They provide "历史胜率: Δ溢价超2%，历史36笔（赢19输17）胜率53%" This suggests Δpremium >2% is a signal but win rate only 53%, not compelling. Similar historical trades all profit but tiny. The current signal "strong_buy" plus overseas strong. The prompt asks "基于以下数据对...买入信号做简短分析" and "置信度判定标准" with "溢价非极端" under high. Current "IOPV溢价: 1.39%" is not extreme? In QDII ETF, 1.39% premium moderate; many have >5% extreme. But "Δ溢价: +5.40%" is extreme movement. The standard "溢价极端" likely refers to IOPV premium, not Δ. "Δ溢价" is not "溢价" but "premium change"; in history they define "Δ溢价超2%" as signal. Current Δ+5.4 could be "extreme" under "Δ溢价"? Hmm.
+
+Let's parse Chinese:
+📊 当前信号:
+- 现价: 1.8300，涨跌幅: +1.55%
+- IOPV溢价: 1.39%
+- Δ溢价: +5.40%
+- 信号强度: strong_buy，振幅: 0.7%
+- 历史胜率: Δ溢价超2%，历史36笔（赢19输17）胜率53%（均收益+0.48%）
+
+"Δ溢价" maybe "premium change" not "premium". They ask "置信度判定标准: 高: ... 溢价非极端" Could include both "IOPV溢价" and "Δ溢价" but says "溢价非极端" generic. Current IOPV 1.39 is moderate; Δ+5.4 is large. Maybe "溢价" in standard means "IOPV溢价", not Δ. But "Δ溢价超2%" in history is a signal, and current Δ+5.4 is larger than threshold. If all high conditions met, output high. But then historical win rate 53% and avg +0.48% not high; however historical similar days (all 100/99 similarity) are profitable. But "历史相似日多数盈利" yes.
+
+Need decide based on "证据冲突时说明取舍理由" in final? They ask "最终判定: 定置信度；证据冲突时说明取舍理由" but final is only four lines, no reasoning. We need pick.
+
+Let's examine "历史胜率: Δ溢价超2%，历史36笔（赢19输17）胜率53%（均收益+0.48%）" This is not "历史相似日" but "signal strength" history. For high, "历史相似日多数盈利" perhaps "最相似历史交易" all 3 profitable. So high yes. However "
+AI推理全文(19552字):
+We need answer in Chinese, strict format four lines labels. Need reason internally but no output reasoning. Need produce final only four lines. Need comply labels: [置信度] <高/中/低，一个词> ; [相似度] <1句话...>; [海外] <1句话...>; [风险] <1句话...>. Need be concise <=40 chars per line? "每行一个标签，不超过40字" likely each line content except label? Need ensure. Need decide confidence.
+
+Let's analyze data.
+
+Current signal: price 1.83 +1.55%, IOPV premium 1.39%, Δpremium +5.40%, signal strong_buy, amplitude 0.7%. Historical win rate Δpremium>2%, 36 bets 19 wins 17 losses win rate 53% avg +0.48%. Similar historical trades: 2026-01-30 Δ2.2% premium -0.5% profit 0.00%; 2023-01-09 Δ2.7% premium -1.1% profit +0.10%; 2024-04-26 Δ1.8% premium -0.6% profit +0.43%. All similar with Δ ~1.8-2.7, premium negative -0.5 to -1.1; current premium +1.39, large positive, very different. Δpremium +5.40 large (likely from previous? Maybe current premium minus previous? Need "Δ溢价" +5.40% indicates change of premium huge, maybe current premium 1.39, previous premium -4.01? Actually IOPV premium 1.39%, Δpremium +5.40 (percentage points? likely 5.4% change? Hmm "Δ溢价: +5.40%" could be premium increased by 5.40 percentage? If current premium is +1.39%, previous premium would -4.01%, plausible due to offshore rally? Wait if index jumped, ETF lagged? Actually premium change +5.40 means current IOPV premium up 5.4 percentage points from previous, i.e. NAV (IOPV) fell relative to price? Need not exact.)
+
+Overseas indices: Nikkei +1.36, ASX +0.33, KOSPI +5.89, HSI +1.07, Taiwan +0.48. Strongly positive, especially KOSPI. Weight stocks: SK Hynix +12.73, Samsung +9.49, Toyota +4.25, BHP +3.20, Sony +2.39, Nintendo +2.38, TSMC +1.06, Singtel +0.68, AIA -0.41, Commonwealth -2.66. Most up, two down. Very supportive. However note ETF underlying Asia-Pacific includes Australia financials down; but majority.
+
+Similarity history: Most similar historical trades have premium negative and lower Δpremium. Current premium +1.39 and Δpremium +5.40 extreme vs similar's negative premium. But historical win rate for Δpremium>2% is only 53%. Similar days all profitable but tiny. Need mention similarity: Δpremium comparable or higher? Actually current Δpremium +5.4 much higher than historical similarities Δ1.8-2.7. Current premium +1.39 vs historical negative -0.5/-1.1. So difference: current premium positive and Δpremium much larger, less similar. Need phrase.
+
+Confidence criteria:
+- High if overseas broad up + weights majority up + historical similar days mostly profitable + premium non-extreme.
+Overseas broad up yes, weights majority up yes, historical similar days profitable yes (though tiny), but premium non-extreme? Current IOPV premium 1.39% is not extreme? For ETF, 1.39% premium moderately high; Δpremium +5.40% extreme? The standard says "溢价非极端" likely premium not extreme. IOPV 1.39 maybe not extreme but Δpremium +5.40 is large. But "溢价极端" maybe "IOPV溢价" not Δ? Need decide. Also signal strong_buy. Need "中" or "高"? Let's parse.
+
+Data includes "历史胜率: Δ溢价超2%，历史36笔（赢19输17）胜率53%（均收益+0.48%）" This is a warning: high Δ premium doesn't guarantee high win rate. Similar historical trades all "赚" but 0.00, 0.10, 0.43, with premium negative. Current premium +1.39 is higher, making risk of buying at premium. If IOPV premium is 1.39, you pay more than NAV; if premium reverts, loss. But Δpremium +5.40 means premium expanded massively; maybe momentum? For ETF trading, high premium can mean overvaluation, but also sentiment.
+
+Need answer "置信度" likely 中 because not all conditions: historical similar days have low profit and current premium positive vs historical negative; despite overseas strong. Need maybe "中" not "高" due to premium extreme and historical win rate only 53%. Let's reason per standard.
+
+Need maybe formulate final four lines:
+[置信度]
+中
+
+[相似度]
+最相似3笔Δ溢价1.8-2.7%、溢价为负且收益轻微；当前溢价+1.39%、Δ+5.4%，形态更极端。
+
+Need ensure <=40 chars? Label line includes maybe "中" one word. Other lines one sentence <=40 Chinese characters? Let's count. "最相似3笔Δ溢价1.8-2.7%、溢价为负且收益轻微；当前溢价+1.39%、Δ+5.4%，形态更极端。" Count maybe 50? Need "不超过40字" maybe stricter. Need reduce.
+
+Need produce exactly four lines with label. Need include [置信度] etc. Let's craft concise.
+
+Potential final:
+[置信度]
+中
+[相似度]
+最相似3笔溢价为负且Δ约2%，当前溢价+1.39%、Δ+5.4%，更极端。
+[海外]
+海外普涨且韩股领涨，核心权重股多数大涨，支撑信号。
+[风险]
+IOPV溢价1.39%且Δ溢价+5.4%偏高，若溢价收敛易回撤。
+
+Need check each line except label <=40 chars? Let's count:
+"最相似3笔溢价为负且Δ约2%，当前溢价+1.39%、Δ+5.4%，更极端。" Count: 最(1)相2似3 3? Let's count roughly 38? Actually Chinese chars + numbers/latin. "最相似3笔溢价为负且Δ约2%，当前溢价+1.39%、Δ+5.4%，更极端。" maybe 38? Need not exact? The instruction "不超过40字" likely content length. We'll keep short.
+
+"海外普涨且韩股领涨，核心权重股多数大涨，支撑信号。" 26 chars.
+
+"IOPV溢价1.39%且Δ溢价+5.4%偏高，若溢价收敛易回撤。" 30.
+
+Need maybe mention "置信度" "中". Good.
+
+Need ensure no extra explanatory text. But perhaps need "严格按格式输出四行" meaning exactly four lines with labels. We'll output.
+
+Need maybe consider if "置信度" should be "高" because overseas+weights+similar days profitable+strong_buy. But "溢价非极端" maybe IOPV premium 1.39 not extreme? Hmm.
+
+Let's thoroughly reason to avoid wrong.
+
+Let's inspect signal semantics: "现价: 1.8300，涨跌幅: +1.55%" "IOPV溢价: 1.39%" "Δ溢价: +5.40%" "信号强度: strong_buy，振幅: 0.7%" "历史胜率: Δ溢价超2%，历史36笔（赢19输17）胜率53%（均收益+0.48%）"
+
+What is "Δ溢价"? Could be "change in premium" perhaps from previous day's premium. Current IOPV premium 1.39%, Δpremium +5.40% means previous premium was 1.39 - 5.40 = -4.01%. That huge swing due to IOPV? Wait if IOPV premium is price vs IOPV. If overseas markets +? Actually if underlying assets (ex-Japan? etc) rose strongly, IOPV should be high, premium would decrease if price not rise enough. But Δpremium +5.40 means premium increased 5.4 pct, so price rose much more than IOPV. Could happen due to retail buying pressure. This is dangerous.
+
+Historical similar trades: "2026-01-30: Δ2.2% 溢价-0.5% → 🟢赚0.00% (相似度100%)" Current Δ5.4 vs 2.2, premium +1.39 vs -0.5. Similarity algorithm maybe despite values? It says similarity 100% for 2026-01-30 but values differ; maybe other features. Wait "最相似历史交易" with similarity 100% for Δ2.2%, premium -0.5%; but current Δ+5.4, premium +1.39. How can similarity be 100%? Maybe "最相似" among many but not actually exact? Or "Δ溢价" means "simulated delta" not premium change? Hmm.
+
+Maybe "Δ溢价" in table is "premium change rate" relative to IOPV? Need not.
+
+Historical "Δ溢价超2%" perhaps "溢价 change over 2%" triggers signal. Current Δpremium +5.40 (maybe "日经指数 delta"??) Not sure.
+
+Need use provided data at face value. Similarity days: Δ2.2/2.7/1.8, premium -0.5/-1.1/-0.6, result profit 0/0.10/0.43. Current Δ5.4, premium +1.39. Thus current has larger premium and Δ, which could reduce edge. The historical win rate for Δ>2 is 53% only. So confidence should not be high. "中" likely.
+
+Need perhaps mention "海外市场" line: "韩股+5.89%、半导体权重大涨，海外全面支持" Include KOSPI and SK/Samsung. Good.
+
+Need perhaps mention "风险" line: "溢价已达+1.39%，追高后若溢价回落，即使净值上涨也可能不赚." Good.
+
+Need perhaps mention "相似度" line: "历史最相似日溢价均为负、仅微赚；当前正溢价且Δ更高，相似度有限." Count.
+
+Need produce final with exactly 4 lines. Ensure no "推理" text.
+
+Let's compose with careful length:
+
+Line1: "[置信度]\n中" Actually label line then content line. Need "每行一个标签" maybe labels themselves on lines? The user says "严格按格式输出四行（每行一个标签，不超过40字）" Means each line has a tag label? Example:
+[置信度]
+<高/中/低，一个词>
+
+[相似度]
+<1句话...>
+
+So 4 physical lines? Actually "四行（每行一个标签）" likely means four blocks? Wait "每行一个标签" maybe each line starts with [标签] and then content. They listed:
+[置信度]
+<高/中/低，一个词>
+
+[相似度]
+<1句话...>
+
+That's 4 lines? Let's count: [置信度], <...>, [相似度], <...> = 4 lines? Actually they listed 4 lines? Let's see:
+1 [置信度]
+2 <高/中/低，一个词>
+3 [相似度]
+4 <1句话，与历史交易的相似度和差异>
+5 [海外]
+6 <1句话，海外市场是否支撑当前信号>
+7 [风险]
+8 <1句话，当前最大风险>
+That's 8 lines with labels. But user says "严格按格式输出四行（每行一个标签，不超过40字）" Hmm "每行一个标签" maybe "每行一个标签" means each line is one label and content? Maybe they want four rows in output:
+[置信度] 中
+[相似度] ...
+[海外] ...
+[风险] ...
+This is 4 lines, each line has label. The examples show label on one line and content next line, but "四行" contradicts. Need decide.
+
+They explicitly: "请用中文回复，严格按格式输出四行（每行一个标签，不超过40字）" Then listed:
+[置信度]
+<高/中/低，一个词>
+
+[相似度]
+<1句话，与历史交易的相似度和差异>
+
+[海外]
+<1句话，海外市场是否支撑当前信号>
+
+[风险]
+<1句话，当前最大风险>
+
+This is eight lines if output as shown. But they say 四行, perhaps each "行" is a section with label and content on same line? Actually "每行一个标签" may mean each line contains one label and its content. Need output four lines:
+[置信度] 中
+[相似度] ...
+[海外] ...
+[风险] ...
+That fits "四行" and "每行一个标签". The placeholders are on separate lines in prompt due to formatting, but "四行" likely means 4 lines. Need follow "四行" maybe exactly 4 lines, not 8. The instruction "严格按格式输出四行（每行一个标签，不超过40字）" means each line must start with [标签], and content after. We'll do four lines, each line "[标签] 内容". Need ensure line length <=40? likely content.
+
+Let's craft four lines with labels and content.
+
+Need maybe "置信度" content "中" one word. "一个词" yes.
+
+Line 2: "[相似度] 最相似3笔溢价为负且Δ约2%，当前溢价+1.39%、Δ+5.4%，形态更极端。" Maybe line length 45? Need shorten.
+
+Let's count Chinese chars: "[相似度] 最相似3笔溢价为负且Δ约2%，当前溢价+1.39%、Δ+5.4%，形态更极端。" Label 4? Actually "相似度" 3, bracket 2, space 1 =6. Content: 最1相2似3 3? Let's count properly:
+最(1) 相(2) 似(3) 3(4) 笔(5) 溢(6) 价(7) 为(8) 负(9) 且(10) Δ(11) 约(12) 2(13) %(14) ，(15) 当(16) 前(17) 溢(18) 价(19) +(20) 1(21) .(22) 3(23) 9(24) %(25) 、(26) Δ(27) +(28) 5(29) .(30) 4(31) %(32) ，(33) 形(34) 态(35) 更(36) 极(37) 端(38) 。(39) plus label [相似度] 6. Total 45. "不超过40字" maybe line including label? Need reduce.
+
+Content can be "最相似3笔溢价为负且Δ约2%；当前溢价+1.39%、Δ+5.4%，更极端。" Count content: 最1 相2 似3 3? Let's count: 最(1) 相(2) 似(3) 3(4) 笔(5) 溢(6) 价(7) 为(8) 负(9) 且(10) Δ(11) 约(12) 2(13) %(14) ；(15) 当(16) 前(17) 溢(18) 价(19) +(20) 1(21) .(22) 3(23) 9(24) %(25) 、(26) Δ(27) +(28) 5(29) .(30) 4(31) %(32) ，(33) 更(34) 极(35) 端(36) 。(37) Content 37. Plus label [相似度] and space 6 =43. Still over 40 if "每行" includes label. But user maybe "每个标签" not count label? Hmm.
+
+Need maybe "不超过40字" per line likely content after label. We'll aim content <40.
+
+Line 3: "[海外] 韩股领涨、核心权重多数大涨，海外全面支撑信号。" Content: 韩1 股2 领3 涨4 、5 核6 心7 权8 重9 多10 数11 大12 涨13 ，14 海15 外16 全17 面18 支19 撑20 信21 号22。22. Good.
+
+Line 4: "[风险] 当前溢价+1.39%且Δ+5.4%偏高，溢价收敛易回撤。" Content: 当1前2溢3价4+5 1.39%... Let's count maybe 25. Good.
+
+Need maybe mention "历史相似日多数盈利" in similarity? The line "最相似3笔溢价为负且Δ约2%；当前溢价+1.39%、Δ+5.4%，更极端。" It conveys similarity/difference but not "历史相似日多数盈利". The prompt for similarity: "<1句话，与历史交易的相似度和差异>" We mention similarity: "最相似3笔溢价为负且Δ约2%" and difference current. Good.
+
+Need maybe mention "海外市场是否支撑当前信号" in overseas line. Yes.
+
+Need maybe mention "最大风险" in risk line. Good.
+
+Need perhaps "置信度" "中" because not all high. Need maybe in final no reasoning.
+
+Let's ensure "高/中/低，一个词" line "中" only. Good.
+
+Need maybe include exactly four lines, no blank lines. Use Chinese punctuation.
+
+Potential final:
+
+[置信度] 中
+[相似度] 最相似3笔溢价为负且Δ约2%；当前溢价+1.39%、Δ+5.4%，更极端。
+[海外] 韩股领涨、核心权重多数大涨，海外全面支撑信号。
+[风险] 当前溢价+1.39%且Δ+5.4%偏高，溢价收敛易回撤。
+
+Need check line lengths:
+[置信度] 中 = 7? okay.
+[相似度] content "最相似3笔溢价为负且Δ约2%；当前溢价+1.39%、Δ+5.4%，更极端。" Count content 37, label 4? Actually "[相似度]" is 4? Let's count "["1 "相"2 "似"3 "度"4 "]"5? Wait "相似度" 3 plus brackets 2 =5. Space=1. Total 43. "不超过40字" if including label, 43 > 40. Need reduce line length. Need maybe content "最相似3笔溢价为负且Δ约2%；当前溢价+1.39%、Δ+5.4%，更极端。" content 37, plus label 5+space=43. Need reduce by 4. Could shorten "最相似3笔溢价为负且Δ约2%；当前溢价+1.39%、Δ+5.4%，更极端" remove final "。"? Count 36. Total 42. Still. Need content <=34 if including label. Need more drastic.
+
+Maybe use "最相似3笔溢价为负、Δ约2%；当前溢价+1.39%且Δ+5.4%，更极端。" Count content: 最1 相2 似3 3? Let's count with punctuation:
+最(1) 相(2) 似(3) 3(4) 笔(5) 溢(6) 价(7) 为(8) 负(9) 、(10) Δ(11) 约(12) 2(13) %(14) ；(15) 当(16) 前(17) 溢(18) 价(19) +(20) 1(21) .(22) 3(23) 9(24) %(25) 且(26) Δ(27) +(28) 5(29) .(30) 4(31) %(32) ，(33) 更(34) 极(35) 端(36) 。(37) Actually 37. Same. Need content 34. Remove "当前" maybe "现溢价+1.39%、Δ+5.4%，更极端" Count: 最相似3笔溢价为负且Δ约2%；现溢价+1.39%、Δ+5.4%，更极端。 Let's count: 最1 相2 似3 3? 4笔5溢6价7为8负9且10Δ11约122%13? Wait "2%" one char? Let's count all: 最(1) 相(2) 似(3) 3(4) 笔(5) 溢(6) 价(7) 为(8) 负(9) 且(10) Δ(11) 约(12) 2(13) %(14) ；(15) 现(16) 溢(17) 价(18) +(19) 1(20) .(21) 3(22) 9(23) %(24) 、(25) Δ(26) +(27) 5(28) .(29) 4(30) %(31) ，(32) 更(33) 极(34) 端(35) 。(36) Content 36. Plus label 6 =42. Need content 34 or less. Maybe "最相似3笔溢价为负、Δ约2%；现溢价+1.39%、Δ+5.4%，更极端。" Count: 最1相2似3 3?4笔5溢6价7为8负9、10Δ11约12 2%? Let's count full: 最(1) 相(2) 似(3) 3(4) 笔(5) 溢(6) 价(7) 为(8) 负(9) 、(10) Δ(11) 约(12) 2(13) %(14) ；(15) 现(16) 溢(17) 价(18) +(19) 1(20) .(21) 3(22) 9(23) %(24) 、(25) Δ(26) +(27) 5(28) .(29) 4(30) %(31) ，(32) 更(33) 极(34) 端(35) 。(36) Still 36. Need maybe "最相似3笔溢价为负、Δ约2%；现溢价+1.39%、Δ+5.4%，形态更极端" no. Hmm.
+
+Maybe "不超过40字" doesn't include label? If not, line 2 content 37 okay. But if they mean per line including label, need shorten further. We can phrase "历史相似日溢价为负且Δ≈2%；现溢价+1.39%、Δ+5.4%，更极端。" Count: 历1史2相3似4日5溢6价7为8负9且10Δ11≈12 2%? Let's count: 历(1) 史(2) 相(3) 似(4) 日(5) 溢(6) 价(7) 为(8) 负(9) 且(10) Δ(11) ≈(12) 2(13) %(14) ；(15) 现(16) 溢(17) 价(18) +(19) 1(20) .(21) 3(22) 9(23) %(24) 、(25) Δ(26) +(27) 5(28) .(29) 4(30) %(31) ，(32) 更(33) 极(34) 端(35) 。(36) Content 36. Label 6 total 42. Need content 34. Maybe "历史相似日溢价为负、Δ≈2%；现溢价+1.39%、Δ+5.4%，更极端。" Count: 历1史2相3似4日5溢6价7为8负9、10Δ11≈12 2%13? Let's full: 历(1) 史(2) 相(3) 似(4) 日(5) 溢(6) 价(7) 为(8) 负(9) 、(10) Δ(11) ≈(12) 2(13) %(14) ；(15) 现(16) 溢(17) 价(18) +(19) 1(20) .(21) 3(22) 9(23) %(24) 、(25) Δ(26) +(27) 5(28) .(29) 4(30) %(31) ，(32) 更(33) 极(34) 端(35) 。(36). Still 36. Remove "更极端"? "历史相似日溢价为负、Δ≈2%；现溢价+1.39%、Δ+5.4%。" Count: 历1史2相3似4日5溢6价7为8负9、10Δ11≈12 2%? Let's count: 历1 史2 相3 似4 日5 溢6 价7 为8 负9 、10 Δ11 ≈12 2?13 %14 ；15 现16 溢17 价18 +19 1?20 .21 3?22 9?23 %24 、25 Δ26 +27 5?28 .29 4?30 %31 。32. Content 32. Perfect. Line including label 38 maybe. This conveys similarity/difference enough: historical similar days premium negative, delta approx 2%; current premium +1.39%, delta +5.4%. It doesn't explicitly say "相似度" but okay. Need maybe "更极端" omitted due length. But "差异" is clear. Could add "更极端" if no need count. But final line length? Let's include "更极端" maybe 35 content, total 41. "不超过40字" maybe total? Need not? To be safe use "历史相似日溢价为负、Δ≈2%；现溢价+1.39%、Δ+5.4%。" That's 32 content. Good.
+
+But "与历史交易的相似度和差异" maybe "历史相似日溢价为负、Δ≈2%" says similar? Actually "历史相似日" equals? It says historical similar days have premium negative and delta approx 2, while current has premium positive and delta 5.4; this highlights difference. Need mention "相似度有限" maybe "历史相似日溢价为负、Δ≈2%；现溢价+1.39%、Δ+5.4%，相似度有限。" Count: 历1史2相3似4日5溢6价7为8负9、10Δ11≈12 2%? Let's full: 历1 史2 相3 似4 日5 溢6 价7 为8 负9 、10 Δ11 ≈12 2?13 %14 ；15 现16 溢17 价18 +19 1?20 .21 3?22 9?23 %24 、25 Δ26 +27 5?28 .29 4?30 %31 ，32 相33 似34 度35 有36 限37 。38 Content 38. Plus label 6 =44. If "不超过40字" including label, no. But maybe content only? 38 ok. If strict, need shorter: "历史相似日溢价为负、Δ≈2%；现溢价+1.39%、Δ+5.4%，相似有限。" Count: 历1史2相3似4日5溢6价7为8负9、10Δ11≈12 2%? Let's count full: 历(1) 史(2) 相(3) 似(4) 日(5) 溢(6) 价(7) 为(8) 负(9) 、(10) Δ(11) ≈(12) 2(13) %(14) ；(15) 现(16) 溢(17) 价(18) +(19) 1(20) .(21) 3(22) 9(23) %(24) 、(25) Δ(26) +(27) 5(28) .(29) 4(30) %(31) ，(32) 相(33) 似(34) 有(35) 限(36) 。(37) Content 37. Good. Plus label 6=43. If line limit including label, still. But likely "不超过40字" per line content? Hmm.
+
+Need maybe not overfocus. But final should be concise. I can output with labels and content, maybe label+content within 40? Let's see:
+"[相似度] 历史相似日溢价为负、Δ≈2%；现溢价+1.39%、Δ+5.4%，相似有限。" Count label 5 + space 1 + content 37 =43. Slightly over. To make total <=40, reduce content by 3: "历史相似日溢价为负、Δ≈2%；现溢价+1.39%、Δ+5.4%，相似度低？" no. "历史相似日溢价为负、Δ≈2%；现溢价+1.39%、Δ+5.4%" content 31. Total 37. Good. But missing "相似度有限" but difference obvious. We can say "差异在溢价" maybe.
+
+Try content: "历史相似日溢价为负、Δ≈2%；现溢价+1.39%、Δ+5.4%，差异大。" Count: 历1史2相3似4日5溢6价7为8负9、10Δ11≈12 2%? Let's count: 历(1) 史(2) 相(3) 似(4) 日(5) 溢(6) 价(7) 为(8) 负(9) 、(10) Δ(11) ≈(12) 2(13) %(14) ；(15) 现(16) 溢(17) 价(18) +(19) 1(20) .(21) 3(22) 9(23) %(24) 、(25) Δ(26) +(27) 5(28) .(29) 4(30) %(31) ，(32) 差(33) 异(34) 大(35) 。(36) Content 36. Total 42. Need reduce one: no period "差异大" content 35? Actually with period 36, without 35, total 41. Need reduce 2: "历史相似日溢价为负、Δ≈2%；现溢价+1.39%、Δ+5.4%，差异大" no period -> 35, plus label 6=41. Still 1 over. Could use "历史相似日溢价为负、Δ≈2%；现溢价+1.39%、Δ+5.4%" no "差异大" total 37. But then line is not a full sentence? It's okay.
+
+Maybe use "历史相似日溢价为负、Δ约2%，现溢价+1.39%、Δ+5.4%，差异大。" Count "约" instead of "≈" same. Need total? Let's calculate with label: "[相似度] " 6. Content "历史相似日溢价为负、Δ约2%，现溢价+1.39%、Δ+5.4%，差异大。" Count: 历1史2相3似4日5溢6价7为8负9、10Δ11约12 2?13 %14，15现16溢17价18+19 1?20 .21 3?22 9?23 %24、25Δ26+27 5?28 .29 4?30 %31，32差33异34大35。36. Total 42. Hmm. Because label 5+space=6. Need content <=34. "历史相似日溢价为负、Δ约2%；现溢价+1.39%、Δ+5.4%，差异大。" Count maybe 35? Let's count with semicolon? 历1史2相3似4日5溢6价7为8负9、10Δ11约12 2?13 %14；15现16溢17价18+19 1?20 .21 3?22 9?23 %24、25Δ26+27 5?28 .29 4?30 %31，32差33异34大35。36. Still 35? Wait remove "大" maybe no. Need not.
+
+Maybe use shorter label? The label fixed. Need not enforce total 40. The instruction "每行一个标签，不超过40字" maybe each line's content after label? Hmm.
+
+Let's not over-optimize. The final answer should be acceptable if content concise.
+
+Need perhaps maybe "置信度" line "中" maybe one word. Good.
+
+Let's think if "置信度" should be "高" due to overseas+weights+similar profits. Let's evaluate criteria from user:
+- 高: 海外普涨+权重股多数涨+历史相似日多数盈利+溢价非极端
+Current: overseas broad up yes; weights majority up yes; historical similar days "🟢赚0.00/0.10/0.43" all green, majority盈利 yes; premium non-extreme? Current premium +1.39, Δpremium +5.4. Is this "溢价非极端"? IOPV premium 1.39% not extreme maybe but Δpremium +5.4 is huge. However criteria says "溢价非极端" not "Δ溢价". If judged by IOPV 1.39 (not extreme) then all four conditions satisfied -> "高". But if "Δpremium" is extreme -> not. Need infer from data: They provide "历史胜率: Δ溢价超2%，历史36笔（赢19输17）胜率53%" This suggests Δpremium >2% is a signal but win rate only 53%, not compelling. Similar historical trades all profit but tiny. The current signal "strong_buy" plus overseas strong. The prompt asks "基于以下数据对...买入信号做简短分析" and "置信度判定标准" with "溢价非极端" under high. Current "IOPV溢价: 1.39%" is not extreme? In QDII ETF, 1.39% premium moderate; many have >5% extreme. But "Δ溢价: +5.40%" is extreme movement. The standard "溢价极端" likely refers to IOPV premium, not Δ. "Δ溢价" is not "溢价" but "premium change"; in history they define "Δ溢价超2%" as signal. Current Δ+5.4 could be "extreme" under "Δ溢价"? Hmm.
+
+Let's parse Chinese:
+📊 当前信号:
+- 现价: 1.8300，涨跌幅: +1.55%
+- IOPV溢价: 1.39%
+- Δ溢价: +5.40%
+- 信号强度: strong_buy，振幅: 0.7%
+- 历史胜率: Δ溢价超2%，历史36笔（赢19输17）胜率53%（均收益+0.48%）
+
+"Δ溢价" maybe "premium change" not "premium". They ask "置信度判定标准: 高: ... 溢价非极端" Could include both "IOPV溢价" and "Δ溢价" but says "溢价非极端" generic. Current IOPV 1.39 is moderate; Δ+5.4 is large. Maybe "溢价" in standard means "IOPV溢价", not Δ. But "Δ溢价超2%" in history is a signal, and current Δ+5.4 is larger than threshold. If all high conditions met, output high. But then historical win rate 53% and avg +0.48% not high; however historical similar days (all 100/99 similarity) are profitable. But "历史相似日多数盈利" yes.
+
+Need decide based on "证据冲突时说明取舍理由" in final? They ask "最终判定: 定置信度；证据冲突时说明取舍理由" but final is only four lines, no reasoning. We need pick.
+
+Let's examine "历史胜率: Δ溢价超2%，历史36笔（赢19输17）胜率53%（均收益+0.48%）" This is not "历史相似日" but "signal strength" history. For high, "历史相似日多数盈利" perhaps "最相似历史交易" all 3 profitable. So high yes. However "
+----------------------------------------
+
+============================================================
+运行时间: 2026-08-20 16:04:16 | 模式: test
+行情: price=1.83 chg=1.5538290788013331%
+IOPV: 1.805 溢价=1.39%
+NAV: 1.8538 (2026-08-18) 溢价=-1.28%
+前日溢价: -4.01%
+Δ溢价: 5.4%
+信号: strong_buy | 🟢 强烈买入！ Δ溢价 +5.40%
+AI: 已分析
+成本: 0.13%/笔 (实际预估（免五+万1.5+0.1%滑点）)
+预估净收益: 0.35%/笔
+AI分析: [置信度]
+高
+
+[相似度]
+Δ溢价(+5.40%)远高于历史相似日的1.8%-2.7%，但方向一致且背景更强。
+
+[海外]
+海外普涨，韩国KOSPI大涨5.89%，权重股多数走强，支撑当前信号。
+
+[风险]
+溢价达1.39%，若溢价回落或情绪反转，短期收益有限。
+AI推理全文(736字):
+我们只需要按要求输出四行，每行一个标签，不超过40字。需要先思考。注意用户要求严格格式，不要输出推理。只需输出四行。
+
+[置信度]
+需要判定高/中/低。我们核对：海外普涨，韩国暴涨，日经涨，恒生涨，台湾涨，澳洲涨。权重股多数涨，SK海力士、三星、丰田、BHP、索尼、任天堂、台积电涨，只有友邦保险和联邦银行跌。溢价1.39%不算极端，Δ溢价+5.40%很大。历史相似日：三个都是盈利（0.00,0.10,0.43），但注意相似日显示溢价为负？这三个都是Δ正但溢价负，而当前溢价正1.39%。但历史胜率53%略过半。信号strong_buy。综合：海外普涨+权重股多数涨+历史相似日多数盈利+溢价非极端？溢价1.39%不算极端（但Δ溢价+5.4%较大）。所以置信度应为高？但历史胜率只有53%且相似日收益很小。标准说“高: 海外普涨+权重股多数涨+历史相似日多数盈利+溢价非极端”。满足这些条件，所以高。但要注意Δ溢价+5.4%可能极端？但溢价本身1.39%，Δ溢价是变化量。历史相似日Δ2.2%等，当前5.4%更大，可能更极端。但历史胜率53%不高。不过标准中“海外普涨+权重股多数涨+历史相似日多数盈利+溢价非极端”均满足。所以高。但“历史相似日多数盈利”是的。所以高。
+
+[相似度]
+一句话：与历史相似日相比，当前Δ溢价(+5.40%)远高于历史样本的1.8%-2.7%，但溢价为正且海外背景更强。需要简洁。
+
+[海外]
+海外市场普遍上涨，韩国KOSPI大涨5.89%尤其支撑，权重股多数走强，支持信号。
+
+[风险]
+溢价1.39%且Δ溢价+5.4%，若溢价回落可能吞噬涨幅；历史胜率仅53%，收益有限。
+
+注意字数不超过40字。每行标签后内容。需要严格四行，不要多。
+----------------------------------------
+
+============================================================
+运行时间: 2026-08-20 16:04:46 | 模式: test
+行情: price=2.792 chg=0.7215007215007222%
+IOPV: 2.2359 溢价=24.87%
+NAV: 2.2515 (2026-08-18) 溢价=24.01%
+前日溢价: 20.72%
+Δ溢价: 4.15%
+信号: danger | 🔴 溢价暴涨风险 Δ溢价 +4.15%
+AI: 已分析
+成本: 0.13%/笔 (实际预估（免五+万1.5+0.1%滑点）)
+预估净收益: -0.13%/笔
+AI分析: [概况]
+溢价24.87%极高，风险显著。
+
+[海外]
+海外指数平淡，半导体大跌，不支持高溢价。
+
+[关注]
+建议减仓避险，观察溢价回落至10%内。
+AI推理全文(327字):
+我们只需要回答三行，严格格式。注意每行不超过40字。内容要简洁。根据数据，溢价24.87%高位，虽然收缩但依然极高。海外市场涨跌不一，半导体大跌，纳指微涨，不支持如此高溢价。建议减仓或观望，关注溢价收缩和半导体情绪。需要严格每行标签。写中文。
+
+[概况]
+溢价24.87%极高，风险显著。
+
+[海外]
+海外指数平淡，半导体大跌，不支持高溢价。
+
+[关注]
+建议减仓避险，观察溢价回落至10%内。
+
+检查字数：第一行"溢价24.87%极高，风险显著。" 中文标点，字数约13？第二行"海外指数平淡，半导体大跌，不支持高溢价。" 约19。第三行"建议减仓避险，观察溢价回落至10%内。" 约18。符合。但需要严格按格式每行一个标签，且每行不超过40字。OK。
+----------------------------------------

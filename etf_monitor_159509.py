@@ -38,6 +38,7 @@ from datetime import datetime, timedelta, timezone
 
 # ====== 配置 ======
 ETF_CODE = "159509"
+MAX_EVIDENCE_CHARS = 4000  # 推导过程消息总字数上限（Seatalk 实测硬上限 4096 字符，留安全边距）
 TRADE_CAPITAL = float(os.environ.get("TRADE_CAPITAL", "20000"))
 COST_MODEL = os.environ.get("COST_MODEL", "realistic")
 SEATALK_APP_ID = os.environ.get("SEATALK_APP_ID", "")
@@ -624,30 +625,41 @@ def ai_analyze(analysis, mode="daily"):
 
 三行即可，每行不超过40字。"""
 
-    try:
-        resp = requests.post(DEEPSEEK_API, json={
-            "model": "deepseek-reasoner",  # 推理模式，深度思考
-            "messages": [{"role": "user", "content": prompt}],
-            "max_tokens": 8192,            # 充足预算（推理token+回复共用）
-            "temperature": 0.1,            # 最低温度，最专注
-        }, headers={
-            "Content-Type": "application/json",
-            "Authorization": f"Bearer {DEEPSEEK_API_KEY}",
-        }, timeout=60)  # 推理模式需要更长时间
+    for attempt in range(2):
+        try:
+            resp = requests.post(DEEPSEEK_API, json={
+                "model": "deepseek-reasoner",  # 推理模式，深度思考
+                "messages": [{"role": "user", "content": prompt}],
+                "max_tokens": 16384,           # 推理token+回复共用；推理常吃8k+预算，给回复留空间
+                "temperature": 0.1,            # 最低温度，最专注
+            }, headers={
+                "Content-Type": "application/json",
+                "Authorization": f"Bearer {DEEPSEEK_API_KEY}",
+            }, timeout=120)  # 结构化推理耗时变长，120s+重试一次
 
-        if resp.status_code == 200:
-            data = resp.json()
-            msg = data["choices"][0]["message"]
-            reasoning = msg.get("reasoning_content", "")  # 推理过程
-            content = msg.get("content", "").strip()      # 最终结论
-            if reasoning:
-                print(f"[AI] 推理过程 ({len(reasoning)}字): {reasoning[:200]}...")
-                analysis["ai_reasoning"] = reasoning  # 留存推理过程，用于推导佐证
-            return content or reasoning.strip()
-        else:
-            print(f"[AI] API 错误: {resp.status_code} {resp.text[:200]}")
-    except Exception as e:
-        print(f"[AI] 调用失败: {e}")
+            if resp.status_code == 200:
+                data = resp.json()
+                msg = data["choices"][0]["message"]
+                reasoning = msg.get("reasoning_content", "")  # 推理过程
+                content = msg.get("content", "").strip()      # 最终结论
+                if reasoning:
+                    print(f"[AI] 推理过程 ({len(reasoning)}字): {reasoning[:200]}...")
+                    analysis["ai_reasoning"] = reasoning  # 留存推理过程，用于推导佐证
+                if content:
+                    return content
+                # content 为空 = token 预算被推理吃光。绝不能把整段推理当 AI 分析返回：
+                # 推理可达 1~2 万字，塞进主消息必超 Seatalk 4096 字上限导致整条拒收。
+                # 推理全文已存 ai_reasoning，会经推导消息发送（带 4000 字截断）。
+                print("[AI] 回复 content 为空（预算被推理耗尽），主消息不附加 AI 分析段")
+                return None
+            else:
+                print(f"[AI] API 错误: {resp.status_code} {resp.text[:200]}")
+        except Exception as e:
+            if attempt == 0 and "timed out" in str(e).lower():
+                print("[AI] 超时，重试一次...")
+                continue
+            print(f"[AI] 调用失败: {e}")
+            break
 
     return None
 
@@ -676,6 +688,9 @@ def write_diag_log(analysis, mode, ai_result=None):
         lines.append(f"预估净收益: {analysis['est_net']}%/笔")
     if ai_result:
         lines.append(f"AI分析: {ai_result}")
+    if analysis.get("ai_reasoning"):
+        lines.append(f"AI推理全文({len(analysis['ai_reasoning'])}字):")
+        lines.append(analysis["ai_reasoning"])
 
     lines.append("-" * 40)
 
@@ -779,6 +794,9 @@ def format_message(a):
         ai = ai.replace("[风险]", "\n⚠️ **风险**")
         ai = ai.replace("[关注]", "\n👀 **关注**")
         ai = _re.sub(r'\n\s*\n', '\n', ai)  # 清理空行
+        # 长度保险：Seatalk 单条消息硬上限 4096 字符（实测），AI 段过长则截断
+        if len(ai) > 2500:
+            ai = ai[:2500] + "…（AI 分析过长已截断，完整内容见本地日志 run.log）"
         m += f"\n🤖 **AI 分析**{ai}\n"
     return m
 
@@ -845,11 +863,21 @@ def build_evidence(a):
         lines.append(f"⑥ 提示: 本档仅{band['n']}笔样本，统计意义有限，轻仓为宜")
     else:
         lines.append("⑥ 提示: 历史回测仅供参考，不构成投资建议")
-    # AI 推理过程（全文，整理为分段可读格式）
+    # AI 推理过程（全文，分段可读；总长控制在 MAX_EVIDENCE_CHARS 内，超长按句截断）
     reasoning = a.get("ai_reasoning", "")
     if reasoning:
         lines.append("⑦ AI推理过程(全文):")
-        lines.append(format_ai_reasoning(reasoning))
+        fmt = format_ai_reasoning(reasoning)
+        budget = MAX_EVIDENCE_CHARS - len("  \n".join(lines)) - 60
+        if budget > 200 and len(fmt) > budget:
+            cut = fmt[:budget]
+            idx = max(cut.rfind("。"), cut.rfind("！"), cut.rfind("？"), cut.rfind("\n"))
+            cut = cut[:idx + 1] if idx > 0 else cut
+            lines.append(cut + f"\n（推理原文共{len(reasoning)}字，超出部分已存本地日志 run.log）")
+        else:
+            lines.append(fmt)
+    else:
+        lines.append("⑦ AI推理: 本次AI调用超时或失败，无推理佐证（详见本地日志）")
     # markdown 需"两个空格+换行"才是真换行；群聊纯文本模式下无影响
     return "  \n".join(lines)
 
@@ -933,6 +961,10 @@ def send_group_evidence(first_resp, evidence, headers):
 def send_seatalk(message, mode="daily", evidence=None):
     """发送消息。test 模式仅通知主用户，其余通知全组。
     evidence: 抄底信号的推导过程文本，发送后作为线程回复附在信号消息下"""
+    # 长度保险：Seatalk 单条消息硬上限 4096 字符（实测：4093 过 / 4097 拒），
+    # 超长会被整条拒收，必须截断保底（推导消息由 build_evidence 单独控制上限）
+    if len(message) > 4000:
+        message = message[:4000] + "…（消息超长已截断，完整内容见本地日志 run.log）"
     if not SEATALK_APP_ID or not SEATALK_APP_SECRET:
         print("\n⚠️  未配置 SEATALK_APP_ID / SEATALK_APP_SECRET")
         print("=" * 50)
@@ -1024,17 +1056,22 @@ def send_seatalk(message, mode="daily", evidence=None):
         else:
             print(f"[Seatalk] ❌ 发送失败 {emp_code}: {data.get('message', '')}")
 
-    # 私聊模式下推导过程作为跟进消息发给每位收件人
+    # 私聊模式下推导过程作为跟进消息发给每位收件人（检查响应，失败要可见）
     if evidence and success_count > 0:
+        ev_ok = 0
         for emp_code in emp_codes:
             try:
                 body = {"employee_code": emp_code,
                         "message": {"tag": "markdown",
                                     "markdown": {"content": "↪️ 推导过程：\n\n" + evidence}}}
-                requests.post(SEATALK_SINGLE_API, json=body, headers=headers, timeout=15)
-            except:
-                pass
-        print(f"[Seatalk] ✅ 推导过程已发送到 {success_count} 位收件人")
+                r3 = requests.post(SEATALK_SINGLE_API, json=body, headers=headers, timeout=15)
+                if r3.status_code == 200 and r3.json().get("code") == 0:
+                    ev_ok += 1
+                else:
+                    print(f"[Seatalk] ❌ 推导过程发送失败 {emp_code}: {r3.text[:200]}")
+            except Exception as e:
+                print(f"[Seatalk] ❌ 推导过程发送异常 {emp_code}: {e}")
+        print(f"[Seatalk] 推导过程发送: {ev_ok}/{len(emp_codes)} 成功")
 
     if success_count > 0:
         print(f"[Seatalk] 发送完成: {success_count}/{len(emp_codes)} 成功")
