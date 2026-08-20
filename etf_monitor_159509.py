@@ -294,12 +294,30 @@ def analyze():
     all_rets = [t.get("ret", 0) for t in trades]
     dynamic_avg = sum(all_rets) / len(all_rets) if all_rets else 0
 
-    # 159509 反向策略：Δ↓（溢价暴跌）= 抄底信号
+    # 按 Δ 档位从历史数据库动态计算胜率/收益（不写死）
+    def band_stats(lo, hi):
+        """返回 (笔数, 胜率%, 平均收益%)；样本不足返回 None"""
+        sub = [t for t in trades if lo <= t.get("delta", 0) < hi]
+        if not sub:
+            return None
+        w = sum(1 for t in sub if t.get("result") == "win")
+        avg = sum(t.get("ret", 0) for t in sub) / len(sub)
+        return len(sub), w / len(sub) * 100, avg
+
+    def band_desc(name, lo, hi):
+        """生成信号描述：真实胜率 + 样本量；无数据如实标注"""
+        s = band_stats(lo, hi)
+        if s is None:
+            return f"{name}，该档位暂无历史样本"
+        n, wr, avg = s
+        return f"{name}，历史{n}笔胜率{wr:.0f}%（均收益{avg:+.2f}%）"
+
+    # 159509 反向策略：Δ↓（溢价暴跌）= 抄底信号（胜率动态计算）
     signal_map = [
-        (lambda d, p: d < -3.0, "strong_buy", "🟢 强烈抄底！", "溢价暴跌超3%，恐慌超卖反弹概率95%"),
-        (lambda d, p: d < -2.0, "buy", "🟢 抄底信号", "溢价大跌，反弹概率85%"),
-        (lambda d, p: d < -1.0, "weak_buy", "🟡 弱抄底信号", "溢价回落，反弹概率76%"),
-        (lambda d, p: d > 3.0, "danger", "🔴 溢价暴涨风险", "溢价急升，次日大概率回调"),
+        (lambda d, p: d < -3.0, "strong_buy", "🟢 强烈抄底！", band_desc("溢价暴跌超3%", -100, -3.0)),
+        (lambda d, p: d < -2.0, "buy", "🟢 抄底信号", band_desc("溢价大跌2%以上", -3.0, -2.0)),
+        (lambda d, p: d < -1.0, "weak_buy", "🟡 弱抄底信号", band_desc("溢价回落1%以上", -2.0, -1.0)),
+        (lambda d, p: d > 3.0, "danger", "🔴 溢价暴涨风险", band_desc("溢价急升超3%", 3.0, 100)),
     ]
     for cond, sig, text, desc in signal_map:
         if cond(delta, prem):
@@ -310,8 +328,13 @@ def analyze():
                 r["est_gross"] = 0
                 r["est_net"] = round(0 - cost["total_pct"], 2)
             else:
-                r["est_gross"] = round(dynamic_avg, 2)
-                r["est_net"] = round(dynamic_avg - cost["total_pct"], 2)
+                # 预估收益优先用本档位真实平均收益；样本不足时退回全库平均
+                bs = band_stats(*({
+                    "strong_buy": (-100, -3.0), "buy": (-3.0, -2.0), "weak_buy": (-2.0, -1.0),
+                }[sig]))
+                est = bs[2] if bs else dynamic_avg
+                r["est_gross"] = round(est, 2)
+                r["est_net"] = round(est - cost["total_pct"], 2)
             r["cost"] = cost
             return r
 
@@ -329,17 +352,21 @@ def fetch_market_context():
     ctx = {"indices": {}, "holdings": []}
     try:
         import yfinance as yf
-        # 大盘指数
+        # 大盘指数（重试3次，yfinance 偶尔限流）
         for name, symbol in OVERSEAS_INDICES.items():
-            try:
-                t = yf.Ticker(symbol)
-                h = t.history(period="2d")
-                if len(h) >= 2:
-                    latest = h['Close'].iloc[-1]
-                    prev = h['Close'].iloc[-2]
-                    ctx["indices"][name] = round((latest - prev) / prev * 100, 2)
-            except:
-                pass
+            for attempt in range(3):
+                try:
+                    t = yf.Ticker(symbol)
+                    h = t.history(period="2d")
+                    if len(h) >= 2:
+                        latest = h['Close'].iloc[-1]
+                        prev = h['Close'].iloc[-2]
+                        ctx["indices"][name] = round((latest - prev) / prev * 100, 2)
+                    break
+                except:
+                    if attempt < 2:
+                        time.sleep(1)
+                    continue
         # 权重股（带重试）
         for name, ticker, weight in INDEX_HOLDINGS:
             for attempt in range(2):
@@ -687,12 +714,16 @@ def format_message(a):
 """
 
     if a.get("signal") in ("strong_buy", "buy", "weak_buy"):
-        net_yuan = a['est_net'] * cost.get('capital', 20000) / 100
+        eg, en = a['est_gross'], a['est_net']
+        net_yuan = en * cost.get('capital', 20000) / 100
+        warn = ""
+        if en < 0:
+            warn = "\n> ⚠️ 该档位历史期望收益为负，不建议实盘操作\n"
         m += f"""
 📈 **预估收益**
-• 历史毛收益: +{a['est_gross']:.2f}%/笔
-• 扣除成本净收益: **+{a['est_net']:.2f}%/笔** ≈ **¥{net_yuan:.2f}**
-
+• 历史毛收益: {eg:+.2f}%/笔
+• 扣除成本净收益: **{en:+.2f}%/笔** ≈ **{net_yuan:+.2f} 元**
+{warn}
 > 🟢 14:55 尾盘买入 → 次日 9:25 开盘卖出
 """
 
@@ -1015,10 +1046,6 @@ def main():
     if settled:
         analysis["settled_trade"] = settled
 
-    # 写诊断日志
-    ai_result = analysis.get("ai_analysis")
-    write_diag_log(analysis, mode, ai_result)
-
     # 数据质量标签
     data_quality = []
     if not analysis.get("iopv"):
@@ -1045,6 +1072,9 @@ def main():
         if ai_result:
             analysis["ai_analysis"] = ai_result
             print(f"[AI] ✅ 分析完成")
+
+    # 写诊断日志（AI 之后，确保日志记录真实状态）
+    write_diag_log(analysis, mode, analysis.get("ai_analysis"))
 
     message = format_message(analysis)
 
@@ -1080,7 +1110,7 @@ def main():
             print(f"  ⏳ 待定交易: {p['date']} @ {p['entry_price']:.3f}")
         if analysis.get("est_net"):
             net_yuan = analysis['est_net'] * cost.get('capital', 20000) / 100
-            print(f"  预估净收益: +{analysis['est_net']:.2f}%/笔 ≈ ¥{net_yuan:.2f}")
+            print(f"  预估净收益: {analysis['est_net']:+.2f}%/笔 ≈ ¥{net_yuan:+.2f}")
         if analysis.get("ai_analysis"):
             print(f"  AI 分析结果: {analysis['ai_analysis'][:100]}...")
 
