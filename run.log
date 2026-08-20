@@ -1080,3 +1080,184 @@ AI分析: [置信度]
 [风险]
 溢价1.39%偏高，追高需防回落修正
 ----------------------------------------
+
+============================================================
+运行时间: 2026-08-20 15:01:19 | 模式: test
+行情: price=1.83 chg=1.5538290788013331%
+IOPV: 1.805 溢价=1.39%
+NAV: 1.8538 (2026-08-18) 溢价=-1.28%
+前日溢价: -4.01%
+Δ溢价: 5.4%
+信号: strong_buy | 🟢 强烈买入！ Δ溢价 +5.40%
+AI: 已分析
+成本: 0.13%/笔 (实际预估（免五+万1.5+0.1%滑点）)
+预估净收益: 0.35%/笔
+AI分析: 我们需要回答中文，严格四行格式。用户要求思考过程按步骤逐项核对，但最终输出必须按格式四行？ They say "请用中文回复，严格按格式输出四行（每行一个标签，不超过40字）" and also "推理要求：思考过程必须按以下步骤逐项核对..." We need maybe include reasoning? They want final likely only four lines? As assistant we should comply with format strictly. But also they asked thought process. We can include a concise reasoning? "严格按格式输出四行" likely only four lines. However "推理要求" says thinking过程必须... Maybe they expect analysis in response? conflict. We need decide. In similar tasks, they want final with four lines, but also "推理要求" may be internal? As assistant, cannot expose hidden CoT? We can provide brief reasoning? The instruction says "思考过程必须按以下步骤逐项核对" but also "严格按格式输出四行". We can satisfy by maybe outputting exactly four lines, with content substantiated. The "思考过程" is not visible but we can mention evidence in lines. Need not include step-by-step. We need produce four lines:
+
+[置信度]
+<高/中/低，一个词>
+
+[相似度]
+<1句话，与历史交易的相似度和差异>
+
+[海外]
+<1句话，海外市场是否支撑当前信号>
+
+[风险]
+<1句话，当前最大风险>
+
+Need include one word for confidence. Let's analyze data.
+
+Signal: price 1.83 +1.55%, IOPV premium 1.39%, Δpremium +5.40%, signal strong_buy, amplitude 0.7%, historical win rate for Δpremium >2%: 36 trades 19 wins 17 losses 53%, avg return +0.48%.
+
+Overseas indices: Nikkei +1.36, ASX +0.33, KOSPI +5.89, Hang Seng +1.33, Taiwan +0.48. All positive. Very strong.
+
+Weighted stocks: SK Hynix +12.73, Samsung +9.49, Toyota +4.25, BHP +3.20, Sony +2.39, Nintendo +2.38, Singtel +1.13, TSMC +1.06, AIA -0.07, CBA -2.66. 8 up, 2 down, big gains in semiconductors.
+
+Similar historical trades:
+- 2026-01-30: Δ2.2% premium -0.5% → 0.00% (similarity 100)
+- 2023-01-09: Δ2.7% premium -1.1% → +0.10% (99)
+- 2024-04-26: Δ1.8% premium -0.6% → +0.43% (99)
+
+All similar days had Δ around 1.8-2.7%, but premium negative (-0.5 to -1.1). Current Δpremium +5.40% and current premium +1.39% positive. So difference: current Δpremium much larger (+5.4 vs <=2.7) and positive IOPV premium vs negative historical premiums. Historical similar days all had negative premium, suggesting buying at discount; now buying at premium. Also win rate 53% only slightly above coin flip; avg return small. However overseas and weights strong. Need risk: IOPV溢价1.39% and Δ溢价+5.40% means price is running ahead of NAV; reversions could cause loss even if overseas positive. Also maybe "IOPV溢价" positive +1.39%, Δpremium +5.40%? Need interpret: Δpremium is change in premium? If +5.40%, signal strong_buy? It might be "溢价差" as arbitrage signal. Current IOPV premium 1.39%, maybe moderate not extreme? Historical similar days premium negative. That's a divergence. The confidence: high? Let's map criteria:
+
+高: 海外普涨+权重股多数涨+历史相似日多数盈利+溢价非极端
+- Overseas all up: yes.
+- Most weights up: yes (8/10).
+- Historical similar days majority profitable: 2/3 profitable? Three similar days: +0.00 (break-even, not loss), +0.10, +0.43. If win? "盈利" yes? Day 1 0.00 not "赚0.00%" maybe not profit? But not loss. Majority of three? 2 profit + 1 zero. Win rate in Δ>2% historical is 53%, not high. But condition 相似日多数盈利? "most similar historical days" with 3 similar: one 0.00, two positive. Could count as positive or neutral. "溢价非极端": current IOPV premium 1.39% and Δpremium +5.40%? Is +5.40 extreme? The historical win rate for Δ>2% only 53% suggests signal not reliable. "溢价极端" maybe 1.39% premium not extreme but positive. However Δpremium +5.40 is high vs historical similar days Δ<=2.7. Need decide confidence. The criteria says high requires all conditions. Does "溢价非极端" satisfied? Positive premium 1.39% is not extreme? For QDII ETF, 1.39% premium is moderate. Δpremium +5.40% could be large. "signal strength strong_buy" maybe high. But historical win rate 53% weak. Thus maybe "中" because contradiction: strong overseas/weights vs high premium/large Δpremium and mediocre historical win rate. The user's confidence standard: high if "溢价非极端"; middle if "部分条件满足，有正面也有负面信号"; low if "海外偏弱+权重股多数跌+历史相似日亏损+溢价极端". Here not low. There is positive and negative: negative is high Δpremium and positive premium, historical win rate only 53. So "中" maybe appropriate. Need output [置信度] 中. But let's be careful: They might expect "高" because all data positive and signal strong_buy, historical similar all profitable. However historical win rate 53% not "多数盈利"? 53% is marginal. The "most similar historical transactions" are all positive/zero. The IOPV premium 1.39% maybe not "extreme" (many QDII premiums >5%). Δpremium +5.40% is extreme? Need define "溢价极端" in context: "Δ溢价超2%" historical 36 trades; current Δ +5.40, much higher than threshold. That could be extreme. But "溢价" itself 1.39% not extreme. The condition "溢价非极端" maybe means IOPV premium not extreme, not Δ. Need read: "高: 海外普涨+权重股多数涨+历史相似日多数盈利+溢价非极端". So if current premium 1.39%, not extreme. It is positive but moderate. Then high? But "历史相似日多数盈利" yes (2 profit + 1 zero). "权重股多数涨" yes (8/10). "海外普涨" yes. Thus high according to standard. But "历史胜率" 53% not "多数盈利" in overall sample; however "最相似历史交易" all profitable/breakeven. Need maybe high? Let's examine "Δ溢价: +5.40%" could be a strong buy signal. In their framework, Δpremium >2% with historical win rate 53%, average +0.48. That is not high but okay. Current signal strong_buy. The risk line could mention premium 1.39 and Δpremium +5.4 "可能透支" — that's a negative. But confidence can be high despite risk? The confidence standard high says "溢价非极端"; current premium 1.39 non-extreme, but Δpremium +5.4 maybe not "溢价" exactly. Need perhaps "中" because "历史胜率仅53%，且现溢价为正而相似日溢价为负" is a negative. Let's reason in final maybe [置信度] 中. But if final one word only? They want [置信度] <高/中/低> one word. Could just "中". Then other lines.
+
+Need ensure each line <=40 Chinese characters. Four lines with labels? "严格按格式输出四行（每行一个标签，不超过40字）" Means each line includes label and content? likely yes. Let's craft:
+
+[置信度]
+中
+
+[相似度]
+最相似三日Δ溢价1.8%-2.7%且溢价为负，今日+5.4%且溢价+1.39%，幅度更大
+
+Need count? 40 Chinese chars. "最相似三日Δ溢价1.8%-2.7%且溢价为负，今日+5.4%且溢价+1.39%，幅度更大" length ~36? Let's count: 最1 相2 似3 三4 日5 Δ6 溢7 价8 1.8%-2.7% (numbers not Chinese) 且10 溢11 价12 为13 负14 今15 日16 +5.4% etc. Fine.
+
+[海外]
+海外指数普涨，韩股+5.89%领涨，权重半导体股大涨，支撑强
+
+Actually "韩国KOSPI +5.89" and SK Hynix +12.73, Samsung +9.49. Need one sentence. Maybe "海外普涨且韩股/半导体权重领涨，信号获外围支撑" <=40.
+
+[风险]
+IOPV溢价1.39%、Δ溢价+5.4%，追高可能面临溢价回落风险
+
+Need mention "历史胜率仅53%" maybe? The risk can be "溢价偏高+历史胜率仅53%" etc. Need one sentence.
+
+Let's think if confidence should be "高" or "中". Need decide robustly. Let's apply criteria in detail.
+
+① Data:
+Overseas indices: all positive:
+- Nikkei +1.36
+- ASX +0.33
+- KOSPI +5.89
+- HSI +1.33
+- Taiwan +0.48
+Weighted stocks:
+- SK Hynix +12.73 (positive, huge)
+- Samsung +9.49 (positive)
+- Toyota +4.25
+- BHP +3.20
+- Sony +2.39
+- Nintendo +2.38
+- Singtel +1.13
+- TSMC +1.06
+- AIA -0.07 (slightly negative)
+- CBA -2.66 (negative)
+Thus 8/10 positive, many strong. Good.
+
+② Condition:
+Overseas broad up: satisfied.
+Weights majority up: satisfied.
+Historical similar days majority profitable: The three most similar days: 0.00, +0.10, +0.43. "盈利" 2/3; one break-even. Overall Δ>2% historical 19/36 = 52.8% positive, average +0.48%. If "majority" in similar day sample? yes, but barely. Historical win rate not strong. So partial satisfied.
+Premium non-extreme: current IOPV premium 1.39% (positive but not extreme). Δpremium is +5.4% which is high relative to similar days. Is "premium extreme" maybe "IOPV溢价" 1.39% non-extreme. So satisfied. But "Δ溢价" not "premium" maybe an additional risk. Thus all conditions for high are technically satisfied? Need consider "历史相似日多数盈利" — three similar days all have negative premium, current positive premium, so "差异" not necessarily failure. If "历史相似日多数盈利" yes. But "historical win rate 53%" = not high. The "置信度判定标准" includes "历史相似日多数盈利"; not "historical win rate". So high? But "中" if "部分条件满足，有正面也有负面信号". There is a negative: "Δ溢价+5.40%" is extreme? It literally says "Δ溢价超2%" historical win rate 53%, so current Δ is more than double threshold. Does that count as "溢价极端"? They didn't specify threshold for "premium extreme", but "Δ溢价超2%" with 53% win rate is not robust. The "most similar historical transactions" all had Δ 1.8-2.7 and premium negative, so "current Δ+5.4 positive premium" is a significant difference. I'd lean "中" because the signal is strong but one key risk (premium) creates uncertainty. However the user asks "基于以下数据对买入信号做简短分析"; if we output "中" and risk, it's prudent. Need perhaps not be overly aggressive.
+
+Let's parse "IOPV溢价: 1.39%" vs "Δ溢价: +5.40%". In ETF arbitrage, "IOPV溢价" is the difference between market price and IOPV. "Δ溢价" maybe the change in premium? Or "溢价率变化" from previous close? If Δpremium +5.4%, current premium +1.39% would imply previous premium -4.01%? Wait if price changed +1.55%, NAV maybe fell? Actually Δpremium +5.40% could be "premium change" in percentage points? If current IOPV premium is 1.39%, and Δpremium +5.40% perhaps means "premium rate changed by +5.40 percentage points" relative to yesterday? That would be huge but could happen if ETF was at -4.01% premium yesterday and now +1.39%. Is that plausible? Maybe yes due to strong overseas overnight? But current price +1.55%, NAV maybe down? Let's compute: Δpremium +5.40% doesn't necessarily mean current premium high; it's change. The "IOPV溢价" 1.39% is actual premium, not extreme. The model likely uses Δpremium to generate signals; positive Δpremium >2% indicates price moving above IOPV, causing strong_buy? Actually if premium increased, that means ETF price rising faster than NAV; signal may be momentum. Historical win rate 53%, average +0.48. The best signals maybe when Δ premium >2 and current premium negative? Let's look at similar days:
+- 2026-01-30: Δ2.2% 溢价-0.5% → 0.00
+- 2023-01-09: Δ2.7% 溢价-1.1% → +0.10
+- 2024-04-26: Δ1.8% 溢价-0.6% → +0.43
+They all had Δ positive but current premium negative. This suggests when premium is negative but increasing, buying at discount gives positive returns. Current premium +1.39%, not negative. That is a negative divergence: you're buying at a premium, less margin. So "high" maybe unjustified. The confidence standard "溢价非极端" only says not extreme; positive premium 1.39% is not extreme but still not as favorable. In "similarity" line, mention difference. In "risk", premium reversion.
+
+Need perhaps mention "历史相似日多数盈利" in confidence? If confidence "中", we need explain "证据冲突" maybe not enough space. The four-line format doesn't allow long reasoning. But the user asked "推理要求" and "最终判定: 若证据互相冲突，说明取舍理由". In output, we can include "中" only, no explanation. But maybe they expect a reasoning section before the four lines? Let's re-read: "请用中文回复，严格按格式输出四行（每行一个标签，不超过40字）" This is explicit: final should be exactly four lines. The "推理要求" is likely instruction for the model to reason internally, not output. We should not include extra reasoning. But maybe "思考过程必须按以下步骤逐项核对" means they want the assistant to "think" but not necessarily reveal. We can't show hidden chain-of-thought. We can provide concise rationale within the four lines: [相似度], [海外], [风险] are reasoning snippets. That should suffice.
+
+Need ensure no extra text. Four lines:
+[置信度]
+中
+[相似度]
+最相似三日Δ溢价1.8%-2.7%且溢价为负；今日Δ+5.4%、溢价+1.39%，幅度/状态不同
+[海外]
+韩国、日股等海外普涨，半导体权重股大涨，外围支撑较强
+[风险]
+IOPV溢价1.39%且Δ溢价+5.4%，历史胜率仅53%，存在溢价回落/回撤风险
+
+Need check length. Each line maybe under 40 characters? Label not counted? The content:
+"最相似三日Δ溢价1.8%-2.7%且溢价为负；今日Δ+5.4%、溢价+1.39%，幅度/状态不同" Let's count Chinese + alphanumeric. It might be >40? Let's count roughly:
+最相似三日Δ溢价1.8%-2.7%且溢价为负；今日Δ+5.4%、溢价+1.39%，幅度/状态不同
+Chinese chars: 最相似三日(5) 溢价(2) 且(1) 溢价为负(4) 今日(2) 溢价(2) 幅度状态不同(6) = 22? Plus punctuation ~7, numbers/letters ~? Δ, 1.8%-2.7%, +5.4%, +1.39% ~? Total maybe 45. Need keep <=40. We can shorten.
+
+Line [相似度] "最相似三日溢价均为负；今日溢价+1.39%且Δ+5.4%，差异在由折价转溢价" Count maybe okay. But "Δ+5.4" less. Let's craft concise.
+
+Need maybe include "历史相似日多数盈利" in [相似度]? The requirement says "与历史交易的相似度和差异" one sentence. We can say "相似：历史三日Δ约1.8%-2.7%且全部盈利/持平；差异：今日Δ+5.4%且溢价+1.39%" This is 1 sentence with semicolon. Count maybe 40? Let's count:
+相似：历史三日Δ约1.8%-2.7%且全部盈利/持平；差异：今日Δ+5.4%且溢价+1.39%
+Chinese: 相似历史三日约且全部盈利持平差异今日且溢价 =? Let's approximate 30 + numbers. Fine.
+
+[海外] "海外指数普涨，KOSPI+5.89%领涨，SK海力士/三星等半导体权重股大涨，支撑强" Count maybe 35? We can keep.
+
+[风险] "IOPV溢价1
+----------------------------------------
+
+============================================================
+运行时间: 2026-08-20 15:03:36 | 模式: test
+行情: price=1.83 chg=1.5538290788013331%
+IOPV: 1.805 溢价=1.39%
+NAV: 1.8538 (2026-08-18) 溢价=-1.28%
+前日溢价: -4.01%
+Δ溢价: 5.4%
+信号: strong_buy | 🟢 强烈买入！ Δ溢价 +5.40%
+AI: 已分析
+成本: 0.13%/笔 (实际预估（免五+万1.5+0.1%滑点）)
+预估净收益: 0.35%/笔
+AI分析: [置信度] 中
+[相似度] 最相似三日均未亏（收益近零）；但本次Δ溢价5.4%且溢价1.39%，明显更热。
+[海外] 海外普涨且权重股多数上涨，KOSPI与半导体领涨，支撑信号。
+[风险] 正溢价1.39%且Δ溢价5.4%偏极端，若溢价收敛易高开低走。
+----------------------------------------
+
+============================================================
+运行时间: 2026-08-20 15:05:46 | 模式: test
+行情: price=1.83 chg=1.5538290788013331%
+IOPV: 1.805 溢价=1.39%
+NAV: 1.8538 (2026-08-18) 溢价=-1.28%
+前日溢价: -4.01%
+Δ溢价: 5.4%
+信号: strong_buy | 🟢 强烈买入！ Δ溢价 +5.40%
+AI: 未触发/未启用
+成本: 0.13%/笔 (实际预估（免五+万1.5+0.1%滑点）)
+预估净收益: 0.35%/笔
+----------------------------------------
+
+============================================================
+运行时间: 2026-08-20 15:09:02 | 模式: test
+行情: price=1.83 chg=1.5538290788013331%
+IOPV: 1.805 溢价=1.39%
+NAV: 1.8538 (2026-08-18) 溢价=-1.28%
+前日溢价: -4.01%
+Δ溢价: 5.4%
+信号: strong_buy | 🟢 强烈买入！ Δ溢价 +5.40%
+AI: 已分析
+成本: 0.13%/笔 (实际预估（免五+万1.5+0.1%滑点）)
+预估净收益: 0.35%/笔
+AI分析: [置信度]
+中
+
+[相似度]
+历史上Δ溢价约2%且溢价为负，本次Δ5.4%且溢价+1.39%，结构差异较大。
+
+[海外]
+海外指数普涨，韩股及半导体权重股大涨，对当前信号形成支撑。
+
+[风险]
+IOPV溢价1.39%且Δ溢价5.4%偏高，溢价若快速回落易引发高开低走。
+----------------------------------------

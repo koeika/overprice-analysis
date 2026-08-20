@@ -591,7 +591,14 @@ def ai_analyze(analysis, mode="daily"):
 置信度判定标准：
 - 高: 海外普涨+权重股多数涨+历史相似日多数盈利+溢价非极端
 - 中: 部分条件满足，有正面也有负面信号
-- 低: 海外偏弱+权重股多数跌+历史相似日亏损+溢价极端"""
+- 低: 海外偏弱+权重股多数跌+历史相似日亏损+溢价极端
+
+推理要求（仅用于思考过程，最终回复仍是上面四行，不要在回复里输出推理步骤）：
+思考中按以下步骤逐项核对，每步一两句话即可，整个思考过程控制在600字以内：
+① 数据核对: 列出海外指数与权重股涨跌的关键数据
+② 条件比对: 逐条比对判定标准，写出满足/不满足
+③ 相似日证据: 引用最相似历史日的Δ溢价/溢价/收益
+④ 最终判定: 定置信度；证据冲突时说明取舍理由"""
     else:
         prompt = f"""你是量化交易分析师。请对亚太精选ETF(159687)做简短的**日常市场扫描**（今日无买入信号）。
 
@@ -624,7 +631,7 @@ def ai_analyze(analysis, mode="daily"):
         resp = requests.post(DEEPSEEK_API, json={
             "model": "deepseek-reasoner",  # 推理模式，深度思考
             "messages": [{"role": "user", "content": prompt}],
-            "max_tokens": 4096,            # 充分输出
+            "max_tokens": 8192,            # 充足预算（推理token+回复共用）
             "temperature": 0.1,            # 最低温度，最专注
         }, headers={
             "Content-Type": "application/json",
