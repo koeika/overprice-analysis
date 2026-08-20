@@ -819,12 +819,11 @@ def build_evidence(a):
         lines.append(f"⑥ 提示: 本档仅{band['n']}笔样本，统计意义有限，轻仓为宜")
     else:
         lines.append("⑥ 提示: 历史回测仅供参考，不构成投资建议")
-    # AI 推理过程节选（内部换行替换为空格，避免 markdown 折叠成一片）
+    # AI 推理过程（全文，内部换行转为 markdown 硬换行，群聊纯文本模式下无影响）
     reasoning = a.get("ai_reasoning", "")
     if reasoning:
-        brief = reasoning[:400].replace("\n", " ") + ("…" if len(reasoning) > 400 else "")
-        lines.append("⑦ AI推理过程(节选):")
-        lines.append(f"  {brief}")
+        lines.append("⑦ AI推理过程(全文):")
+        lines.append(reasoning.replace("\n", "  \n"))
     # markdown 需"两个空格+换行"才是真换行；群聊纯文本模式下无影响
     return "  \n".join(lines)
 
