@@ -2182,3 +2182,182 @@ Need maybe "四行" exactly. Use newline between lines. final.
 
 Let's produce final.
 ----------------------------------------
+
+============================================================
+运行时间: 2026-08-21 19:01:23 | 模式: daily
+行情: price=1.834 chg=0.21857923497267778%
+IOPV: 1.8184 溢价=0.86%
+NAV: 1.8114 (2026-08-19) 溢价=1.25%
+前日溢价: -1.28%
+Δ溢价: 2.14%
+信号: strong_buy | 🟢 强烈买入！ Δ溢价 +2.14%
+AI: 已分析
+成本: 0.13%/笔 (实际预估（免五+万1.5+0.1%滑点）)
+预估净收益: 0.32%/笔
+AI分析: [置信度] 中
+[相似度] 与三笔历史相似日100%相似且均盈利，但37笔历史胜率仅51%。
+[海外] 恒指、韩股、台股上涨，日经、澳指小跌，权重股多数涨，中性偏多。
+[风险] 溢价0.86%且Δ溢价+2.14%，情绪偏高，溢价回落是最大风险。
+AI推理全文(16070字):
+We need answer in Chinese, four lines labels. Need comply. Need analyze. Need produce four lines. Need think carefully.
+
+ Need final only? User asks strict format four lines. We can output exactly four lines. Need ensure no extra. Need decide confidence.
+
+Let's parse data.
+
+Current: price 1.8340 +0.22%, IOPV premium 0.86%, Δpremium +2.14%, signal strong_buy, amplitude 0.9%. Historical win rate: Δpremium over 2%, 37 trades (win19 loss18) win rate51%, avg return +0.45%. Overseas: Nikkei -0.30, ASX -0.27, KOSPI +0.88, HSI +1.21, Taiwan +0.65. Weights: Samsung +3.87, AIA +3.30, SK Hynix +2.31, Toyota +2.15, TSMC +1.47, CBA +0.99, Sony +0.21, BHP -0.90, Singtel -1.12, Nintendo -2.07. So overseas mostly positive except Japan/Australia; weights majority positive (8/10 up, 2 down). Premium 0.86 not extreme? Δpremium +2.14. Similar historical: 3 trades, all 100% similarity? Need note differences: 2023-01-09 Δ2.7 premium -1.1 profit +0.10; 2024-04-26 Δ1.8 premium -0.6 profit +0.43; 2026-07-14 Δ2.8 premium 0.9 profit +2.46. Wait current Δpremium +2.14 and IOPV premium +0.86. Similarity: all high? We need "相似度" line: "与历史相似交易的相似度和差异" maybe "相似度极高，均为高Δ溢价且多数盈利；差异是当前溢价转正至0.86%" or something. Need mention similar history 3/3 profit. However there is history win rate 51% over 37, similar 100%? Let's think.
+
+Need decide confidence. Standard:
+- High: 海外普涨+权重股多数涨+历史相似日多数盈利+溢价非极端
+- Medium: some conditions met, positive and negative
+- Low: overseas weak + weights mostly down + similar losses + premium extreme.
+
+Check:
+海外普涨? Overseas: Nikkei -0.30, ASX -0.27, KOSPI +0.88, HSI +1.21, Taiwan +0.65. "普涨" not exactly due two negative. But majority up (3/5). More importantly Asia ex Japan? Nikkei and ASX slight negative. We can say "海外涨多跌少，但日经/澳洲小幅走弱". Condition partial.
+权重股多数涨: 8/10 up including heavy TSMC, Samsung, Toyota. Yes.
+历史相似日多数盈利: 3 similar all profit. Also 37-trade win rate 51% barely above coin flip, avg +0.45. Similar evidence positive.
+溢价非极端: IOPV premium 0.86%, Δpremium +2.14. Is premium extreme? 0.86% not extreme; Δpremium high. Need perhaps "溢价0.86%尚可" but "Δ溢价超2%历史胜率51%" moderate. Could be medium? Need choose. The standard "高" requires "海外普涨" but we don't have full 普涨 due two negative. However "海外指数" region includes Japan/Australia negative, but many Asian markets positive. "权重股多数涨" yes. "历史相似日多数盈利" yes. "溢价非极端" yes. If all except overseas? Could still be "高" if overseas is "涨多跌少" not "普涨". But "普涨" is strict? Need not overthink. Need infer desired signal strong_buy. The data likely designed to produce "高" or "中"? Let's evaluate.
+
+Signal strong_buy, IOPV premium +0.86, Δpremium +2.14. Historical similar trades all profit. Weight stocks majority strong. Overseas mixed but positive (HSI/KOSPI/TW). Could be high? But "海外普涨" condition includes no? It says 高: 海外普涨+权重股多数涨+历史相似日多数盈利+溢价非极端. "普涨" perhaps all overseas indexes up. Here Japan and Australia down. So not all. But "海外" index list has 3 up 2 down, with China/HK/Korea/Taiwan up. Also Australia maybe not Asia-Pacific? Actually ASX is APAC. Nikkei and ASX are negative. Is that "海外偏弱"? no, mixed. Weighted by relevance? HSI +1.21 and KOSPI +0.88, Taiwan +0.65, Japan -0.30, Australia -0.27. Net positive. Could count as "海外涨多跌少". If high requires all, not met. Medium if partial. But maybe "高" condition includes "海外普涨" with "多数上涨" interpretation. Need decide between high and medium.
+
+Need also consider premium 0.86 maybe "溢价非极端" but "Δ溢价 +2.14%" positive means demand increasing. Historical win rate 51% only slightly above random; however similar days 3/3. The "最相似历史交易" list includes 2026-07-14 (future? current date 2026? Actually user says 2026-07-14 maybe from future? Wait current date? We don't know. But as an AI, no matter. They give data. Need not question.) The high confidence standard "历史相似日多数盈利" yes. "溢价非极端" yes. "海外普涨" not fully. "权重股多数涨" yes. So at least three of four. "部分条件满足，有正面也有负面信号" would be medium. But if we choose medium, need mention negative signals: Nikkei and ASX down, premium expansion? Let's see.
+
+Need maybe "置信度: 中" because not all conditions. But final answer should be concise. The instruction says "按格式输出四行（每行一个标签，不超过40字）" and labels: [置信度], [相似度], [海外], [风险]. Need not include reasoning. Need ensure each line ≤40 chars? It says each line one label, no more than 40 chars. We can output e.g.
+
+[置信度]
+中
+
+[相似度]
+历史3笔相似日全部盈利，但整体胜率51%仅微优，Δ溢价相近而当前溢价为正。
+
+[海外]
+亚太涨多跌少，恒指/韩股/台股强，日经/澳指小跌，支撑中性偏多。
+
+[风险]
+溢价0.86%且Δ溢价+2.14，若溢价回落将压制短线收益。
+
+Need count? Let's count Chinese chars maybe okay under 40? "历史3笔相似日全部盈利，但整体胜率51%仅微优，Δ溢价相近而当前溢价为正。" Count chars 40? Let's calculate: 历史2 3 1? Actually "历史3笔相似日全部盈利，但整体胜率51%仅微优，Δ溢价相近而当前溢价为正。" Chinese+numbers. Let's count: 历1史2 3? "3" char 3, 笔4, 相5似6日7全8部9盈10利11，12但13整14体15胜16率17 5? "51%" 3 chars? 18 19 20? Let's not. We can simplify.
+
+Need perhaps "相似度" line should answer "与历史交易的相似度和差异": "与三笔历史交易相似度100%，均为Δ溢价1.8-2.8%；差异是当前溢价0.86%为正，历史前两笔溢价为负。" That's good.
+
+Need "海外" line: "海外市场是否支撑当前信号": "日经/澳洲小跌，但恒指、韩股、台股上涨，权重股多涨，整体支撑偏正面。" Good.
+
+Need "风险": "当前最大风险": "IOPV溢价0.86%且Δ溢价+2.14%，情绪透支后溢价回落风险。" Good.
+
+Need confidence. Let's decide. If "中" or "高"? Need maybe "高" if signal strong_buy and all similar profit. But standard includes "海外普涨"; not exactly. If final says "中", then "海外" line says "偏正面" but not full. Is that inconsistent? Medium fits partial. But user asks "买入信号" analysis; maybe they expect whether to buy. Confidence "中" might be appropriate with caveats.
+
+Let's examine "最新相似历史交易" all "相似度100%" and all profit. Wait "最相似历史交易" includes three with 100% similarity; strange. Maybe these are "similar" based on Δpremium and premium? The examples:
+- 2023-01-09: Δ2.7% 溢价-1.1% → profit 0.10 (similarity 100%)
+- 2024-04-26: Δ1.8% 溢价-0.6% → profit 0.43 (similarity 100%)
+- 2026-07-14: Δ2.8% 溢价0.9% → profit 2.46 (similarity 100%)
+Current Δ2.14, premium 0.86. Similarity 100% maybe not actual. They all had positive profit. Historical win rate 51% for Δpremium >2. So "历史相似日多数盈利" yes (3/3). But overall "历史胜率" 51% (19/37) not strong. The criterion says "历史相似日多数盈利", not "overall". So yes.
+
+Could confidence be "高" if we interpret "海外普涨" as "majority up" and "权重股多数涨" as yes. But we need maybe "海外普涨" literally: "标普? 海外指数" The list includes 5 indexes; 3 up, 2 down. "普涨" usually means broadly rising, not necessarily all. "涨多跌少" is okay. If high, the final [海外] line can mention "支撑". But [风险] should mention "溢价正但不算极端"? Could still high with risk.
+
+Let's read user's "置信度判定标准" precisely:
+- 高: 海外普涨+权重股多数涨+历史相似日多数盈利+溢价非极端
+- 中: 部分条件满足，有正面也有负面信号
+- 低: 海外偏弱+权重股多数跌+历史相似日亏损+溢价极端
+
+We need determine if "海外普涨" is satisfied. Overseas list:
+日经225: -0.30%
+澳洲ASX: -0.27%
+韩国KOSPI: +0.88%
+恒生指数: +1.21%
+台湾加权: +0.65%
+"普涨" in Chinese literally "all or most rise". Here 3/5 up, 2 down. "普涨" can be "普遍上涨" = most. So yes, most. Weighted by market? Nikkei is large, but negative small. APAC "海外" maybe excluding China? Actually ETF tracks APAC ex Japan? Wait "亚太精选ETF(159687)" maybe tracks S&P Asia Pacific Ex Japan? Let's recall: 159687 "亚太精选ETF" maybe tracks "标普亚太精选指数" (S&P Asia Pacific Select) likely includes Australia, Hong Kong, Korea, Taiwan, Singapore, etc. Does it include Japan? The overseas list includes Nikkei, ASX, KOSPI, HSI, Taiwan. If it includes Japan and Australia, then two down. But weight stocks list includes Toyota, Sony, Nintendo (Japan), BHP, CBA (Australia), Samsung, SK Hynix (Korea), TSMC, AIA, Singapore Telecom. So yes. Nikkei and ASX slight negative. But weights: Samsung+SK Hynix+TSMC+AIA+Toyota etc all up. So positive.
+
+High standard has "+" between conditions; "海外普涨" maybe not fully. But "权重股多数涨" and "历史相似日多数盈利" and "溢价非极端" all strongly yes. Should we lower to medium because one condition is partial? The instruction says "部分条件满足，有正面也有负面信号" for medium. If we have 3.5 conditions satisfied, high? Hmm.
+
+Need perhaps include "置信度: 高" if "海外涨多跌少" and "权重股多数涨" and "历史相似日盈利" and "溢价0.86%非极端". But "海外普涨" uses "普涨" not "涨多跌少". The slight declines in Japan/Australia are offset by major holdings being mostly up. However "海外" criterion specifically "海外普涨" (overseas generally rising). If two negative, not "普涨". Could still be "中". Need choose.
+
+Let's inspect "最相似历史交易" has one 2026-07-14 with premium 0.9, Δ2.8, profit 2.46. Current premium 0.86, Δ2.14. Very similar to 2026-07-14. That suggests high confidence. The historical win rate 51% (19/18) is near coin flip; but "均收益+0.45%" positive. The three similar all profit, one +2.46. This is strong. If I choose "中", maybe too conservative. The final line "风险" can still flag premium pullback. Confidence should perhaps be "高" because all key conditions except exact 海外普涨, and "海外普涨" can be considered "多数上涨偏正面". Let's think of user likely wants "买入信号" analysis. They provided signal "strong_buy" and asked "基于以下数据对买入信号做简短分析." They expect possibly "高" or "中". The confidence standard says "高" includes "海外普涨". We have "海外指数" with 3 up, 2 down; maybe not "普涨". But "权重股多数涨" yes, "历史相似日多数盈利" yes, "溢价非极端" yes. Should we call "中" due "海外偏弱"? Wait "日经225: -0.30%, 澳洲ASX: -0.27%" not "海外偏弱"; overseas is "涨多跌少". So not "海外偏弱". It is mixed.
+
+Maybe "高" can be justified: "海外普涨" if we consider the relevant "亚太" excluding Japan? But Nikkei is relevant. Hmm.
+
+Let's maybe craft [置信度] as "中" or "高"? Need not output reasoning. But if final says "中", the "相似度" line can still say "相似交易全部盈利" and "海外" line "中性偏多" and "风险" "溢价回落". That will be coherent: confidence medium because overseas mixed and win rate only 51%. But if all similar trades profit and weights majority up, why not high? Because "历史胜率51%" is only slightly positive, not robust; "海外普涨" not full; "IOPV溢价0.86%" maybe positive premium means buy at higher than NAV, risk of premium mean reversion. However "Δ溢价 +2.14%" suggests momentum.
+
+Let's examine "historical win rate: Δpremium over 2%, historical 37 bets (win19 loss18) win rate51% (avg return +0.45%)" This was included specifically. It suggests although similar trades profit, overall signal is weak. The "最相似历史交易" list with 100% maybe a cherry-picked subset. The user's confidence standard "历史相似日多数盈利" not "overall win rate high"; but the overall stats are a negative/neutral signal. In final "相似度" line, we should mention "整体胜率仅51%" as a caveat. If confidence high, that caveat might conflict. But high can still have risk.
+
+Let's read "置信度判定标准" again: "高: 海外普涨+权重股多数涨+历史相似日多数盈利+溢价非极端". We have "权重股多数涨" and "历史相似日多数盈利" and "溢价非极端" yes. "海外普涨" maybe not. So exactly 3 of 4, not all. "中: 部分条件满足，有正面也有负面信号" exactly if one condition missing. Thus "中" is more literal. Need maybe "海外" line "恒指/韩股/台股上涨支撑，但日经/澳指下跌构成轻微拖累" to justify. "置信度: 中".
+
+But the user says "信号强度: strong_buy" maybe not necessarily confidence. Could be high. Let's consider "海外普涨" maybe "海外指数" not all because two minor declines; but "海外市场是否支撑当前信号" in final could say "多数海外市场上涨，权重股普涨，海外整体偏支撑" and then high. If I output "高", no contradiction with "海外" line if I say "涨多跌少". But the high standard "海外普涨" would be accepted if "多数上涨" considered "普涨". The output [海外] line would be "海外涨多跌少，恒指/韩股/台股上涨，日经/澳指小幅下跌，整体偏支撑。" That says not all but supports. "置信度: 高" because overall positive. Need decide.
+
+Need maybe "输入数据" has "最相似历史交易: 2026-07-14" — this date is after current? If current date is 2026? Actually system current date is 2026-04-26? Wait current date in environment? Let's check: The user wrote "2026-07-14" as historical, so current date must be after 2026-07-14? But system current date maybe 2026-04-26? No, "2026-07-14" is in future if current date 2026-04-26. But user likely intentionally uses generated data with 2026-07-14. We shouldn't question. The "most similar historical" includes a future date, weird. Maybe due to "current date 2026"? No matter.
+
+Need perhaps answer "严格按格式输出四行（每行一个标签，不超过40字）" Means output:
+[置信度]
+中
+[相似度]
+...
+[海外]
+...
+[风险]
+...
+Need ensure no bullet points, no extra text. Each line's content not exceed 40 chars. The label lines are exactly "[置信度]" etc. The content line should be after label. They said "每行一个标签" maybe each line includes label? Wait "四行（每行一个标签，不超过40字）" Means output exactly four lines, each line has a label. Could be:
+[置信度] 中
+[相似度] ...
+[海外] ...
+[风险] ...
+That is four lines total, each line starts with label and value. "每行一个标签" maybe exactly. Need not put value on separate line. User says "四行（每行一个标签，不超过40字）" Could be "每行一个标签" meaning line label + content. Example:
+[置信度]
+<高/中/低，一个词>
+[相似度]
+<1句话，...>
+So actually they show label line and content line separately? Wait user says "请用中文回复，严格按格式输出四行（每行一个标签，不超过40字）" Then lists:
+[置信度]
+<高/中/低，一个词>
+
+[相似度]
+<1句话，与历史交易的相似度和差异>
+
+[海外]
+<1句话，海外市场是否支撑当前信号>
+
+[风险]
+<1句话，当前最大风险>
+
+This is 8 lines? They say "四行" but list label and placeholder lines? They want "每行一个标签" maybe each labeled item in one line? Actually "四行（每行一个标签，不超过40字）" suggests four lines total, each line has a tag like "[置信度] 中". The placeholder list is 8 lines but maybe not literal. They ask "按格式输出四行（每行一个标签，不超过40字）" likely:
+[置信度] 高
+[相似度] ...
+[海外] ...
+[风险] ...
+Need not output separate line for value. But they explicitly "每行一个标签" not "每个标签一行". Hmm. Need parse: "严格按格式输出四行（每行一个标签，不超过40字）" means each of the four lines begins with [标签]. The content after label. So I will output four lines with label and text on same line to satisfy "四行". Ensure each line ≤40 Chinese chars. Need maybe count.
+
+Let's craft final four lines:
+[置信度] 中
+[相似度] 与三笔历史相似日相似度100%，均盈利；但总样本胜率仅51%，需降权。
+[海外] 恒指/韩股/台股上涨，日经/澳指小跌，权重股多数上涨，海外偏正面但非普涨。
+[风险] IOPV溢价0.86%且Δ溢价+2.14%，短线情绪偏高，溢价回落是最大风险。
+
+Need count each line ≤40? Let's count. "与三笔历史相似日相似度100%，均盈利；但总样本胜率仅51%，需降权。" Count: 与1 三2 笔3 历4 史5 相6 似7 日8 相9 似10 度11 1? "100%" chars 4? 12-15, ，16 均17 盈18 利19 ；20 但21 总22 样23 本24 胜25 率26 仅27 5? "51%" 3? 28-30，31 需32 降33 权34。35. okay.
+"恒指/韩股/台股上涨，日经/澳指小跌，权重股多数上涨，海外偏正面但非普涨。" Count okay. "IOPV溢价0.86%且Δ溢价+2.14%，短线情绪偏高，溢价回落是最大风险。" Count maybe 39? Let's count: IOPV (4? letters) 溢1价2 0.86% (5? chars) 且3 Δ4 溢5价6 +2.14% (5? chars) ，7 短8线9情10绪11偏12高13，14溢15价16回17落18是19最20大21风22险23. Actually letters count as chars? "IOPV" 4, "0.86%" 5, "Δ"1, "+2.14%"5, Chinese 24? total maybe 42. Need shorten. "溢价0.86%、Δ溢价+2.14%，情绪偏高，溢价回落是最大风险。" Count: 溢1价2 0.86%? wait "0.86%" 5 chars, 3? Let's count not critical? User says ≤40字, but including numbers/letters maybe okay? Need keep under 40 by simplification. "当前溢价0.86%且Δ溢价+2.14%，回落风险是最大风险。" Count: 当1前2溢3价4 0.86% 5-9? 且10 Δ11 溢12价13 +2.14% 14-20? ，21 回22落23风24险25是26最27大28风29险30. Actually "0.86%" is 5 chars, "+2.14%" is 6 chars. So 30. Good. But "回落风险" redundant. Maybe "溢价0.86%且Δ溢价+2.14%，情绪透支后溢价回落风险" Count maybe 30. Need include "最大风险". "当前最大风险：溢价0.86%且Δ溢价+2.14%，情绪透支后回落。" But label already [风险], no need "当前最大风险". But line with label can be: "[风险] 溢价0.86%且Δ溢价+2.14%，情绪透支后溢价回落风险。" Good.
+
+Need decide confidence. Let's perhaps output "中" with "海外偏正面但非普涨" exactly aligns with medium. But need "相似度" line "三笔历史相似日全部盈利" plus "总样本胜率51%" gives positive and negative. That is medium. Good.
+
+But maybe user asked "买入信号" and "信号强度: strong_buy" — if output "中" maybe "不 enough for high". Good.
+
+Let's ensure no "推理步骤". final only four lines. Need maybe no punctuation? Fine.
+
+Let's think if "置信度" line can be "中" one word. Yes.
+
+Potential issue: "最相似历史交易" similarity 100% all three; if I say "总样本胜率仅51%，需降权" maybe "需降权" not in user standard but okay. Need line not exceed 40. "历史三笔相似日全部盈利，但37笔总体胜率51%，优势有限。" Count maybe 34. Good.
+
+"海外" line: "恒指/韩股/台股上涨，日经/澳指小跌，权重股多数涨，海外中性偏多。" Good. "海外市场是否支撑当前信号": Yes "中性偏多". Good.
+
+"风险" line: "溢价0.86%且Δ溢价+2.14%，情绪偏高，溢价回落是最大风险。" Count: 溢1价2 0.86% (5 chars) 且3 Δ4 溢5价6 +2.14% (6) ，7 情8绪9偏10高11，12溢13价14回15落16是17最18大19风20险21. Good.
+
+Need maybe [相似度] line: "与三笔历史相似日相似度100%且均盈利，但总样本胜率51%优势有限。" Count: 与1三2笔3历4史5相6似7日8相9似10度11 100% 12-15 且16均17盈18利19，20但21总22样23本24胜25率26 51% 27-29 优30势31有32限33。 okay.
+
+Need maybe "置信度" "中" because "部分条件满足" and "海外非普涨". Good.
+
+Let's produce final exactly four lines. Need maybe not use "但总样本胜率仅51%，需降权" because "总样本" maybe 37笔; "需降权" could be an instruction not analysis. Fine.
+
+Let's make final:
+[置信度] 中
+[相似度] 与三笔历史相似日100%相似且均盈利，但37笔历史胜率仅51%。
+[海外] 恒指、韩股、台股上涨，日经、澳指小跌，权重股多数涨，中性偏多。
+[风险] 溢价0.86%且Δ溢价+2.14%，情绪偏高，溢价回落是最大风险。
+
+Need "不超过40字" yes. final.
+----------------------------------------
