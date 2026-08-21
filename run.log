@@ -1928,3 +1928,257 @@ AI分析: [置信度]
 AI推理全文(448字):
 我们只需要输出四行，不要推理过程。需要判断置信度。数据：海外普涨，韩股大涨，权重股多数涨，SK海力士三星大涨，但台积电小涨，联邦银行跌。历史相似日三个都盈利，Δ溢价超2%，当前溢价1.39%不算极端但Δ溢价+5.4%很高？注意Δ溢价是+5.40%，历史相似日Δ2.2等，当前Δ溢价5.4%更极端？但历史胜率53%一般。IOPV溢价1.39%不算极端。信号强度strong_buy。综合：海外强，权重多数涨，历史相似盈利，但Δ溢价5.4%可能过热。置信度中或高？判定标准高要求：海外普涨+权重股多数涨+历史相似日多数盈利+溢价非极端。海外普涨满足；权重股多数涨（多数涨）满足；历史相似日多数盈利满足；溢价非极端？现价溢价1.39%不算极端，但Δ溢价+5.40%可能算变化大，但非极端？IOPV溢价1.39%是正的，不是负溢价。历史相似日溢价为负（-0.5, -1.1, -0.6），当前为正1.39，差异明显。所以不是完全满足。中更合适。风险：溢价1.39%可能回调；或者Δ溢价5.4%过高。输出。
 ----------------------------------------
+
+============================================================
+运行时间: 2026-08-21 14:30:16 | 模式: intraday
+行情: price=2.782 chg=-0.35816618911174025%
+IOPV: 2.2275 溢价=24.89%
+NAV: 2.2345 (2026-08-19) 溢价=24.5%
+前日溢价: 24.01%
+Δ溢价: 0.88%
+信号: neutral | ⚪ 无明确信号
+AI: 已分析
+成本: 0.13%/笔 (实际预估（免五+万1.5+0.1%滑点）)
+预估净收益: -0.13%/笔
+AI分析: [概况] 溢价仍高企24.89%，价格微跌0.36%，市场观望情绪浓。  
+[海外] 纳指收跌但费半走强，权重股涨跌互现，拖累ETF偏弱。  
+[关注] 警惕高溢价回落风险，关注明日美股科技股及费半走向。
+AI推理全文(102字):
+我们只需要按格式输出三行，每行不超过40字。内容要简洁。注意溢价24.89%很高，但Δ溢价+0.88%未触发买入阈值。海外市场纳指跌，费半涨。权重股多数下跌。关注明日溢价回落风险或美股走势。严格每行标签。
+----------------------------------------
+
+============================================================
+运行时间: 2026-08-21 14:31:32 | 模式: intraday
+行情: price=1.834 chg=0.21857923497267778%
+IOPV: 1.8186 溢价=0.85%
+NAV: 1.8114 (2026-08-19) 溢价=1.25%
+前日溢价: -1.28%
+Δ溢价: 2.13%
+信号: strong_buy | 🟢 强烈买入！ Δ溢价 +2.13%
+AI: 已分析
+成本: 0.13%/笔 (实际预估（免五+万1.5+0.1%滑点）)
+预估净收益: 0.32%/笔
+AI分析: [置信度] 中
+[相似度] 三相似日皆盈利；当前Δ2.13/溢0.85，但历史胜率51%
+[海外] 韩港台涨、日澳跌，权重股多数涨，海外基本支撑
+[风险] 溢价0.85%非极端，但若溢价收敛或日澳拖累，短线回调
+AI推理全文(24609字):
+We need answer Chinese four lines format exactly. Need think stepwise within 600 words, but final only four lines. Need include confidence, similarity, overseas, risk. Need analyze.
+
+ Need craft final response with four labels and <=40 Chinese chars each? "严格按格式输出四行（每行一个标签，不超过40字）" Each line has label e.g. [置信度] 高. Need one word for confidence. Similarity 1 sentence <=40? Actually "每行一个标签，不超过40字" likely each line after label <=40 chars. Need concise.
+
+Need determine confidence.
+
+Data:
+Current price 1.8340 +0.22%. IOPV premium 0.85%, Δpremium +2.13%. Signal strong_buy, amplitude 0.9%. Historical win rate for Δpremium >2%: 37 trades 19 wins 18 losses winrate 51%, avg +0.45%.
+
+Overseas indices: Nikkei -0.48, ASX -0.32, KOSPI +0.58, HSI +0.85, Taiwan +0.65, FTSE AP nan. Not all positive; two negative but Asia ex-Japan/Aus positive. Weighted stocks: Samsung +3.14, AIA +2.61, Toyota +2.02, SK Hynix +2.01, TSMC +1.47, CBA +0.92, Sony -0.24, SingTel -0.67, BHP -1.03, Nintendo -2.37. Most weights up? Need weight sum: top ten weights maybe 38.7? positives: Samsung 6.2, AIA 2.5, Toyota 4.8, SK 2.3, TSMC 8.5, CBA 3.2 = 27.5. negatives: Sony 3.5, SingTel 2.1, BHP 2.9, Nintendo 2.7 = 11.2. So majority of weighted stocks up, especially big TSMC +1.47, Samsung +3.14, Toyota +2.02. Overseas mixed but positive in most (3? Actually KOSPI, HSI, Taiwan positive; Nikkei, ASX negative; FTSE AP nan). So "海外普涨" not exactly but Asia ex-JP/AU positive. "权重股多数涨" true. "历史相似日多数盈利" Most similar histories all three are profitable 100% (but given historical win rate 51% for Δ>2%, not majority? Wait "最相似历史交易" all three profit, but "历史胜率" for Δ>2% is 51% only, average positive. Need decide. Similar days with Δ2.7, 1.8, 2.8 all premium? The listed: 2023-01-09 Δ2.7% premium -1.1% -> +0.10; 2024-04-26 Δ1.8% premium -0.6% -> +0.43; 2026-07-14 Δ2.8% premium 0.9% -> +2.46. All profit. But note Δpremium >2 threshold, current +2.13. Similar day 2024-04-26 Δ1.8 slightly below? Similarity 100% maybe due pattern? Need mention "与2026-07-14相似度最高: Δ2.8/溢价0.9%盈利2.46%，当前Δ2.13/溢价0.85%接近盈利形态" But also current premium 0.85 positive, similar 2026 has premium 0.9 and profit. Other similar had negative premium. Need mention.
+
+Need risk: current IOPV premium 0.85%? Wait "IOPV溢价: 0.85%" means price above IOPV by 0.85%. "Δ溢价: +2.13%" means premium expansion maybe? Need risk:溢价0.85% not extreme but positive; ETF溢价可能回落，若海外转弱/权重股分化, 追高风险; also Nikkei and Australia negative, BHP/Nintendo/Sony negative. But current signal strong_buy. The biggest risk maybe "亚太市场分化，日澳下跌 + 溢价0.85%回落压力" or "溢价由负转正后若套利资金介入，价格向IOPV回归". Need one sentence <=40 chars. Need mention negative overseas? The risk line: "溢价0.85%且日澳走弱，若指数回落溢价收窄将侵蚀收益" ~28 chars.
+
+Need confidence: high/medium/low. Let's apply criteria:
+- 高: 海外普涨+权重股多数涨+历史相似日多数盈利+溢价非极端
+  Overseas: not "普涨" because Nikkei and ASX lower, but many AP indices positive. Weights: majority positive. Historical similar days all profit. Premium 0.85 not extreme. Is this enough high? Criterion says "海外普涨" strictly no. "部分条件满足，有正面也有负面信号" => medium. Need choose medium because overseas mixed (Nikkei/ASX negative) and historical winrate 51% only? But similar days all profit. Wait "历史胜率: Δ溢价超2%，历史37笔（赢19输18）胜率51%（均收益+0.45%）" This is not high; similar day examples all profit but base rate 51%. Need confidence medium due mixed overseas and base rate barely above coin flip. Also positive weights strong and premium not extreme, so "中".
+
+Need formulate final:
+[置信度]
+中
+
+[相似度]
+与2026-07-14最像：Δ2.8%/溢价0.9%盈利2.46%；当前Δ2.13%/溢价0.85%接近，但历史胜率仅51%
+
+Need count? line after label maybe >40? "与2026-07-14最像：Δ2.8%/溢价0.9%盈利2.46%；当前Δ2.13%/溢价0.85%接近，但历史胜率仅51%" This is 60+ Chinese? Need <=40. Need concise. Maybe:
+"最似2026-07-14：Δ2.8/溢0.9赚2.46%；当前Δ2.13/溢0.85接近，胜率51%"
+Still maybe 45? Need exact <=40. Let's count: "最似2026-07-14：Δ2.8/溢0.9赚2.46%；当前Δ2.13/溢0.85接近，胜率51%" Count Chinese/numbers? Let's count manually. "最似" 2, "2026-07-14" 10? digits and hyphens count 10, "："1, "Δ"1, "2.8"3, "/"1, "溢"1, "0.9"3, "赚"1, "2.46"4, "%"1, "；"1, "当前"2, "Δ"1, "2.13"4, "/"1, "溢"1, "0.85"4, "接近"2, "，"1, "胜率"2, "51%"3. Sum? 2+10=12+1=13+1=14+3=17+1=18+1=19+3=22+1=23+4=27+1=28+1=29+2=31+1=32+4=36+1=37+1=38+4=42+2=44+1=45+2=47+3=50. Too long. Need shorter.
+
+Could write "最相似2026-07-14：Δ2.8/溢0.9盈利；当前Δ2.13/溢0.85，胜率51%" Count maybe 40. Need not include all? Let's calculate: 最相似(3)2026-07-14(10)=13,：(1)=14,Δ(1)=15,2.8(3)=18,/(1)=19,溢(1)=20,0.9(3)=23,盈利(2)=25,；(1)=26,当前(2)=28,Δ(1)=29,2.13(4)=33,/(1)=34,溢(1)=35,0.85(4)=39,，(1)=40,胜率(2)=42,51%(3)=45. Too long. Need maybe "类似2026-07-14盈利日；当前Δ2.13/溢0.85接近，但历史胜率51%" Count: 类似2 2026-07-14 10=12,盈利日3? Actually 盈利日=3, total 15,；1=16,当前2=18,Δ1=19,2.13=23,/1=24,溢1=25,0.85=29,接近2=31,，1=32,但1=33,历史2=35,胜率2=37,51%3=40. Good "类似2026-07-14盈利日；当前Δ2.13/溢0.85接近，但历史胜率51%" exactly 40? Let's verify: "类"1 "似"2 "2026-07-14" 10 =>12 "盈"13 "利"14 "日"15 "；"16 "当"17 "前"18 "Δ"19 "2"20 "."21 "1"22 "3"23 "/"24 "溢"25 "0"26 "."27 "8"28 "5"29 "接"30 "近"31 "，"32 "但"33 "历"34 "史"35 "胜"36 "率"37 "5"38 "1"39 "%"40. Nice. But "2026-07-14" is future? Wait current date? The user data includes 2026-07-14 as historical? That's odd but we can use. Similarity line says "类似2026-07-14盈利日; current close, but historical winrate 51%". Need mention difference? It says with history similarity and difference. Difference: current Δ2.13 lower than 2.8, premium similar; historical win rate only 51%. Need maybe line: "最似2026-07-14（Δ2.8/溢0.9赚2.46%）；当前Δ2.13/溢0.85相似，但胜率仅51%" Too long. Need keep under 40. "类似2026-07-14盈利日；当前Δ2.13/溢0.85接近，但历史胜率51%" enough.
+
+[海外]
+Need one sentence whether overseas market supports. Need mention "涨跌互现，亚洲多数涨但日澳跌，基本支撑但非普涨" Count <=40.
+"海外涨跌互现：韩/港/台涨，日/澳跌，权重股多数上涨，基本支撑" Count maybe 40? Let's count: 海外2? Actually "海"1 "外"2 "涨"3 "跌"4 "互"5 "现"6 "："7 "韩"8 "/"9 "港"10 "/"11 "台"12 "涨"13，"日/澳" count 日1 /2 澳3? Need count. Simpler: "韩港台涨、日澳跌，权重股多数涨，海外基本支撑" Count: 韩1港2台3涨4、5日6澳7跌8，9权10重11股12多13数14涨15，16海17外18基19本20支21撑22. 22 chars. Good. Need include "日经/澳洲 negative" yes.
+
+[风险]
+Need one sentence current max risk. "溢价0.85%偏高，若正溢价回落或日澳拖累，短线回调风险" Count maybe 30. Need mention "套利资金" maybe. "追高风险：溢价0.85%且日澳走弱，若溢价收敛易回调" Count 29? Good.
+
+Need ensure final output exactly four lines, labels. No extra. Need not output reasoning steps. The user asked "请用中文回复，严格按格式输出四行（每行一个标签，不超过40字）" So final should have:
+[置信度]
+中
+[相似度]
+...
+[海外]
+...
+[风险]
+...
+
+Need "置信度" line only 中. Could say "中" one word. Good.
+
+Need consider "历史相似日多数盈利" and "历史胜率51%" nuance. Confidence "中" due not high? Let's justify mentally:
+① Data: overseas: Nikkei -0.48, ASX -0.32, KOSPI +0.58, HSI +0.85, Taiwan +0.65; weights: 7 up 4 down? Actually 10 listed, positive 6? Samsung, AIA, Toyota, SK, TSMC, CBA = 6; negative Sony, SingTel, BHP, Nintendo =4. So majority up. Signal strong_buy.
+② Conditions: 海外普涨 no (mixed). 权重股多数涨 yes. 历史相似日多数盈利 yes (three examples all profitable), but historical base winrate 51% only. 溢价非极端 yes (0.85). So not high due overseas not broad and base rate modest. Medium.
+③ Similar evidence: all three similar profitable; especially 2026-07-14 Δ2.8, premium 0.9, profit 2.46. Current Δ2.13 and premium 0.85 close. But current base rate 51% and average +0.45.
+④ Final: medium. If conflict, rely on weighted stocks and similar profitable days; but overseas negative and premium positive cap.
+
+Need perhaps mention "IOPV溢价0.85%" as risk. "溢价非极端" but positive 0.85, Δ2.13 indicates premium expansion. If premium was negative previously? Δ +2.13% could be premium change from -1.28 to +0.85? Actually "Δ溢价: +2.13%" could mean premium expansion relative to earlier. Large positive delta can be a buy signal? The historical similarity says Δ2.8 premium -1.1 profit; Δ1.8 premium -0.6 profit; Δ2.8 premium 0.9 profit. Current Δ2.13 and premium 0.85. Many similar days with positive premium? Actually 2026-07-14 premium 0.9. So okay. But risk of premium contraction.
+
+Need maybe include "振幅0.9%" maybe risk? Not necessary.
+
+Need ensure "不超过40字" each line? The label line [置信度] plus "中" not? They said "每行一个标签，不超过40字" likely the content after label. But if they count entire line, [置信度] is 4 chars + 中 1 =5. Fine. Similarity line entire line maybe " [相似度] 类似..." label 4 + content 40 =44 >40? Hmm "每行一个标签，不超过40字" might mean the entire line including label? Need parse. "严格按格式输出四行（每行一个标签，不超过40字）" Each line has a label, no more than 40 characters. Label can be bracket plus keyword. If entire line must be <=40 Chinese chars, need content shorter to account for label. We should ensure each line total <=40? Let's compute for similarity line I planned: "[相似度]类似2026-07-14盈利日；当前Δ2.13/溢0.85接近，但历史胜率51%" Count bracket label: [1 相2 似3 度4 ]5 plus content 40 =45. Over 40 if whole line. Need reduce content to <=35. Need be safe: include label + content total <=40. Need adjust all lines.
+
+Let's craft each line total <=40 characters (including label). Chinese chars count variable; but user said 不超过40字, we can keep clearly under 30 total.
+
+Need produce:
+[置信度] 中
+Line total: "[置信度]中" = 6? [ (1) 置2 信3 度4 ]5 中6. Good.
+
+[相似度] 类似2026-07-14盈利日；当前Δ2.13/溢0.85，胜率51%
+Need count if label 5 + content. Content "类似2026-07-14盈利日；当前Δ2.13/溢0.85，胜率51%" count? "类1似2 2026-07-14 10 =>12 盈13利14日15；16当17前18 Δ19 2.13 4 =>23 /24 溢25 0.85 4 =>29 ，30 胜31率32 51% 3 =>35. Label 5 =>40. Perfect. Need omit "接近" and "历史" to fit? "类似2026-07-14盈利日；当前Δ2.13/溢0.85，胜率51%" yes 35 content + 5 =40. But "类似" vs "与..." okay. Need mention "相似度和差异"? It says "与历史交易的相似度和差异" - With line: "类似2026-07-14盈利日；当前Δ2.13/溢0.85，胜率51%" It has similar day and current delta/premium, plus winrate limitation. Difference? Current Δ lower; but not explicit. "胜率51%" indicates not overwhelming. Maybe okay. Could include "但胜率51%" to capture difference. But "但" not needed.
+
+Need check content with "Δ" and digits: Is "字" count including numbers? In Chinese brevity, likely yes. We'll keep total under 45 maybe accepted? Need strict. Could further shorten:
+"[相似度]最似2026-07-14赚2.46%；当前Δ2.13/溢0.85，胜率51%"
+Count label 5 + content "最似2026-07-14赚2.46%；当前Δ2.13/溢0.85，胜率51%": 最1似2 2026-07-14 10 =>12 赚13 2.46 4 =>17 %18 ；19 当20前21 Δ22 2.13 4 =>26 /27 溢28 0.85 4 =>32 ，33 胜34率35 51% 3 =>38. Total 43? Wait label 5 ->43. Over 40. If no label? But need label. Hmm.
+
+Need compress using date maybe "2026-07-14" is 10 chars. Could use "07-14" or "7/14"? For similarity, maybe "26/7/14" count 6? Let's use "26-07-14" count 8? Actually "26-07-14" length 8 (2+1+2+1+2=8). "2026-07-14" length 10. Need save 2. Use "26/07/14" length 8. Or "20260714" length 8. We'll use "20260714" count 8? It has 8 digits. But readability. "类似20260714盈利日；当前Δ2.13/溢0.85，胜率51%" Count content: 类1似2 20260714 8 =>10 盈11利12日13；14当15前16 Δ17 2.13 4 =>21 /22 溢23 0.85 4 =>27 ，28 胜29率30 51% 3 =>33. Label total 38. Good. But "20260714" no hyphens. Fine. Need maybe "历史" not necessary. "胜率51%" is clear.
+
+[海外] Need line total <=40. Label 5. Content <=35. "韩港台涨、日澳跌，权重股多数涨，海外基本支撑" Content 22, total 27. Good. Need mention "海外市场是否支撑当前信号" yes.
+
+[风险] Label 5. Content "溢价0.85%偏高，若溢价收敛或日澳拖累，短线回调" Count content: 溢1价2 0.85%? Count "0.85" 4 + % 1 =5 -> 7? Let's count: 溢1 价2 0.85% 5? Actually "0.85%" = 0 . 8 5 % =5 chars, so after 价 total 7. 偏8 高9 ，10 若11 溢12 价13 收14 敛15 或16 日17 澳18 拖19 累20 ，21 短22 线23 回24 调25. Content 25, label 5 total 30. Good. Need maybe "最大风险" specifically. "溢价0.85%偏高，若溢价收敛或日澳拖累，短线回调" okay. But premium 0.85% is not extreme; "偏高" maybe okay for ETF. Could say "溢价0.85%，若正溢价回落+日澳弱，短线回调" But "最大风险" is premium contraction. Good.
+
+Need perhaps "置信度" line: Could include "中" only. Good.
+
+Need maybe "相似度" line should mention "历史相似日多数盈利" not just one day. But due length, "类似20260714盈利日；当前Δ2.13/溢0.85，胜率51%" Enough. But "与历史交易的相似度和差异" maybe "相似度高，差异在胜率仅51%" Could format:
+"[相似度] 与20260714相似：Δ2.13/溢0.85对2.8/0.9；但胜率51%"
+Need count? Label 5 + content "与20260714相似：Δ2.13/溢0.85对2.8/0.9；但胜率51%" Content count: 与1 20260714 8 =>9 相10似11：12 Δ13 2.13 4=>17 /18 溢19 0.85 4=>23 对24 2.8 3=>27 /28 0.9 3=>31 ；32 但33 胜34率35 51%3=>38. Label total 43. Over. Maybe okay? Need no. Could reduce date to "260714" length 6? But "20260714" fine.
+
+Maybe "[相似度] 似20260714盈利日：当前Δ2.13/溢0.85，胜率51%" Count label 5 + content "似20260714盈利日：当前Δ2.13/溢0.85，胜率51%" content: 似1 20260714 8 =>9 盈10利11日12：13 当14前15 Δ16 2.13 4=>20 /21 溢22 0.85 4=>26 ，27 胜28率29 51%3=>32. Total 37. Good. This is concise. Use "似" rather than "类似". "似20260714盈利日" weird but acceptable. Or "相似20260714盈利日" content "相1似2 20260714 8=>10 盈11利12日13：" total 14? Let's use "[相似度]相似20260714盈利日：当前Δ2.13/溢0.85，胜率51%" Content: 相1似2 20260714 8=10 盈11利12日13：14 当15前16 Δ17 2.13 4=21 /22 溢23 0.85 4=27 ，28 胜29率30 51% 3=33. Label total 38. Perfect. Need mention "差异" maybe not, but "胜率51%" implies. Let's use this.
+
+Need maybe "历史相似日" includes "2023-01-09 Δ2.7 premium -1.1 profit; 2024-04-26 Δ1.8 premium -0.6 profit; 2026-07-14 Δ2.8 premium 0.9 profit." Current premium 0.85, similar to 20260714. Good.
+
+Need maybe "置信度" could be "中" because "海外普涨" not satisfied, "历史胜率51%" not high. But "信号强度: strong_buy" maybe not enough. Need perhaps "高"? Let's reevaluate carefully.
+
+The user asks "基于以下数据对亚太精选ETF(159687)的买入信号做简短分析." They provide signal "strong_buy". Need determine confidence. Criteria:
+- 高: 海外普涨+权重股多数涨+历史相似日多数盈利+溢价非极端
+- 中: 部分条件满足，有正面也有负面信号
+- 低: 海外偏弱+权重股多数跌+历史相似日亏损+溢价极端
+
+Overseas indices:
+Nikkei -0.48, ASX -0.32, KOSPI +0.58, HSI +0.85, Taiwan +0.65. Is that "普涨"? Not all, but 3 of 5 positive, and FTSE AP +nan? Actually "富时亚太: +nan%" maybe unavailable. In Asia-Pacific context, major markets mixed: Japan/Australia weak, Korea/HK/Taiwan strong. So not 普涨. Weighted stocks majority up (6/10 up, and top weights up). Historical similar days all profit but historical win rate exactly 51% (not "多数盈利" in base rate? The sample all 3 profit; but Δ>2 historical 19/18, essentially coin flip though positive avg). Premium 0.85 not extreme. So medium. Yes.
+
+Need perhaps if "strong_buy" signal and similar profitable days, could high? But "海外普涨" missing and "历史胜率51%" not strong. Medium.
+
+Need maybe "风险" should mention "IOPV溢价0.85%" as "正溢价" but not extreme. "溢价极端" would be >? 0.85 not extreme, but "Δ溢价 +2.13%" could be big positive; historical similar days with Δ>2 had profit. But if "溢价0.85%" and "Δ溢价+2.13%" maybe means premium rose 2.13 from -1.28 to 0.85, which is a signal? The "risk" of "premium convergence" is relevant. Good.
+
+Need maybe "海外" line should mention "海外涨跌互现，但权重股涨多跌少，基本支撑" That supports.
+
+Need maybe "相似度" line should mention "相似度高" not just "相似". We can say "[相似度]相似20260714盈利日：当前Δ2.13/溢0.85，胜率51%" It says "相似" and current values. Good.
+
+Need ensure final not include reasoning. The final should be exactly four lines. Need no bullet? They specified each line one label. We can use:
+[置信度]
+中
+[相似度]
+相似20260714盈利日：当前Δ2.13/溢0.85，胜率51%
+[海外]
+韩港台涨、日澳跌，权重股多数涨，海外基本支撑
+[风险]
+溢价0.85%偏高，若溢价收敛或日澳拖累，短线回调
+
+Need line count? That is 8 lines if labels and content on separate lines. They said "四行（每行一个标签）" meaning each line has label and content on same line? "每行一个标签" Could be:
+[置信度] 中
+[相似度] ...
+[海外] ...
+[风险] ...
+This is 4 lines. Need output exactly 4 lines, each with label and content. So combine label and content on same line. Good.
+
+Need counts:
+Line1 [置信度] 中 = 6
+Line2 [相似度] 相似20260714盈利日：当前Δ2.13/溢0.85，胜率51% = label 5 + content 33 = 38. Need check "相似20260714盈利日：" content count: 相1 似2 2 0 2 6 0 7 1 4? Wait "20260714" is 8 characters/digits. But if counting Chinese characters, numbers maybe not "字"; but user likely means "字" loosely. To be safe, use fewer. Could say "[相似度]似260714盈利日：当前Δ2.13/溢0.85，胜率51%" Count label 5 + content "似260714盈利日：当前Δ2.13/溢0.85，胜率51%" = 似1 260714 6 =7 盈8利9日10：11 当12前13 Δ14 2.13 4=18 /19 溢20 0.85 4=24 ，25 胜26率27 51% 3=30. Total 35. "260714" is date unambiguous? It's 2026-07-14. Use "260714" perhaps less readable but okay. Better "2026/07/14" count 8? Actually "2026/07/14" length 10? 4 digits + slash +2 + slash +2 =10. "260714" 6. Use "260714" to save. But "相似260714盈利日" maybe weird. Could use "2026-07-14" and content 33, total 38 okay. Let's keep readable "20260714" maybe okay. Maybe "2026-07-14" count 10, content 35? Let's calculate with hyphens: "相似2026-07-14盈利日：" Content: 相1似2 2026-07-14 10 =12 盈13利14日15：16 当17前18 Δ19 2.13 4=23 /24 溢25 0.85 4=29 ，30 胜31率32 51%3=35. Label total 40. Exactly 40. Good. Use hyphen readability. But if count "2026-07-14" as 10, line exactly 40. Nice. Let's use this. Need ensure "：" after day? Content count includes colon. If no colon, even shorter. "[相似度]相似2026-07-14盈利日；当前Δ2.13/溢0.85，胜率51%" Count semicolon; same length. Let's use "：" as separator.
+
+Line2: "[相似度]相似2026-07-14盈利日：当前Δ2.13/溢0.85，胜率51%"
+Length: Label [相似度] = 5? Let's count label: "["1 "相"2 "似"3 "度"4 "]"5. Content as above 35. Total 40. Great.
+
+Line3: "[海外]韩港台涨、日澳跌，权重股多数涨，海外基本支撑"
+Label [海外] = 4? "["1 海2 外3 "]"4. Content "韩港台涨、日澳跌，权重股多数涨，海外基本支撑" count: 韩1港2台3涨4、5日6澳7跌8，9权10重11股12多13数14涨15，16海17外18基19本20支21撑22. Total 26. Good.
+
+Line4: "[风险]溢价0.85%偏高，若溢价收敛或日澳拖累，短线回调"
+Label [风险] = 4? "["1 风2 险3 "]"4. Content count: 溢1价2 0.85% 5 =7 偏8高9，10若11溢12价13收14敛15或16日17澳18拖19累20，21短22线23回24调25. Total 29. Good.
+
+Need maybe "风险" line "溢价0.85%偏高" but 0.85% not necessarily extreme; but it's positive and with Δ+2.13 maybe premium expanded. "偏高" could be fine. If "溢价极端" criterion not satisfied, but risk still. Could say "溢价0.85%，若溢价收敛或日澳走弱，短线回调" avoid "偏高" to not conflict. But "最大风险" premium convergence is enough. "溢价0.85%非极端，但若溢价收敛或日澳拖累，短线回调" Count content: 溢1价2 0.85%5 =>7 非8极9端10 ，11 但12 若13 溢14价15收16敛17或18日19澳20拖21累22 ，23短24线25回26调27. Total 31. This is better and nuanced. Use "溢价0.85%非极端，但若溢价收敛或日澳拖累，短线回调". Good.
+
+Need perhaps "海外" line "韩港台涨、日澳跌" Is "海外" includes Hong Kong, Korea, Taiwan, Japan, Australia. "韩港台涨、日澳跌" okay. "权重股多数涨" yes. "海外基本支撑" yes. Could "海外涨跌互现，权重股多数涨，基本支撑" more precise. Count: 海1外2涨3跌4互5现6，7权8重9股10多11数12涨13，14基15本16支17撑18. Label total 22. But "海外" line contains "海外涨跌互现" perhaps redundant. Need mention specific. "韩港台涨、日澳跌" is better.
+
+Need maybe "相似度" line "胜率51%" might be interpreted as "历史胜率" not "相似日胜率"; okay. Need perhaps "当前Δ2.13/溢0.85" vs similar "2026-07-14 Δ2.8/溢0.9" but line doesn't mention similar day's Δ/premium. It says "相似2026-07-14盈利日" but not details; maybe enough? It says "相似度" and "差异" with current values. But no explicit similarity score. It might be better to include similar day's delta/premium: "相似2026-07-14(Δ2.8/溢0.9赚2.46%)；当前Δ2.13/溢0.85，胜率51%" too long. Need fit. Could choose line: "[相似度]似2026-07-14：它Δ2.8/溢0.9赚2.46%；当前Δ2.13/溢0.85，胜率51%" Count too long. Not possible under 40. Maybe use "2026-07-14" as "260714" to save space. Let's formulate:
+"[相似度]似260714盈利日：Δ2.8/溢0.9赚2.46%；当前Δ2.13/溢0.85，胜率51%"
+Count label 5 + content "似260714盈利日：Δ2.8/溢0.9赚2.46%；当前Δ2.13/溢0.85，胜率51%"
+Content: 似1 260714 6=7 盈8利9日10：11 Δ12 2.8 3=15 /16 溢17 0.9 3=20 赚21 2.46 4=25 %26 ；27 当28前29 Δ30 2.13 4=34 /35 溢36 0.85 4=40 ，41 胜42率43 51%3=46. Too long. Need not include all.
+
+Maybe "[相似度]似260714：当前Δ2.13/溢0.85，胜率51%" Count label 5 + content "似260714：当前Δ2.13/溢0.85，胜率51%" = 似1 2607146=7 ：8 当9前10 Δ11 2.13 4=15 /16 溢17 0.85 4=21 ，22 胜23率24 51%3=27. Total 32. This is concise. It identifies similar date and current values, plus winrate. It doesn't say similar day profitable, but "盈利日" in previous version. "盈利日" matters. Use "似260714盈利日：当前Δ2.13/溢0.85，胜率51%" Count: 似1 2607146=7 盈8利9日10：11 当12前13 Δ14 2.13 4=18 /19 溢20 0.85 4=24 ，25 胜26率27 51%3=30. Label total 35. Good. Use "260714" rather than "2026-07-14". It's clear enough? Maybe "260714" could be 2026-07-14; use "20260714" count 8, total 37. Let's use "20260714" because clearer. "[相似度]相似20260714盈利日：当前Δ2.13/溢0.85，胜率51%" Count label 5 + content "相似20260714盈利日：当前Δ2.13/溢0.85，胜率51%" = 相1似2 20260714 8=10 盈11利12日13：14 当15前16 Δ17 2.13 4=21 /22 溢23 0.85 4=27 ，28 胜29率30 51%3=33. Total 38. Good. Use "相似" and "20260714". Need perhaps "20260714" is 2026-07-14. Good.
+
+Need maybe "历史相似日多数盈利" from all three examples; our line says "盈利日" singular. But enough? Could say "三相似日皆盈利" maybe:
+"[相似度]三相似日皆盈利；当前Δ2.13/溢0.85，胜率51%" Count label 5 + content "三相似日皆盈利；当前Δ2.13/溢0.85，胜率51%" = 三1相2似3日4皆5盈6利7；8当9前10 Δ11 2.13 4=15 /16 溢17 0.85 4=21 ，22 胜23率24 51%3=27. Total 32. This conveys historical similar days all profitable. This is even better. It doesn't mention specific date, but "与历史交易的相似度和差异" maybe "三相似日皆盈利" and current values. Need "相似度" maybe "三相似日皆盈利" indicates high similarity? Could say "[相似度]三相似日皆盈利：当前Δ2.13/溢0.85，胜率51%" Total 33? Content: 三1相2似3日4皆5盈6利7：8 当9前10 Δ11 2.13 4=15 /16 溢17 0.85 4=21 ，22 胜23率24 51%3=27, label total 32. Good. This captures "历史相似日多数盈利" better. But "最相似历史交易" has 3 similar days all profitable; "三相似日皆盈利" is factual. Maybe use this instead of date. It doesn't mention "相似度" differences. But "胜率51%" shows not robust. Need "差异" maybe "当前Δ低于相似日" but not necessary. Let's craft:
+[相似度] 三相似日皆盈利：当前Δ2.13/溢0.85，胜率51%
+Line total: label 5 + content "三相似日皆盈利：当前Δ2.13/溢0.85，胜率51%" = 三1相2似3日4皆5盈6利7：8 当9前10 Δ11 2.13 4=15 /16 溢17 0.85 4=21 ，22 胜23率24 51%3=27. total 32. Good. This is perhaps best. But "三相似日皆盈利" not "相似度" exactly. It says similarity. Need maybe "与三相似日" no. Good.
+
+Need maybe "胜率51%" is "历史胜率" of Δ>2, not "三相似日". We can clarify "但历史胜率51%" to avoid confusion. Content: "三相似日皆盈利；当前Δ2.13/溢0.85，但历史胜率51%" Count: 三1相2似3日4皆5盈6利7；8当9前10 Δ11 2.13 4=15 /16 溢17 0.85 4=21 ，22 但23历24史25胜26率27 51%3=30. Label total 35. Good. Use "但" explicit. Let's use:
+[相似度]三相似日皆盈利；当前Δ2.13/溢0.85，但历史胜率51%
+Line length 35. Nice. This fulfills "相似度和差异": similar days all profit, current values, but base winrate 51% (difference/weakness).
+
+Need "海外" line:
+[海外]韩港台涨、日澳跌，权重股多数涨，海外基本支撑
+Good.
+
+Need "风险" line:
+[风险]溢价0.85%非极端，但若溢价收敛或日澳拖累，短线回调
+Need count label 4 + content 31 =35? Let's count content again: 溢1价2 0.85% 5 =>7 非8极9端10，11但12若13溢14价15收16敛17或18日19澳20拖21累22，23短24线25回26调27. total content 27, label 4 total 31. Good. Wait earlier I counted content 27? Let's recalc: "溢价" 2, "0.85%" is 5? Actually "0.85%" has characters: '0' '.' '8' '5' '%' =5. So after "溢价" total 7. "非极端" =3 -> 10. "，" =1 -> 11. "但"1 ->12. "若"1 ->13. "溢价"2 ->15. "收敛"2 ->17. "或"1 ->18. "日澳"2 ->20. "拖累"2 ->22. "，"1 ->23. "短线"2 ->25. "回调"2 ->27. Yes content 27. Label [风险] length 4 (bracket + two Chinese) -> total 31. Good.
+
+Need "置信度" line maybe "中" with no period. Good.
+
+Let's think if "海外" line "韩港台涨、日澳跌" uses "港" (Hong Kong) and "台" (Taiwan) okay. But "海外" for Chinese ETF includes Hong Kong/Taiwan? Geographically yes. "海外指数" listed includes "恒生指数", "台湾加权". Fine.
+
+Need maybe "富时亚太: +nan%" not mention. Good.
+
+Need perhaps "权重股表现" "三星电子 +3.14, 友邦 +2.61, Toyota +2.02, SK +2.01, TSMC +1.47, CBA +0.92" "多数涨" yes. But "BHP -1.03, Nintendo -2.37" etc. "海外基本支撑" okay.
+
+Need maybe "IOPV溢价: 0.85%" and "Δ溢价: +2.13%" "signal strong_buy" but "历史胜率 51%" "均收益+0.45%" "positive expected value small". Confidence medium. Good.
+
+Need perhaps "振幅0.9%" maybe low volatility; not in final.
+
+Need maybe "current price 1.8340, +0.22%" not in final.
+
+Need maybe "buy signal" analysis should include "买入信号" maybe "置信度中" not "买入/不买". The user asks "买入信号做简短分析" and output four lines. Good.
+
+Need ensure no extra text before/after. The final answer should be exactly four lines:
+[置信度] 中
+[相似度] 三相似日皆盈利；当前Δ2.13/溢0.85，但历史胜率51%
+[海外] 韩港台涨、日澳跌，权重股多数涨，海外基本支撑
+[风险] 溢价0.85%非极端，但若溢价收敛或日澳拖累，短线回调
+
+Need check line [相似度] "三相似日皆盈利" could be interpreted as "three similar days all profitable" yes. "当前Δ2.13/溢0.85" current. "但历史胜率51%" current signal's historical. Good.
+
+Need maybe "置信度" should be "中" but if "三相似日皆盈利" and "权重股多数涨" "premium non-extreme", maybe "高"? Let's revisit with confidence criteria exactly:
+High: 海外普涨 + 权重股多数涨 + 历史相似日多数盈利 + 溢价非极端
+Medium: 部分条件满足，有正面也有负面信号
+Low: 海外偏弱 + 权重股多数跌 + 历史相似日亏损 + 溢价极端
+
+- 海外普涨? No, "韩港台涨、日澳跌" mixed. So high fails first condition.
+- 权重股多数涨 yes.
+- 历史相似日多数盈利 yes (three examples all profit) but base rate 51% (not majority? Actually 51% is majority but slight). If "历史相似日多数盈利" tied to "最相似历史交易" all profit, yes.
+- 溢价非极端 yes.
+Thus partial. Medium.
+
+Could there be "海外" line "海外基本支撑" but overall mixed. Good.
+
+Need maybe "风险" line "溢价0.85%非极端" but "Δ溢价+2.13%" maybe "premium expansion large" and "IOPV溢价0.85%" means current premium positive. The risk of premium convergence is real. Good.
+
+Need maybe "历史胜率 51%" in similarity line could be seen as "low" and risk. Good.
+
+Need perhaps "similarity" line should not include "历史胜率" because that's not similarity; but it's a caveat. Fine.
+
+Potential issue: The user requested "每行一个标签，不超过40字" They might not count punctuation/numbers? If count Chinese chars only, our lines are well under. Good.
+
+Need perhaps "置信度" one word "高/中/低" exactly. We use "中". Good.
+
+Let's formulate final with no bullets. Make sure no trailing spaces? okay.
+
+Need maybe "四行" exactly. Use newline between lines. final.
+
+Let's produce final.
+----------------------------------------
