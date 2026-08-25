@@ -2704,3 +2704,125 @@ AI: 未触发/未启用
 成本: 0.13%/笔 (实际预估（免五+万1.5+0.1%滑点）)
 预估净收益: 0.3%/笔
 ----------------------------------------
+
+============================================================
+运行时间: 2026-08-25 19:00:38 | 模式: daily
+行情: price=1.822 chg=0.3856749311294831%
+IOPV: 1.8141 溢价=0.44%
+NAV: 1.8589 (2026-08-21) 溢价=-1.99%
+前日溢价: -1.64%
+Δ溢价: 2.08%
+信号: strong_buy | 🟢 强烈买入！ Δ溢价 +2.08%
+AI: 已分析
+成本: 0.13%/笔 (实际预估（免五+万1.5+0.1%滑点）)
+预估净收益: 0.3%/笔
+AI分析: [置信度]
+中
+
+[相似度]
+与历史Δ1.2~4.1%、溢价-0.5~0.8%相似，但三笔仅一笔盈利、胜率50%
+
+[海外]
+海外主要指数普涨，权重股多数上涨，支撑当前信号
+
+[风险]
+溢价扩大至0.44%且历史胜率仅50%，追高有回撤风险
+AI推理全文(7294字):
+我们 need answer in Chinese four lines. Need follow format. Need think but final only four lines. Need compute confidence.
+
+Let's analyze data.
+
+Current: price 1.8220 +0.39%, IOPV premium 0.44%, Δpremium +2.08%, signal strong_buy, amplitude 1.6%, historical win rate for Δpremium >2%: 38 trades 19 win 19 loss winrate50% avg return +0.43%.
+
+Overseas indices: Nikkei +0.50, ASX +0.68, KOSPI +0.68, HSI -0.02, Taiwan +0.91. Mostly up. Weighted stocks: Singapore Telecom +1.58, TSMC +1.05, BHP +0.82, Nintendo +0.81, SK Hynix +0.42, CBA +0.08, Samsung +0.00, AIA -0.34, Sony -0.47, Toyota -1.38. Need assess majority? There are 10 listed: 7 positive? Let's count: positive: Singtel, TSMC, BHP, Nintendo, SK Hynix, CBA = 6. Samsung flat 0.00, negative AIA, Sony, Toyota = 3. So majority up.
+
+Historical similar: three rows but weird dates: 2023-05-29 Δ1.2% premium -0.2% loss -0.10 (similarity100%); 2025-10-29 Δ4.1% premium0.8% gain0.30; 2026-01-30 Δ2.2% premium -0.5% gain0.00. Need use? The "最相似历史交易" includes future dates? Actually current date 2026? Hmm. Need note similarity and differences: Similar Δpremium around 2% and premium positive/negative moderate. Among three, two non-loss? Actually 2025 and 2026 gain/no loss, one loss. Need say similar to historical Δpremium 1.2-4.1%, premium -0.5~0.8; outcome mixed but avg positive? Let's compute avg of three: -0.10 +0.30 +0.00 = +0.20 /3 = +0.0667 positive. But historical overall for Δ>2% 50% win rate avg +0.43. Need maybe high? Conditions: Overseas broad up? Yes mostly. Weighted stocks majority up? Yes. Historical similar days majority profitable? 2 of 3 profitable (one breakeven counted? 2026 gain0.00 is not profit technically but no loss) and one loss. Premium not extreme? current premium 0.44%, Δ+2.08 not extreme. So confidence high? Let's check "高: 海外普涨+权重股多数涨+历史相似日多数盈利+溢价非极端". Yes. However historical win rate for Δ>2% is 50%, not majority. But "历史相似日多数盈利" from given similar trades: 2 of 3 profitable (if 0.00 considered profit? "赚0.00%" maybe no profit but no loss). Need maybe high. But caution: Δpremium +2.08 maybe indicates premium expanded significantly, could be negative? Actually Δpremium is change in premium? Signal strong_buy. IOPV premium 0.44% moderate. Overseas positive. So high.
+
+Need output four lines:
+
+[置信度]
+高
+
+[相似度]
+与历史Δ溢价1.2~4.1%、溢价-0.5~0.8%相似，三笔中两笔未亏，但胜率50%
+
+Need line <=40 Chinese chars. Need one sentence.
+
+[海外]
+海外主要指数普涨，权重股多数上涨，支撑买入信号
+
+[风险]
+溢价扩大至0.44%且历史胜率仅50%，追高或回撤
+
+Need ensure "严格按格式输出四行（每行一个标签，不超过40字）" Means each line label and content. Use Chinese punctuation. Need perhaps no extra.
+
+Need include "置信度: 高" or "[置信度] 高"? The prompt says 每行一个标签 maybe exactly [置信度] 高. We'll output that.
+
+Need consider "signal strength: strong_buy" maybe mention? No need.
+
+Need ensure not include reasoning steps. final only four lines.
+
+Let's craft final:
+
+[置信度]
+高
+
+[相似度]
+与历史Δ溢价1.2~4.1%、溢价-0.5~0.8%相似，三笔两笔未亏，但整体胜率50%
+
+Count 40? Need count: 与历史Δ溢价1.2~4.1%、溢价-0.5~0.8%相似，三笔两笔未亏，但整体胜率50% (approx 39 Chinese+symbols). Fine.
+
+[海外]
+海外主要指数普涨，权重股多数上涨，支撑当前信号
+
+[风险]
+当前最大风险是溢价扩大至0.44%且历史胜率仅50%，追高易回撤
+
+Need "不超过40字" maybe each line content? Need include label? The label plus content? We can keep content under 40. Let's count.
+
+Line1 "[置信度]" plus "高" short.
+
+Line2 "与历史Δ溢价1.2~4.1%、溢价-0.5~0.8%相似，三笔两笔未亏，但整体胜率50%" maybe 35? OK.
+
+Line3 "海外主要指数普涨，权重股多数上涨，支撑当前信号" 22.
+
+Line4 "当前最大风险是溢价扩大至0.44%且历史胜率仅50%，追高易回撤" 30.
+
+Need maybe "海外" line mention "恒生微跌" maybe not needed. But "海外市场是否支撑当前信号" yes.
+
+Need ensure "置信度" high? Let's double-check with strict criteria: "高: 海外普涨+权重股多数涨+历史相似日多数盈利+溢价非极端". Are these all satisfied? Overseas: Nikkei, ASX, KOSPI, Taiwan up; HSI flat -0.02. That's "普涨" maybe yes. Weighted stocks: majority up, but Toyota -1.38, Sony -0.47, AIA -0.34. "多数涨" yes. Historical similar days: 3 days: one loss, one gain, one break-even. "多数盈利" if break-even counts as no loss, yes. But "历史胜率: Δ溢价超2%，历史38笔（赢19输19）胜率50%" contradicts "相似日多数盈利" maybe the similar trades are not exactly Δ>2? The most similar historical trades: first Δ1.2, second Δ4.1, third Δ2.2; all similarity 100%? Strange. The overall historical win rate for Δ>2 is 50%. So "多数盈利" not exactly. But the prompt's confidence criteria says "历史相似日多数盈利" not "历史胜率", so use similar days. The three similar days: two positive/zero, one negative. If count "盈利" strictly, 2026 gain0.00 is zero not profit, so only one profitable among three, not majority. Let's scrutinize: "2026-01-30: Δ2.2% 溢价-0.5% → 🟢赚0.00% (相似度100%)" This says "赚0.00%" but actually zero. "多数盈利" not satisfied if zero not profit. But maybe "未亏" majority. Need decide confidence.
+
+Maybe confidence should be "中" because historical win rate exactly 50%, and similar trades have one loss, one gain, one no-loss; not clear majority. Also weight stocks: Samsung flat, AIA/Sony/Toyota negative. But overseas up. Need "高" requires all conditions; "中" says partial conditions. Could be "中" because historical胜率50% not strong, and some权重股跌. Let's evaluate.
+
+Let's think as quant analyst. Signal strong_buy but historical win rate for Δ>2 is 50%, average return +0.43% positive. That is essentially coin flip but positive expectancy. Current Δ=+2.08 premium 0.44. "IOPV溢价: 0.44%" not extreme but premium expanded by 2.08%. Need caution. The prompt's confidence criteria: "高: 海外普涨+权重股多数涨+历史相似日多数盈利+溢价非极端". We can say overseas mostly up, weights majority up, premium moderate, but historical similar days? There are three most similar, one loss, one profit, one breakeven. Not "多数盈利" if breakeven not profit. Also historical win rate 50%. Therefore "中" might be more appropriate because not all positive conditions. The prompt says "证据冲突时说明取舍理由" but final only four lines? It says final output four lines, not include reasoning. Need choose.
+
+Need interpret "历史相似日多数盈利" from the three listed: 2023 loss, 2025 gain, 2026 zero. "盈利" strictly only 2025. If include zero as non-loss, two non-loss. The prompt's "赚0.00%" could be considered "rounded to 0.00 but actually maybe positive? It says赚0.00%, maybe exact zero but marked green. Not profitable. So "多数盈利" not satisfied. Thus confidence not high. But "海外普涨+权重股多数涨" satisfied. "溢价非极端" satisfied. One condition fails. So "中" by "部分条件满足，有正面也有负面信号". Need output "中".
+
+Need formulate line2 with similarity and difference. Maybe "与历史Δ1.2~4.1%、溢价-0.5~0.8%相似；但历史胜率50%，且三笔中仅一笔正收益" Need mention difference. Actually three similar: one loss, one gain, one zero. "仅一笔正收益" yes. This is a negative. Need line2 "相似度: 与历史Δ溢价和溢价区间相似，但历史样本胜率仅50%、三笔中仅一笔盈利" Wait "三笔中仅一笔盈利" true if zero not profit. But "相似度100%" weird. Need "最相似历史交易" all similarity 100%, but outcomes mixed. We'll state.
+
+Need line3 "海外": "海外主要指数普涨，权重股多数上涨，支撑信号" But "海外" line should answer whether overseas support. Yes.
+
+Need line4 "风险": "当前最大风险是溢价已扩大至0.44%且历史胜率50%，买入后可能回撤" Good.
+
+Need maybe mention "strong_buy" in output? Not necessary.
+
+Need ensure final exactly four lines with labels. Let's produce:
+
+[置信度]
+中
+
+[相似度]
+与历史Δ1.2~4.1%、溢价-0.5~0.8%相似，但三笔仅一笔盈利、胜率50%
+
+[海外]
+海外主要指数普涨，权重股多数上涨，支撑当前信号
+
+[风险]
+溢价扩大至0.44%且历史胜率仅50%，追高有回撤风险
+
+Need check line2 "三笔仅一笔盈利" but 2026 zero maybe "赚0.00%" could be considered "不亏" not "盈利". We need "三笔仅一笔盈利" is accurate? The list: 2023 loss, 2025 gain, 2026 zero (not profit). So yes.
+
+Need perhaps "相似度" line should include "相似度高" or "与历史交易...". Good.
+
+Need final.
+----------------------------------------
