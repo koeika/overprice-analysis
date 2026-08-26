@@ -2826,3 +2826,141 @@ Need perhaps "相似度" line should include "相似度高" or "与历史交易.
 
 Need final.
 ----------------------------------------
+
+============================================================
+运行时间: 2026-08-26 14:30:17 | 模式: intraday
+行情: price=2.787 chg=0.39625360230547985%
+IOPV: 2.223 溢价=25.37%
+NAV: 2.2043 (2026-08-24) 溢价=26.43%
+前日溢价: 24.56%
+Δ溢价: 0.81%
+信号: neutral | ⚪ 无明确信号
+AI: 已分析
+成本: 0.13%/笔 (实际预估（免五+万1.5+0.1%滑点）)
+预估净收益: -0.13%/笔
+AI分析: [概况]  
+溢价25.37%偏高，现价微涨，市场情绪谨慎。  
+
+[海外]  
+纳指费半走强，AMD领涨，支撑ETF小幅上行。  
+
+[关注]  
+高溢价未触发买入，警惕溢价回落及权重股分化。
+AI推理全文(108字):
+我们只需要按要求回复三行，每行不超过40字。内容要基于数据。注意溢价25.37%非常高，但Δ溢价未触发买入阈值。海外市场上涨，费半强。权重股AMD大涨，英伟达涨。关注点可能是溢价风险或科技股持续性。用中文，严格格式。
+----------------------------------------
+
+============================================================
+运行时间: 2026-08-26 14:30:31 | 模式: intraday
+行情: price=1.84 chg=0.9879253567508242%
+IOPV: 1.8225 溢价=0.96%
+NAV: 1.834 (2026-08-24) 溢价=0.33%
+前日溢价: -1.99%
+Δ溢价: 2.95%
+信号: strong_buy | 🟢 强烈买入！ Δ溢价 +2.95%
+AI: 已分析
+成本: 0.13%/笔 (实际预估（免五+万1.5+0.1%滑点）)
+预估净收益: 0.29%/笔
+AI分析: [置信度]
+中
+
+[相似度]
+与历史相似，但当前Δ溢价和溢价低于亏损样本；历史样本多数亏损
+
+[海外]
+海外普涨，日韩台港走强，仅澳洲小跌，支撑当前信号
+
+[风险]
+溢价近1%且Δ溢价近3%，回撤风险高；历史相似日多数亏损
+AI推理全文(5210字):
+We need answer in Chinese, strict format four lines labels. Need think but final only four lines. Need analyze. Need determine confidence. Let's parse.
+
+Data:
+现价 1.84 +0.99%
+IOPV溢价 0.96%
+Δ溢价 +2.95%
+Signal strong_buy, amplitude 1.4%
+Historical win rate: Δ溢价>2%, 39 trades 19 wins 20 losses win rate 49% avg return +0.42%.
+
+Overseas:
+Nikkei +0.63, Australia -0.33, KOSPI +1.10, Hang Seng +0.82, Taiwan +1.47, FTSE APAC nan.
+
+Weighted:
+Samsung 6.2 +1.95
+Sony 3.5 +1.49
+SK Hynix 2.3 +0.95
+Singtel 2.1 +0.89
+TSMC 8.5 +0.62
+Nintendo 2.7 +0.11
+AIA 2.5 +0.07
+BHP 2.9 -0.25
+Toyota 4.8 -0.29
+Commonwealth Bank 3.2 -1.17
+
+Most similar:
+2025-01-09 Δ10.1%, premium 4.3% -> +7.47 (similarity 100%)
+2026-07-09 Δ4.5%, premium 1.7% -> -0.77 (sim 100%)
+2026-08-20 Δ5.4%, premium 1.4% -> -0.55 (sim 100%)
+Warning similar historical days mostly losses, caution.
+
+Need output four lines:
+[置信度]
+<高/中/低，一个词> — just one word maybe "中" or "低"? Need decide.
+
+Need use criteria:
+- High: overseas broad up + weights majority up + historical similar days majority profit + premium not extreme
+- Medium: some conditions satisfied, positive and negative
+- Low: overseas weak + weights majority down + historical similar days losses + premium extreme
+
+Let's evaluate.
+
+Overseas: 5 up, 1 down, so broad positive.
+Weights: 7 up (Samsung, Sony, SK Hynix, Singtel, TSMC, Nintendo, AIA) vs 3 down (BHP, Toyota, CBA) -> majority up. Good.
+Historical similar: three similar days? Similarity 100% weird maybe same pattern. 1 win 2 losses, "多数亏损" -> negative. Historical win rate 49% near coin flip, avg positive +0.42. "相似历史交易日多数亏损" caution. So historical not positive.
+Premium: current IOPV premium 0.96%, Δ premium +2.95%, not extreme? 0.96% moderate; delta high. "溢价非极端" yes (premium < maybe 2). But delta +2.95 indicates premium expanded sharply. Historical similar had Δ10.1 premium4.3 win; Δ4.5 premium1.7 loss; Δ5.4 premium1.4 loss. Current Δ2.95 lower than losses, premium0.96 lower. Actually current less extreme than historical losses? But historical win had high Δ and high premium, generated profit. Yet "相似历史交易日多数亏损" from provided warning. Need decide.
+
+The "信号强度: strong_buy" but we need analyze buy signal. We need output confidence high/medium/low. Given positive overseas and weights, but historical similar days mostly losses and win rate 49%, and premium expanded. Should be "中" perhaps. Need not be low because overseas/weights positive. But caution from historical similar days. Let's craft.
+
+Need include one line for "相似度": "与历史相似交易日相似度高，但当前溢价/Δ溢价低于亏损样本，接近中性；历史样本多数亏损" Maybe 1 sentence <=40 chars? The label says not exceed 40 chars for each line? "每行一个标签，不超过40字" likely for each line content. Need be concise.
+
+Need "海外": "海外普涨，日韩台港强，仅澳洲小跌；支撑当前信号" Good.
+
+Need "风险": "高溢价/Δ溢价快速扩大后回撤风险；历史相似日多数亏损" Need mention historical majority losses. But "current max risk" maybe premium expansion reversal and ETF溢价回落. Actually IOPV premium 0.96 and Δ premium +2.95. For ETF buy signal, high premium risk: buying at premium can lose if premium mean-reverts. Need mention.
+
+Need "置信度" exactly one word "中". Should we include "中" only. Need no explanation. The user requested "严格按格式输出四行（每行一个标签，不超过40字）". So final exactly:
+
+[置信度]
+中
+[相似度]
+与历史样本相似但当前溢价/Δ溢价低于亏损案例；历史多数亏损需谨慎
+[海外]
+海外市场普涨，日韩台港均走强，仅澳洲小跌，支撑信号
+[风险]
+溢价已近1%且Δ溢价近3%，回撤风险高；历史相似日多数亏损
+
+Need ensure each line <=40 chars? Let's count.
+
+Line [相似度] content: "与历史样本相似但当前溢价/Δ溢价低于亏损案例；历史多数亏损需谨慎" Count maybe 32? Fine.
+Line [海外] content: "海外市场普涨，日韩台港均走强，仅澳洲小跌，支撑信号" 24? Fine.
+Line [风险] content: "溢价已近1%且Δ溢价近3%，回撤风险高；历史相似日多数亏损" 27? Fine.
+
+Need consider "置信度" maybe "低"? Let's think deeply.
+
+The criteria says "低: 海外偏弱+权重股多数跌+历史相似日亏损+溢价极端". Here overseas not weak, weights not down, premium not extreme? But historical similar losses. "中: 部分条件满足，有正面也有负面信号" yes.
+
+Could "strong_buy" signal be based on Δ premium? Actually "Δ溢价: +2.95%" means premium increased. Signal strength strong_buy. But history says Δ>2 has win rate 49%, avg +0.42, so no edge. Most similar historical days majority losses. Should we maybe "低" because historical similar days losses is a red flag, despite market positive? Let's evaluate "置信度" should reflect buy signal reliability. If win rate 49% (worse than coin flip? Actually equal) and historical similar "majority losses", then signal not reliable. But overseas and weights positive could increase probability. However the instruction's medium: "部分条件满足，有正面也有负面信号" exactly.
+
+Need maybe mention "海外: 日经+0.63, KOSPI+1.10, 台+1.47, 恒生+0.82; 澳洲ASX -0.33; 权重股多数上涨" in overseas line? Need not list all.
+
+Let's ensure not output reasoning. final only four lines.
+
+Need maybe include "相似度" with "相似度100%" but "差异": current Δ2.95 vs historical Δ4.5-10.1, premium0.96 vs 1.4-4.3. "与历史相似交易日（Δ4.5-10.1/溢价1.4-4.3）相比，当前溢价更低；但形态相似且历史多数亏损" Need not exceed 40 chars. Let's craft better.
+
+"与历史相似，但当前Δ溢价和溢价低于亏损样本；历史样本多数亏损" count ~30. Good.
+
+Need "风险": "追高溢价回撤风险，历史相似日胜率仅49%且多数亏损" Good.
+
+Need final no bullet? The labels include bracket. Four lines. Let's provide exactly.
+
+Potential issue: "每行一个标签，不超过40字" If label itself plus content? We can include bracket label and content. The bracket label is maybe not counted? But okay. Need no extra blank lines? Could include four lines. Let's final.
+----------------------------------------
