@@ -3619,3 +3619,82 @@ AI推理全文(559字):
 
 最终回复四行，每行标签不超过40字。要严格按照格式。置信度一个词。相似度一句话。海外一句话。风险一句话。
 ----------------------------------------
+
+============================================================
+运行时间: 2026-09-03 19:00:36 | 模式: daily
+行情: price=1.833 chg=1.1589403973509882%
+IOPV: 1.8124 溢价=1.14%
+NAV: 1.8739 (2026-09-01) 溢价=-2.18%
+前日溢价: -2.85%
+Δ溢价: 3.99%
+信号: strong_buy | 🟢 强烈买入！ Δ溢价 +3.99%
+AI: 已分析
+成本: 0.13%/笔 (实际预估（免五+万1.5+0.1%滑点）)
+预估净收益: 0.29%/笔
+AI分析: [置信度] 低  
+[相似度] 与2026-07-09/08-20高相似，同为高Δ溢价且多数亏损  
+[海外] 日经/恒指/台股下跌，亚太整体偏弱，不支撑信号  
+[风险] IOPV溢价1.14%且Δ溢价+3.99%，溢价回归回撤风险大
+AI推理全文(5323字):
+ need output four lines. Need reason but not include. Need comply. Need analyze.
+
+Need think thoroughly but concise.
+
+Need output exactly four lines with labels maybe "置信度 低". No reasoning.
+
+Need decide confidence. Data: Price +1.16%, IOPV premium 1.14%, Δpremium +3.99%, signal strong_buy, amplitude 1.3%, historical win rate for Δpremium >2%: 40 trades 20 win 20 loss, avg +0.42%. Overseas mixed: Nikkei -0.17, ASX +0.46, KOSPI +0.26, HSI -0.39, Taiwan -0.67. Weighted stocks mixed: positive AIA +1.71, BHP +0.82, CBA +0.79, Nintendo +0.39, TSMC +0.21; negative Samsung -0.2, Singtel -0.45, Toyota -0.51, Sony -0.64, SK Hynix -1.05. Count 5 up? Actually listed 10, 5 positive? Need note TSMC +0.21 positive, Samsung negative, SK negative. Weighted by weights: let's compute approx: positives weights 2.5+2.9+3.2+2.7+8.5=19.8; negatives weights 6.2+2.1+4.8+3.5+2.3=18.9. Slight positive. But Asia markets mixed, Taiwan weak, Japan weak, HK weak. Similar historical trades: 3 trades all 100% similarity? 2026-01-30 Δ2.2% premium -0.5 -> 0.00; 2026-07-09 Δ4.5% premium 1.7 -> -0.77; 2026-08-20 Δ5.4% premium 1.4 -> -0.55. Most similar historical days majority losses (2 losses, 1 flat), need cautious. Current Δ3.99 premium 1.14 similar to negative examples (Δ4.5/prem1.7, Δ5.4/prem1.4) rather than neutral flat (prem -0.5). Historical win rate 50%. Overseas not supportive strongly. Confidence likely low or medium? Criterion:
+高: overseas broad up + weights majority up + historical similar days majority profitable + premium non-extreme.
+中: some conditions, positive and negative.
+低: overseas weak + weights majority down + historical similar days losses + premium extreme.
+
+Here overseas not broad up (4/5? Let's count up: ASX/KOSPI up 2, down 3; weak mixed). Weights not majority up? Actually 5 up 5 down, but by count not majority; weighted sum? Need "多数涨" maybe not. Historical similar days losses. Premium 1.14% and Δ3.99 extreme? IOPV premium 1.14 not huge but Δ +3.99 indicates signal extreme? "溢价极端" maybe current premium 1.14 not extreme? But Δpremium +3.99 >2 high, historical win rate 50. 相似日多数亏损. Thus "低" if high threshold says low requires overseas weak + weights majority down + historical similar losses + premium extreme. Do we have all? Overseas weak yes (more down, HK/TW/JP down). Weights majority down no (5/5). historical similar losses yes. premium extreme? premium 1.14 maybe not extreme but Δ premium +3.99 extreme enough. Since one condition not met, but overall low-to-medium. Need choose. User asks with signal strong_buy but historical similar warns. Need maybe "低" due to 历史相似日亏损+海外偏弱+溢价溢价 1.14? But weight stocks mixed not majority down. Need decide.
+
+Let's parse signal: IOPV溢价: 1.14%, Δ溢价 +3.99%, signal strength strong_buy. Wait "Δ溢价" maybe change in premium with IOPV? Maybe positive means price premium expanded by 3.99% during day? It might be a trading signal. Historical win rate for Δ溢价 >2 is 50%. The most similar historical trades show "相似度100%" but with different Δ premium values? It says 2026-01-30 Δ2.2%, 2026-07-09 Δ4.5%, 2026-08-20 Δ5.4% all similarity 100%. But their outcomes include one flat, two losses. Thus evidence against. Need "置信度 低".
+
+Need output exactly four lines, each line tag and less than 40 chars. Need include [置信度], [相似度], [海外], [风险]. Need no extra. Let's craft:
+[置信度]
+低
+
+Line labels can include Chinese. Need one word after label? "低" is under label on next line. They say strict format output four lines (each line one label, no more than 40 words) maybe labels with value on same line? "按格式输出四行（每行一个标签，不超过40字）" Means each line label? Example not provided. Could be:
+[置信度]
+<高/中/低，一个词>
+[相似度]
+<1句话...>
+[海外]
+<1句话...>
+[风险]
+<1句话...>
+
+That's 8 lines? Actually four labels plus values? "四行（每行一个标签，不超过40字）" Hmm "每行一个标签" maybe should be four lines each include label and content? Let's parse: "请用中文回复，严格按格式输出四行（每行一个标签，不超过40字）： [置信度] <...> [相似度] <...> [海外] <...> [风险] <...>" This appears 8 lines? But says 四行 perhaps each line one label means four sections? Need output four lines exactly: line1 "[置信度]\n低"? That's 2 lines? Better output as:
+[置信度] 低
+[相似度] 与历史相似日 Δ3.99% 接近亏损样本，胜率50%
+[海外] 亚太指数偏弱，日经/恒指/台股下跌
+[风险] IOPV溢价1.14%且Δ+3.99%，追高回撤风险大
+
+Need each line [tag] content within 40 Chinese chars. Count:
+1 [置信度] 低 (ok)
+2 [相似度] 与历史相似日似2026-07-09亏损样本，胜率50% (maybe 27) Need mention most similar historical days majority losses. 
+3 [海外] 海外指数涨跌互现、偏弱，日经/恒指/台股下跌 (25)
+4 [风险] 历史相似日多数亏损，IOPV溢价1.14%透支，追高易回撤 (maybe 31). Need "最大风险" perhaps "历史相似日多数亏损+溢价高企，冲高回落风险" 
+Need if "低" because "海外偏弱/历史相似日亏损" but weights mixed.
+
+Let's ensure line length under 40. Fine.
+
+Need maybe line [置信度] 低 (一个词). Good.
+
+Need include "不超40字" per line. Count approximate. Each line no punctuation? ok.
+
+Need potentially "相似度" phrase: "与2026-07-09、08-20高相似，均为Δ溢价高且亏损" Count maybe 27. Good.
+
+Need "海外" phrase: "日经/恒指/台湾下跌，韩澳小涨，整体不支撑" Maybe 23. Need all.
+
+Need "风险": "最大风险是IOPV溢价1.14%及Δ溢价3.99%导致溢价回归下杀" maybe 29. Good.
+
+Need be careful: We can mention 权重股涨跌: weights 5涨5跌 but with key权重台积电小涨. Maybe risk includes SK海力士/索尼下跌? Hmm.
+
+Need perhaps confidence "低" despite signal "strong_buy" due to historical losses and premiums. Need mention "历史40笔胜率50%" and "相似日多数亏损". Good.
+
+Need final only four lines. But "推理要求" says think 600 words but not output reasoning. We comply.
+
+Let's final with four lines.
+----------------------------------------
