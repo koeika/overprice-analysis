@@ -3770,3 +3770,179 @@ AI推理全文(1219字):
 
 可以。
 ----------------------------------------
+
+============================================================
+运行时间: 2026-09-04 19:00:59 | 模式: daily
+行情: price=1.852 chg=1.0365521003818945%
+IOPV: 1.8365 溢价=0.84%
+NAV: 1.8375 (2026-09-02) 溢价=0.79%
+前日溢价: -2.18%
+Δ溢价: 3.02%
+信号: strong_buy | 🟢 强烈买入！ Δ溢价 +3.02%
+AI: 已分析
+成本: 0.13%/笔 (实际预估（免五+万1.5+0.1%滑点）)
+预估净收益: 0.3%/笔
+AI分析: [置信度] 中
+[相似度] 最像8/26，同为正Δ；但历史三笔仅一赚，胜率51%
+[海外] 日韩台港普涨，SK海力士/三星/TSMC强，海外整体支撑
+[风险] 现溢价0.84%、Δ溢价+3.02%，警惕追高后杀溢价回落
+AI推理全文(12985字):
+We need answer in Chinese strictly format four lines labels. Need analyze. Need obey user asks: final only four lines, no reasoning. Need determine confidence. Need inspect data.
+
+ Need craft concise. Need maybe include labels [置信度] etc. Need one line each <=40 Chinese chars? "每行一个标签，不超过40字" likely content under label. Need four lines.
+
+Let's reason internally here.
+
+Data: Price 1.852 +1.04%. IOPV premium 0.84%, Δpremium +3.02%. Signal strong_buy amplitude 0.9%. Historical win rate Δ>2%: 41 trades win21 lose20 winrate51% avg +0.43%.
+
+Overseas indices: Nikkei +1.26, ASX -0.16, KOSPI +1.64, HSI +1.74, Taiwan +1.51. Mostly up except ASX small down. Weighted stocks: SK Hynix +3.2, Samsung +2.2, Singtel +1.8, AIA +0.96, TSMC +0.84, CBA -0.1, Nintendo -0.18, Sony -0.26, Toyota -1.15, BHP -2.4. Weighted majority? Count up 5, down 5? Let's count: positive: SK, Samsung, Singtel, AIA, TSMC =5. Negative: CBA, Nintendo, Sony, Toyota, BHP =5. But weights: positives weights 2.3+6.2+2.1+2.5+8.5=21.6%. negatives weights 3.2+2.7+3.5+4.8+2.9=17.1%. So by weighted majority positive. Important large negative Toyota, BHP but smaller weights. Major tech semiconductors strong. Overseas broad up. Similar historical trades: 2026-01-30 Δ2.2% premium -0.5% -> gain 0.00 similarity 100; 2026-08-20 Δ5.4% premium 1.4% -> loss 0.55 sim 100; 2026-08-26 Δ3.2% premium 1.2% -> gain 0.43 sim 100. Similarity to current? Current Δ3.02, premium 0.84. Compare three: current premium positive 0.84, Δ 3.0. Similar to 2026-08-26 Δ3.2, premium 1.2 -> gain +0.43. Also 2026-08-20 Δ5.4 premium1.4 -> loss. 2026-01-30 Δ2.2 premium -0.5 -> flat. Historical win rate 51% marginal. Similar days mixed (one gain, one loss, one flat). But current overseas strong and momentum.
+
+Need confidence: high? Conditions:
+- 海外普涨+权重股多数涨+历史相似日多数盈利+溢价非极端. Overseas mostly up yes (4/5, ASX slight). Weighted stocks majority? by count tie but weighted more up yes. Historical similar日多数盈利? Among three similar: one profit, one loss, one flat, not majority. Historical overall 51% not high. Premium 0.84% not extreme? IOPV premium 0.84, Δpremium +3.02 (positive large; maybe "溢价非极端" 0.84 okay. But Δpremium +3.02 high? They define signal strong_buy from delta premium. Historical premium for similar trades 1.2, -0.5,1.4. 0.84 moderate. But Δ premium +3.02 indicates current price has jumped relative to IOPV, premium increased by 3.02 percentage points? Wait if Δ溢价 +3.02, current IOPV premium 0.84. That means before? Could be premium was negative -2.18? Price surged vs IOPV. Signal strong_buy from arbitrage? Actually ETF premium high? Need be careful: "IOPV溢价: 0.84%" means market price above IOPV by 0.84%. "Δ溢价: +3.02%" maybe premium change? If premium increased a lot, maybe short-term overheat. Similar historical trades have Δ positive and premium moderate. Need assess risk: high premium? 0.84% not extreme, but Δ +3.02 high. For ETF QDII, premium can mean high buying enthusiasm; if overseas market rallies, premium expansion can signal strong momentum but risk of premium retracement. Historical win rate at Δ>2% only 51%, so not strong. Similar historical trades outcomes mixed. Thus confidence might be "中" because overseas/weights support but historical win rate mediocre and no clear majority. Need determine from criteria: "高: 海外普涨+权重股多数涨+历史相似日多数盈利+溢价非极端" Historical similar日多数盈利? Let's inspect "最相似历史交易" list: 3 entries. "盈利" only +0.43 and 0.00? Is 0.00 not profit? They classify "🟢赚0.00%" maybe "赚" but zero. Strict "盈利" >0 only one of three. If "相似日多数盈利" false. Overall 51% is barely better than coin flip. Therefore not high. "中: 部分条件满足，有正面也有负面信号." Yes. Low? Overseas not weak, weights not majority down, historical similar not all loss. So medium.
+
+Need formulate four lines.
+
+Need ensure each line <=40 Chinese chars? The tag line maybe " [置信度]" and content. Need "严格按格式输出四行（每行一个标签，不超过40字）" Probably line can be like "[置信度]\n中" etc? Wait "每行一个标签" maybe output four labels and content on same line? They want four lines, each line a label. "不超过40字" likely each line content. Need include label and value in same line? Format:
+[置信度]
+<高/中/低，一个词>
+
+[相似度]
+<1句话...>
+
+Actually they show labels and placeholders on separate lines: "[置信度]" then "<...>" but "每行一个标签" maybe expects four lines each line label and text? Need parse: "请用中文回复，严格按格式输出四行（每行一个标签，不超过40字）：
+
+[置信度]
+<高/中/低，一个词>
+
+[相似度]
+<1句话，与历史交易的相似度和差异>
+
+[海外]
+<1句话，海外市场是否支撑当前信号>
+
+[风险]
+<1句话，当前最大风险>"
+
+This indicates exactly 4 lines? Actually there are 8 lines including labels and content with blank lines. But "每行一个标签" maybe output each line starts with label and then content. Need "四行" means no blank lines. Could output:
+[置信度] 中
+[相似度] 与8/26类似（Δ3.2/溢价1.2），但历史盈亏互现，仅51%胜率
+[海外] 日韩港台普涨，权重半导体强，ASX微跌，整体有支撑
+[风险] 溢价已升至0.84%且Δ溢价+3.02%，若跟踪指数回落易杀溢价
+Need each line <=40 chars? Need count. Need be concise. Let's count Chinese chars. But "不超过40字" each line. " [置信度] 中" 6. Good. Similarity line maybe >40? Need count. Let's compose around 30-40. Let's count carefully. Need maybe "与2026-08-26相似（Δ3.2、溢价1.2），但三次相似日仅一盈一平一亏" length? Let's count: 与1 2 0 2 6? Let's count Chinese and punctuation maybe "字" not chars? Need not exact but keep short.
+
+Need perhaps include "相似度" line: "最相似为2026-08-26（Δ3.2、溢价1.2）盈利0.43%，但样本胜率仅51%". Count maybe 41? Need less.
+
+Let's design final:
+
+[置信度] 中
+[相似度] 接近2026-08-26那笔，但历史相似日盈亏互现，胜率仅51%
+[海外] 日韩台及恒指普涨，半导体权重走强，海外总体支撑
+[风险] IOPV溢价0.84%且Δ溢价+3.02%，警惕冲高后溢价收敛
+
+Need "每行一个标签，不超过40字" Labels included perhaps okay. Need maybe "标签" includes [置信度] no content. "中" is one word. But "每行一个标签" maybe exactly two lines per label? Wait "严格按格式输出四行（每行一个标签，不超过40字）" They ask "用中文回复，严格按格式输出四行（每行一个标签，不超过40字）： [置信度] <高/中/低，一个词> ..." There are four sections. Each section has a tag and content. So one line per section with tag + content. Good.
+
+Need ensure "相似度" line says "与历史交易的相似度和差异" includes similarity and difference. Need mention "最相似历史交易 2026-08-26 Δ3.2 溢价1.2 -> +0.43" similar. Difference maybe "当前溢价0.84低于1.2? or Δ 3.02 vs 3.2". We can mention "与2026-08-26（Δ3.2/溢价1.2/盈利0.43）最相似，当前Δ3.02/溢价0.84略低" That's more complete. Let's count:
+"与2026-08-26（Δ3.2/溢价1.2/赚0.43）最像；当前Δ3.02、溢价0.84，整体略低" Count maybe 48. Need <=40. Let's count: 与1 2026? digits count? Hard. But Chinese chars + digits? "字" includes Chinese characters; not digits? We'll not be too exact. Need "不超过40字" maybe all chars. Better keep short.
+
+Potential final:
+[置信度] 中
+[相似度] 最像2026-08-26，但三次相似日仅一赚一平一亏
+[海外] 日韩台恒指普涨、权重半导体强，海外有支撑
+[风险] 溢价0.84%且Δ溢价达3.02%，防冲高溢价收敛
+
+Need "相似度" line count: 最像2026-08-26，但三次相似日仅一赚一平一亏 = maybe 27. Good. "差异" not explicit but mentions mixed outcomes. Maybe enough? Need "与历史交易的相似度和差异" maybe line should mention current vs historical. Let's include "当前溢价0.84%更低" perhaps. But line limit. Maybe:
+[相似度] 最像2026-08-26（赚0.43），但历史三笔仅一盈；当前溢价0.84%更低
+Count ~40. Let's count Chinese/digits: 最像(2)+2026-08-26 digits? +（赚0.43）+，但历史三笔仅一盈；当前溢价0.84%更低. Could exceed 40 if all chars. Let's avoid exact date? "最像8/26（Δ3.2vs3.0，溢价低）" Need count? Let's see.
+
+Need perhaps content each line <=40 Chinese characters, not including label? Hmm.
+
+Let's formulate elegantly:
+
+[置信度] 中
+[相似度] 与8/26最像（Δ3.2/溢价1.2→赚0.43），但历史胜率仅51%
+[海外] 日韩台及恒指普涨，权重半导体造好，海外支撑偏正面
+[风险] 现溢价0.84%、Δ溢价+3.02%，防止高开低走溢价收敛
+
+Need count line 2: "与8/26最像（Δ3.2/溢价1.2→赚0.43），但历史胜率仅51%" Length maybe 36. OK.
+
+Need "confid中" one word. We can maybe include "中" only after label no explanation.
+
+Need perhaps mention weights "多数涨" but by count tie. In [海外] line, "海外市场是否支撑当前信号": yes, but also ASX small down, Toyota/BHP negative. Could say "日韩台港普涨，科技权重拉动，仅ASX/资源股弱，整体支撑" This is more accurate. Need include weight stocks? "权重半导体强" enough. Need not mention all.
+
+Need risk: "当前最大风险" likely premium/delta premium high due to ETF price chasing; if overseas reverses, premium compression. Also negative weight Toyota/BHP, Australian decline maybe but overseas broadly positive. Need mention "溢价扩大后回落" as risk.
+
+Need verify "IOPV溢价: 0.84%, Δ溢价: +3.02%" Wait "Δ溢价" maybe "IOPV溢价变化" from prior day? If current premium 0.84 and Δpremium +3.02, maybe previous IOPV premium? Actually if "IOPV溢价" current and "Δ溢价" could be "溢价的Z-score变化"? Need not. "Δ溢价超2%" historical win rate. They use Δ溢价 as signal. If Δpremium +3.02, historically at Δ>2% win rate 51%, avg +0.43. That's positive but weak. "signal strong_buy" is based on model. Need maybe confidence "中" because "strong_buy" signal but historical win rate 51% and only 1/3 similar profitable. Let's include.
+
+Need think about "历史胜率: Δ溢价超2%，历史41笔（赢21输20）胜率51%（均收益+0.43%）" This is important: 21 wins 20 losses, win rate 51%. "high" requires historical similar日多数盈利; if "historical similar days" from top 3 not majority. Overall not significant. So medium.
+
+Could there be reason to "高"? Let's review criteria:
+- 海外普涨: 4/5 up (yes)
+- 权重股多数涨: by count tie, by weights yes? Let's calculate with weights: Up weights 2.3+6.2+2.1+2.5+8.5=21.6; Down 3.2+2.7+3.5+4.8+2.9=17.1; positive net +4.5% of portfolio. But count equal. "多数涨" by number not "多数"; by weights yes. Need define? Usually "权重股多数涨" means number of stocks in list more up than down? Here exactly 5 up and 5 down, so not satisfied. But weighted by portfolio, up stocks have higher weights, so positive performance contribution. The largest weight negative? Actually TSMC 8.5 up 0.84, Samsung 6.2 up 2.2, Toyota 4.8 down -1.15, Sony 3.5 down -0.26, CBA 3.2 down. Weighted average: let's compute approximate contributions:
+SK 2.3*3.2=+0.0736
+Samsung 6.2*2.2=+0.1364
+Singtel 2.1*1.8=+0.0378
+AIA 2.5*0.96=+0.024
+TSMC 8.5*0.84=+0.0714
+Total positive =0.3432% contribution /? actually weighted contribution in percent points.
+CBA 3.2*-0.1=-0.0032
+Nintendo 2.7*-0.18=-0.00486
+Sony 3.5*-0.26=-0.0091
+Toyota 4.8*-1.15=-0.0552
+BHP 2.9*-2.4=-0.0696
+Total negative=-0.14196. Net +0.20. So weights positive.
+- Historical similar日多数盈利: inconclusive; top similar one profit, one loss, one break-even. Overall 51% exactly.
+- 溢价非极端: IOPV premium 0.84 not extreme; but Δpremium +3.02 maybe "extreme"? Signal type strong buy based on Δ. The "溢价" likely "IOPV溢价" at buy time? They list similar historical: Δ2.2% premium -0.5; Δ5.4% premium 1.4; Δ3.2% premium1.2. Current premium 0.84 within range. Non-extreme yes. But if current premium is after price run? It could keep rising if overseas strong, but high premium is risk.
+
+Given "中" likely. Need maybe output "中" not "高".
+
+Need not include reasoning. final four lines. Need ensure no extra explanation. Let's draft final with labels and content.
+
+Potential final:
+
+[置信度] 中
+[相似度] 与8/26最像（Δ3.2/溢价1.2→赚0.43），但历史三笔仅一赚、胜率51%
+[海外] 日韩台港普涨，权重半导体/AIA强，ASX与资源股偏弱，整体支撑
+[风险] 现溢价0.84%、Δ溢价+3.02%，警惕追高后溢价收敛/回落
+
+Need count line 2 maybe 40? Let's count: 与8/26最像（Δ3.2/溢价1.2→赚0.43），但历史三笔仅一赚、胜率51% 
+Chinese chars and numbers:
+与(1) 8? digit, /, 2,6? Let's count total "characters" maybe 43. We can trim:
+[相似度] 最像8/26（赚0.43），但历史胜率51%，三笔仅一赚
+Count: [similarity] label excluded? "最像8/26（赚0.43），但历史胜率51%，三笔仅一赚" Chinese count: 最像(2),8,/ ,2,6? Hard. It's short.
+
+Need include "差异": current Δ3.02 vs 3.2 and premium0.84 vs1.2 lower. Maybe "最像8/26（Δ3.2/溢价1.2→赚0.43），当前略低" Count maybe 28. Let's use:
+[相似度] 最像8/26：Δ3.2→3.0、溢价1.2→0.84，结果偏空但样本少
+Need "结果偏空" not ideal. Better:
+[相似度] 最像8/26（Δ3.2/溢价1.2→赚0.43）；当前溢价更低，历史胜率51%
+This includes similarity/difference and mixed. Count maybe 40. But "历史胜率51%" maybe under "相似度" okay. Actually [相似度] line wants "与历史交易的相似度和差异" not necessarily historical win rate. But okay.
+
+Need not mention "结果偏空" maybe.
+
+Let's think about [海外] line: "海外市场是否支撑当前信号" Need say "支撑" yes. Need mention "日韩台港+1.3~1.7%" and "权重半导体涨" maybe enough. But "Australia ASX -0.16" and BHP Toyota down. Need note "ASX/汽车资源股拖累有限" to be accurate. We can include:
+[海外] 日韩台港普涨1.3%-1.7%，权重半导体强；ASX微跌但拖累有限
+Count maybe 36. Good.
+
+[风险] "现溢价0.84%、Δ溢价+3.02%，追高后若亚太开盘转弱或杀溢价" Count maybe 36. Need "当前最大风险" maybe premium retracement. "当前溢价已0.84%，Δ+3.02%偏高" Actually 0.84 not high historically? But Δ+3.02 high. Need phrase:
+[风险] 溢价与Δ溢价偏高，若指数高开低走，价格向IOPV收敛
+Let's use "现溢价0.84%且Δ溢价+3.02%，追高后溢价收敛是最大风险" Count maybe 32.
+
+Need maybe "置信度" content "中" one word. Good.
+
+Let's ensure final exactly four lines, no blank lines. Each label followed by content. Need not use bullet. Use Chinese punctuation. Good.
+
+Potential final:
+[置信度] 中
+[相似度] 最像8/26，同为正Δ高溢价；但历史三笔仅一赚，胜率51%
+[海外] 日韩台港普涨，SK海力士/三星/TSMC强，海外整体支撑
+[风险] 现溢价0.84%、Δ溢价+3.02%，警惕杀溢价回落
+
+Need "同为正Δ高溢价" current Δ3.02, premium0.84, historical 8/26 Δ3.2 premium1.2, yes "同为正Δ高溢价" maybe "正Δ" yes. But "高溢价" maybe 0.84 moderate. "最像8/26，同为正Δ高溢价；但历史三笔仅一赚，胜率51%" Good. Historical three only one profit plus one break-even one loss. Does "仅一赚" okay.
+
+Need "海外" line "日韩台港普涨" yes (4 +1.26,1.64,1.74,1.51). "SK海力士/三星/TSMC强" yes. "海外整体支撑" yes. "ASX小跌" omitted. Fine.
+
+Need "风险" "现溢价0.84%、Δ溢价+3.02%" Wait if "IOPV溢价: 0.84%, Δ溢价: +3.02%" is high? "现溢价0.84%" not necessarily high but Δ maybe. "警惕杀溢价回落" yes.
+
+Need maybe "溢价非极端" if confidence medium? In risk line says premium high? There is tension: If confidence medium due to risk of premium retracement, okay.
+
+Let's formulate final with exactly four lines.
+----------------------------------------
