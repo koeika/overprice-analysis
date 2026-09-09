@@ -4687,3 +4687,97 @@ Let's check "溢价1.47%偏高且仍在扩大" if "仍在扩大" refers to premi
 
 Now I'm ready.
 ----------------------------------------
+
+============================================================
+运行时间: 2026-09-09 19:00:29 | 模式: daily
+行情: price=1.889 chg=0%
+IOPV: 1.8656 溢价=1.25%
+NAV: 1.8792 (2026-09-07) 溢价=0.52%
+前日溢价: 0.53%
+Δ溢价: 0.72%
+信号: weak_buy | 🟡 弱买入信号 Δ溢价 +0.72%
+AI: 已分析
+成本: 0.13%/笔 (实际预估（免五+万1.5+0.1%滑点）)
+预估净收益: 0.35%/笔
+AI分析: [置信度]
+中
+
+[相似度]
+历史相似日2胜1负，但彼时溢价/Δ溢价远高于当前，参考性有限。
+
+[海外]
+海外涨跌互现，韩台偏强，日澳港偏弱，对买入支撑有限。
+
+[风险]
+ETF正溢价1.25%且继续走阔，若净值回落溢价收敛将拖累价格。
+AI推理全文(4997字):
+We need answer in Chinese, strict four lines labels. Need think but final only four lines. Need include confidence, similarity, overseas, risk. Need decide high/medium/low.
+
+ Need reason. Let's parse data.
+
+Current price 1.8890, change 0.00%, IOPV premium 1.25%, Δpremium +0.72%, signal weak_buy, amplitude 1.4%. Historical win rate for Δpremium 0.5~1%: 3 trades win2 lose1 win rate 67%, avg +0.48%.
+
+Overseas: Nikkei -0.19, ASX -0.11, KOSPI +1.40, HSI -0.17, Taiwan +0.16. Mixed, Asia ex? Some positive but many negative.
+
+Weight stocks: SK Hynix +3.51, BHP +3.25, Singtel +0.44, Toyota +0.08, AIA +0.07, Samsung 0.00, TSMC -0.20, Sony -0.79, CBA -2.17, Nintendo -3.99. Many big weights? Samsung 6.2 flat, TSMC 8.5 -0.2, Nintendo -3.99, Sony -0.79, CBA -2.17. Positive: Hynix, BHP. Negative: Nintendo, CBA. Net mixed/negative.
+
+Similar historical trades:
+2026-06-24: Δ5.3% premium8.8% -> profit1.97% similarity100% (weird far future? but data)
+2026-06-25: Δ5.9% premium9.4% -> loss2.20% sim99%
+2024-06-19: Δ1.6% premium2.4% -> profit0.08% sim98%
+These similar have much larger Δpremium/premium (5.3/8.8 etc) vs current 0.72/1.25. Maybe not similar in premium magnitude? Wait "最相似历史交易" list similarity 100 but Δ5.3 vs current 0.7? Maybe maybe due date? Weird. They gave "Δ溢价" for similar days 5.3%, premium 8.8%. Current Δpremium +0.72. Similarity is high but values differ. Need mention discrepancy? Need in final "相似度" one sentence with historical and differences. Need perhaps "相似历史日胜率不错，但历史样本溢价与Δ溢价显著高于当前，参考性有限" etc.
+
+Need decide confidence: Based criteria:
+- High: overseas broadly rally + weights majority up + historical similar days majority profit + premium not extreme.
+Here overseas not broad rally (KOSPI up, TW up, Nikkei/Aussie/HK down). Weights not majority up: let's count 10: up: SK Hynix, BHP, Singtel, Toyota, AIA = 5 positive/up; Samsung flat; TSMC, Sony, CBA, Nintendo down = 4 down; if flat not up/down. "多数涨" not satisfied exactly 5/10, flat one. Overseas mixed. Historical similar days: two profit one loss (majority profit) but sample? Also current Δpremium +0.72 and premium 1.25 not extreme. Signal weak_buy. So conditions partly met. Confidence "中" likely. Need mention mixed evidence.
+
+Need produce four lines exactly labels:
+[置信度]
+中
+
+[相似度]
+与历史相似日多数盈利相似，但历史溢价/Δ溢价远高于当前，参考折扣。
+
+Need <40 Chinese chars? "不超过40字" each label content? Need obey. "中" one word. For other lines one sentence no more than 40 chars. Need count Chinese characters. Need concise.
+
+[海外]
+海外涨跌互现，韩台偏强，日澳港偏弱，支撑有限。
+
+Maybe 31 chars? Let's count: 海外涨跌互现，韩台偏强，日澳港偏弱，支撑有限。 = 23? Actually including punctuation? fine under 40.
+
+[风险]
+溢价1.25%且继续走阔，若跟踪指数回落易遭溢价收敛损失。
+
+Need count 31. Need note Δpremium +0.72, premium 1.25, signal weak buy. Risk: premium expanded to 1.25%, current price unchanged while IOPV? Δpremium +0.72 suggests price rose relative to IOPV? Actually if price +0.00, premium increased means IOPV fell? Could be due underlying index fall? Risk: "正溢价走阔至1.25%，叠加外盘分化，若净值回落溢价收敛将拖累价格." But max risk perhaps premium not extreme yet but expanding. For QDII ETF premium can be dangerous. Need mention.
+
+Need maybe "相似度" one sentence: "与历史相似案例均为高溢价扩张，但本次溢价仅1.25%、Δ0.72%，幅度差距大". Count maybe 39. Need include "历史2胜1负"? "相似历史2胜1负，但历史溢价5%+与当前1.25%差异大，参考性弱" Count 38? Let's count: 相似历史2胜1负，但历史溢价5%+与当前1.25%差异大，参考性弱. Chinese chars: 相似历史2胜1负(8?) Actually 相似历史 (4) + 2 (1) + 胜 (1) + 1 (1) + 负 (1) =8? Let's not need exact. Need no more 40. Good.
+
+Need maybe "最强相似历史交易" says 2026 future? Weird but no matter. Need mention "高溢价样本" not exactly. Also "历史胜率: Δ溢价0.5~1%, 3笔赢2输1胜率67%" current Δpremium 0.72 fits this segment. Similar days are not from same Δ bucket? 2026-06-24 Δ5.3 premium8.8, not 0.5~1. Hmm the "最相似历史交易" may be different feature-based not current? Actually current Δpremium +0.72, premium 1.25. Historical similar list includes Δ5.3 and premium8.8, not similar in these variables. Maybe "similarity 100%" weird. Need mention differences to discount. But maybe in final "与历史相似交易表面相似，但彼时溢价与Δ远高于当前，不能简单类比." Good.
+
+Need ensure "严格按格式输出四行（每行一个标签，不超过40字）" Means output exactly:
+[置信度]
+中
+[相似度]
+...
+[海外]
+...
+[风险]
+...
+No extra text. Need "置信度" one word only. Good.
+
+Need maybe use "中" not "中等"? It says <高/中/低，一个词>, so 中.
+
+Need maybe "海外" one sentence: "海外市场涨跌互现且日澳港走弱，韩国台湾走强，支撑不足" Count? Let's produce.
+
+Let's formulate final with each content <=40 Chinese chars. Need not include "推理". Use punctuation.
+
+Need ensure confidence line "中" no more 40. Good.
+
+Need perhaps "风险" one sentence <=40. "最大风险是正溢价继续走阔后收敛，叠加日澳港弱权重股调整" Count maybe 35. Need mention "Nintendo -3.99" but not necessary.
+
+Let's think if confidence maybe "低" due overseas weak + weights not majority down? Criterion low: "海外偏弱+权重股多数跌+历史相似日亏损+溢价极端." We have overseas mixed not broad weak; weights not majority down (4 down, 1 flat, 5 up); historical similar days majority profit; premium not extreme. So not low. Some positive conditions -> medium. Good.
+
+Need maybe "高" no due many not support. Medium.
+
+Let's produce final with no extra.
+----------------------------------------
