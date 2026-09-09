@@ -4279,3 +4279,411 @@ AI推理全文(171字):
 
 检查字数：第一行约25字，第二行约25字，第三行约25字。符合。确保每行一个标签且标签后内容。
 ----------------------------------------
+
+============================================================
+运行时间: 2026-09-08 14:30:19 | 模式: intraday
+行情: price=1.886 chg=-0.4749340369393203%
+IOPV: 1.8904 溢价=-0.23%
+NAV: 1.879 (2026-09-04) 溢价=0.37%
+前日溢价: 2.17%
+Δ溢价: -2.4%
+信号: neutral | ⚪ 无明确信号
+AI: 已分析
+成本: 0.13%/笔 (实际预估（免五+万1.5+0.1%滑点）)
+预估净收益: -0.13%/笔
+AI分析: [概况] 今日小幅折价且折价扩大，价格微跌。  
+[海外] 日经澳洲领跌但权重股分化，拖累有限。  
+[关注] 关注亚太能否企稳及折价回补机会。
+AI推理全文(204字):
+我们只需要三行，严格按格式。注意每行不超过40字。内容要简练。
+
+[概况] 今日溢价-0.23%且折价扩大，价格微跌。
+[海外] 日经澳洲领跌但权重股涨跌互现，拖累有限。
+[关注] 关注亚太市场能否企稳及折价是否收敛。
+
+检查字数。概况：今日溢价-0.23%且折价扩大，价格微跌。 大概18字。海外：日经澳洲领跌但权重股涨跌互现，拖累有限。 18字。关注：关注亚太市场能否企稳及折价是否收敛。 17字。合理。
+----------------------------------------
+
+============================================================
+运行时间: 2026-09-08 19:00:18 | 模式: daily
+行情: price=1.889 chg=-0.3166226912928763%
+IOPV: 1.8902 溢价=-0.06%
+NAV: 1.879 (2026-09-04) 溢价=0.53%
+前日溢价: 2.17%
+Δ溢价: -2.23%
+信号: neutral | ⚪ 无明确信号
+AI: 已分析
+成本: 0.13%/笔 (实际预估（免五+万1.5+0.1%滑点）)
+预估净收益: -0.13%/笔
+AI分析: [概况]  
+溢价转负但背离温和，现价微跌、幅度与海外普跌一致。  
+
+[海外]  
+日韩澳港台齐跌，外围风险偏好抑制ETF走势。  
+
+[关注]  
+丰田索尼领跌权重，明日留意汽车与电子龙头止跌信号。
+AI推理全文(124字):
+我们只需要按格式输出三行，每行不超过40字。内容基于数据。注意现价跌0.32%，溢价负0.06%，Δ溢价负2.23%未触发买入。海外指数普跌。权重股丰田和索尼大跌，但前两大台积电和SK海力士上涨。明天关注权重股是否继续分化或超跌反弹。严格每行标签。
+----------------------------------------
+
+============================================================
+运行时间: 2026-09-09 14:30:21 | 模式: intraday
+行情: price=2.847 chg=0.10548523206751455%
+IOPV: 2.2759 溢价=25.09%
+NAV: 2.2774 (2026-09-07) 溢价=25.01%
+前日溢价: 24.88%
+Δ溢价: 0.21%
+信号: neutral | ⚪ 无明确信号
+AI: 已分析
+成本: 0.13%/笔 (实际预估（免五+万1.5+0.1%滑点）)
+预估净收益: -0.13%/笔
+AI分析: [概况]  
+高溢价25%但未触发买入，价格微涨，市场观望情绪浓。  
+
+[海外]  
+纳指小跌、费半领涨，权重股分化，对ETF影响偏中性。  
+
+[关注]  
+注意高溢价回落风险，及英伟达等权重股能否止跌。
+AI推理全文(120字):
+我们只需要按照要求输出三行，每行一个标签，内容简短不超过40字。注意格式：[概况] [海外] [关注]。内容基于数据。今日溢价25.09%很高，但Δ溢价未触发买入。海外纳指跌但费半涨，权重股分化。关注明日溢价回落风险或科技股走势。控制字数。
+----------------------------------------
+
+============================================================
+运行时间: 2026-09-09 14:31:19 | 模式: intraday
+行情: price=1.893 chg=0.21175224986765503%
+IOPV: 1.8656 溢价=1.47%
+NAV: 1.8792 (2026-09-07) 溢价=0.73%
+前日溢价: 0.53%
+Δ溢价: 0.94%
+信号: weak_buy | 🟡 弱买入信号 Δ溢价 +0.94%
+AI: 已分析
+成本: 0.13%/笔 (实际预估（免五+万1.5+0.1%滑点）)
+预估净收益: 0.35%/笔
+AI分析: [置信度] 中
+[相似度] 形态相似，但Δ溢价与溢价均低于历史样本；2赢1输胜率67%。
+[海外] 海外涨跌互现，韩台偏强但日经恒指走弱，整体中性不构成强支撑。
+[风险] 溢价1.47%偏高且仍在扩大，若收敛或海外转弱，买入易回撤。
+AI推理全文(21574字):
+用户要求我对亚太精选ETF(159687)的买入信号进行分析并按照指定格式输出。让我按步骤思考，但最终只能输出四行。
+
+① 数据核对:
+海外指数：日经-0.21%，澳洲ASX-0.02%，韩国+1.39%，恒生-0.23%，台湾+0.16%。
+权重股：SK海力士+3.35%，BHP+3.25%，丰田+0.59%，友邦+0.33%，三星+0.09%，台积电-0.20%，索尼-0.25%，新加坡电信-0.44%，联邦银行-2.17%，任天堂-4.10%。
+现价+0.21%，IOPV溢价1.47%，Δ溢价+0.94%，信号weak_buy，振幅1.4%。
+
+② 条件比对:
+- 海外普涨？不满足，多数下跌/平，仅韩国、台湾上涨。
+- 权重股多数涨？涨的：SK海力士、BHP、丰田、友邦、三星 = 5只；跌的：台积电、索尼、新加坡电信、联邦银行、任天堂 = 5只。权重上看，涨的权重2.3+2.9+4.8+2.5+6.2=18.7%；跌的权重8.5+3.5+2.1+3.2+2.7=20.0%。跌的权重略高，但接近平衡。
+- 历史相似日多数盈利？相似度100%的三笔，2024-06-19赢、2026-06-24赢、2026-06-25输，2赢1输，多数盈利（67%）。
+- 溢价非极端？溢价1.47%，Δ溢价+0.94%，不算极端（历史极端Δ5%+，溢价8%+）。
+部分条件满足，有正面也有负面信号，所以置信度应为“中”。
+
+③ 相似日证据：
+最相似历史交易：
+2024-06-19: Δ1.6% 溢价2.4% → 赚0.08%
+2026-06-24: Δ5.3% 溢价8.8% → 赚1.97%
+2026-06-25: Δ5.9% 溢价9.4% → 亏2.20%
+当前Δ溢价0.94%，溢价1.47%，与这三笔相比Δ溢价更低，溢价也更低，不完全相似。但历史相似日显示Δ溢价上升阶段可能有收益，但2026-06-25显示极端溢价可能亏损。
+
+④ 最终判定：
+置信度：中
+相似度：当前Δ溢价0.94%、溢价1.47%，与历史三者Δ1.6%/5.3%/5.9%差异较大；历史2赢1输胜率67%，均收益+0.48%。
+海外：海外指数涨跌互现，韩国领涨+1.39%，但日经恒生下跌，整体支撑偏中性。
+风险：溢价1.47%且Δ溢价+0.94%已偏高，若追踪海外指数回落或溢价收敛，短期买入后可能承受溢价回撤风险；任天堂-4.10%、联邦银行-2.17%等权重走弱也构成压力。
+
+现在需要按格式输出四行，每行一个标签，不超过40字。
+
+[置信度]
+中
+
+[相似度]
+与历史Δ1.6%-5.9%相比当前溢价溢价差幅小，2赢1输但幅度偏弱。
+
+这句38字左右？让我数一下。字数统计：与历史Δ1.6%-5.9%相比当前溢价溢价差幅小，2赢1输但幅度偏弱。共34字？中文字符：与历史Δ1.6%-5.9%相比当前溢价溢价差幅小，2赢1输但幅度偏弱。大约32个汉字加数字符号，应该不超过40字。但"溢价溢价"重复了，改成"与历史Δ1.6%-5.9%相比，当前溢价更低；2赢1输但幅度弱" ~ 约34字。
+
+[海外]
+海外涨跌互现，韩台涨、日澳港跌，整体中性偏弱，不构成强支撑。
+
+约34字。
+
+[风险]
+溢价1.47%且升幅0.94%，若指数回落易遭溢价收敛+权重股走弱双杀。
+
+约32字。
+
+Let me double check the output requirement: "请用中文回复，严格按格式输出四行（每行一个标签，不超过40字）" They specify four lines each with a label. So labels are [置信度], [相似度], [海外], [风险]. They seem to want label on its own line then value on next line? Looking at the format:
+
+[置信度]
+<高/中/低，一个词>
+
+[相似度]
+<1句话，与历史交易的相似度和差异>
+
+[海外]
+<1句话，海外市场是否支撑当前信号>
+
+[风险]
+<1句话，当前最大风险>
+
+So indeed it should be 8 lines? The user says "严格按格式输出四行（每行一个标签，不超过40字）" but the template shows 4 blocks each with a label line and content line. "四行（每行一个标签）" is ambiguous. I think the intended output is exactly like their template: four blocks, each with the label as a separate line? Wait the template shows:
+
+[置信度]
+<高/中/低，一个词>
+
+That's 2 lines per section. But user says "四行（每行一个标签，不超过40字）" That seems contradictory: if label and content share a line, we'd have 4 lines total. "每行一个标签" maybe means each line starts with one tag like [置信度]内容. But in their format they have labels alone on line and content below. However "每行一个标签" suggests each of the four lines contains one tag and its content after it? Let me re-read:
+
+"请用中文回复，严格按格式输出四行（每行一个标签，不超过40字）：
+
+[置信度]
+<高/中/低，一个词>
+
+[相似度]
+<1句话，与历史交易的相似度和差异>
+
+[海外]
+<1句话，海外市场是否支撑当前信号>
+
+[风险]
+<1句话，当前最大风险>"
+
+I see four labels, each followed by content on the next line. That's 8 lines. But they say "四行" (four lines) maybe they consider each label+content as one "行" (block/line)? In Chinese, "四行" might mean four rows. "每行一个标签" maybe each row should have one tag, but their content also needs to be under the tag. Actually the plain text template has 8 lines. Maybe "四行" is a typo. To be safe, I should output exactly as the template structure with label line and content line, which would be 8 lines in total. But user explicitly says "四行" and "每行一个标签". Let me think about typical tasks in this benchmark. The user wants a strict 4-line output, and provided a template where each label line is followed by description of what to write. Maybe the intended output is eight lines? The phrase "每行一个标签，不超过40字" could refer to "每行" meaning the content line where the full line including label and value is no more than 40 chars. So maybe output should be:
+
+[置信度] 中
+[相似度] 与历史...
+[海外] 海外...
+[风险] 风险...
+
+That is 4 lines total, each line starts with a tag. But the "content" is not within angle brackets; user placed the kind of content inside <>. It may be just a placeholder explaining what to write, not literally angle brackets. Hmm.
+
+Let's parse: "严格按格式输出四行（每行一个标签，不超过40字）" — four lines each containing a tag. Then below they list:
+
+[置信度]
+<高/中/低，一个词>
+
+[相似度]
+<1句话...>
+
+...
+
+This is the "format" but it's 8 lines. However, if we treat each bracket as its own label, there are 4 label lines; the lines with <...> are placeholder instructions, not output lines. So "output four lines" means output lines that replace the <...> placeholders? But label lines are already there... Actually in this kind of instruction, the desired answer likely has the bracket on one line and content on the next. But that would be 8 physical lines, contradicting "四行". However, they said "每行一个标签" not "每块一个标签". Wait, if output was 8 lines, there would be 4 tags and 4 content lines; "每行一个标签" would only refer to the first 4 lines, not the latter 4. Hmm.
+
+Let's consider typical strict JSON-like outputs in these tasks. Since they say "不超过40字" for each line, it suggests each line is a self-contained statement. 4 lines. The format could be:
+
+[置信度] 中
+[相似度] ... 
+[海外] ...
+[风险] ...
+
+Each line starts with a tag, so "每行一个标签". That makes sense and totals 4 physical lines. The placeholder structure shown sorts of displays tag first and then the content type next line for readability, but they said "四行", so I should merge label and content into one line each:
+
+[置信度] 中
+[相似度] ...
+[海外] ...
+[风险] ...
+
+Let me examine "不超过40字" for each line - that likely counts the whole line. If labels were on separate lines and content beneath, the "40字" constraint for content lines would not count labels. But the user said "每行一个标签，不超过40字" - perhaps they intend each of the four lines includes label and content, all within 40 chars.
+
+I'll go with four physical lines, each containing a tag and its value/content, under 40 chars.
+
+Content drafts:
+[置信度] 中
+[相似度] 与历史相比Δ溢价和溢价偏低，样本2赢1输但幅度较小
+[海外] 海外涨跌互现，日恒澳偏弱，韩台较强，中性支撑
+[风险] 溢价1.47%偏高，若亚太回落或溢价收敛，短期有回撤风险
+
+Let's verify lengths:
+[置信度] 中 = 6 chars (including brackets) — good.
+[相似度] 与历史相比Δ溢价和溢价偏低，样本2赢1输但幅度较小. Count: 与历史相比Δ溢价和溢价偏低，样本2赢1输但幅度较小 — 中文+数字. Let's count: 与(1)历(2)史(3)相(4)比(5)Δ6溢7价8和9溢10价11偏12低13 ，14 sample? 样15本16 2 17赢18 1 19输20但21幅22度23较24小25. With "[相似度]" 4 chars prefix => 30. Under 40. Good. But "Δ溢价和溢价偏低" maybe "当前Δ溢价0.94%、溢价1.47%，低于历史样本；2赢1输" but longer. I can adjust later.
+
+[海外] 海外涨跌互现，日恒澳偏弱，韩台较强，中性支撑. Count: [海外] 4 + 海外涨跌互现(6) ，日恒澳偏弱(6) ，韩台较强(5) ，中性支撑(4) =~25. good.
+
+[风险] 溢价1.47%偏高，若亚太回落或溢价收敛，短期有回撤风险. Count: [风险]4 + 溢价1.47%偏高 ≈9, if. Good ~30.
+
+Need ensure "不要输出推理步骤". We comply.
+
+Now need ensure final [相似度] mentions "与历史交易的相似度和差异" and historical specific "最相似历史日" evidence. Maybe mention "Δ溢价、溢价均明显低于历史相似日，幅度不同". Simpler:
+[相似度] 与历史最相似日（Δ1.6%~5.9%、溢价2.4%~9.4%）相比，当前Δ溢价和溢价均更低。
+This is 37 Chinese chars after label? Let's count: "与历史最相似日（Δ1.6%~5.9%、溢价2.4%~9.4%）相比，当前Δ溢价和溢价均更低。" Count: 与(1)历(2)史(3)最(4)相(5)似(6)日(7)（8 Δ9 1 . 6 %? not Chinese, ~ ~, 5.9%,）. Very long maybe 50 in total, but with label maybe near 55. Too long.
+
+Need be concise <=40. Perhaps:
+[相似度] Δ溢价和溢价较历史样本更低，形态相似但样本幅度差异明显，2赢1输。
+约: tag 4 + 21 = 25. Does it mention historical sample? yes. "2赢1输" = 2 wins 1 loss? Actually "赢2输1" better. "胜率67%" maybe. 
+
+[相似度] 较历史样本（Δ更高、溢价更高）更加温和，2赢1输胜率67%。
+Counting: tag 4 + 较历史样本（Δ更高、溢价更高）更加温和，2赢1输胜率67%。≈ 30. Good.
+
+But "Δ更高、溢价更高" refers to historical sample characteristics? The historical examples are Δ1.6%, 5.3%, 5.9%, 溢价2.4%, 8.8%, 9.4%. Current Δ0.94, 溢价1.47. So historical samples have higher Δ and premium. So "较历史样本（Δ更高、溢价更高）更加温和" accurate. "2赢1输胜率67%" might suggest history supports some positive but current condition milder. Add "但当前价位距离样本溢价率较远" maybe.
+
+Maybe final:
+[相似度] 与历史样本相比，Δ溢价与溢价均更低、更温和；历史2赢1输胜率67%。
+Let's count chars after tag: 与历史样本相比，Δ溢价与溢价均更低、更温和；历史2赢1输胜率67%。 与(1)历2史3样4本5相6比7 ，8 Δ9 溢10价11与12溢13价14均15更16低17 、18更19温20和21 ；22历23史24 2 25赢26 1 27输28胜29率30 67 % 32 + . Around 32 + tag = 36, <=40. Good.
+
+Wait "1" counts as Chinese? anyway 33 plus symbol % = ~34.
+
+[置信度] 中
+[相似度] 与历史样本相比，Δ溢价与溢价均更低、更温和；历史2赢1输胜率67%。
+[海外] 海外涨跌互现，日恒澳偏弱，韩台偏强，整体中性支撑偏弱。
+[风险] 溢价1.47%偏高，若指数回落或溢价收敛，买入易面临回撤风险。
+
+Let's verify labels with square brackets included count toward line length. "[置信度]" = 5 symbols? Actually [ is one symbol, 置1 信2 度3 , ] one, so 5. "中" = 1 total 6.
+
+"[相似度]" = [ + 相 + 似 + 度 + ] = 5? Actually "相似度" is 3 Chinese chars, brackets = 2, total 5. Content 32, total 37. Fine.
+
+"[海外]" = 4? [=1, 海2? Wait: [海外] = [ + 海 + 外 + ] = 4, content ~22, total ~26.
+"[风险]" = [ + 风 + 险 + ] = 4, content ~30, total ~34.
+
+Everything under 40. Nice.
+
+But there is the confusion about line structure. I will output four physical lines. No extra blank lines, no bullets.
+
+Let's ensure "置信度判定标准" says:
+- 高: 海外普涨+权重股多数涨+历史相似日多数盈利+溢价非极端
+- 中: 部分条件满足，有正面也有负面信号
+- 低: 海外偏弱+权重股多数跌+历史相似日亏损+溢价极端
+
+For this case:
+- 海外普涨: Not met. (3 down, 2 up? Actually Korea +1.39 Taiwan +0.16; Nikkei, ASX, HSI down = overall mixed to weak)
+- 权重股多数涨: 5涨5跌 by count but top weights: TSMC -0.20, Samsung +0.09, Toyota +0.59, etc. Not a clear majority? 5涨5跌 exactly tie. If compare by number, "多数" not satisfied. By market cap top weight (TSMC 8.5) falls, but SK Hynix +3.35 and BHP +3.25 big increases. Roughly neutral.
+- 历史相似日多数盈利: 2/3 = yes.
+- 溢价非极端: 1.47%, moderate? It is positive but not extreme. Δ溢价0.94% below 1% threshold but in signal "weak_buy" range. Satisfies.
+
+So "部分条件满足" => "中". Good.
+
+But wait, the signal "weak_buy" already an engine output. User asks to analyze buy signal. We should give signal analysis based on those metrics. Our "置信度 中" says partial support.
+
+Need be careful: They said "每行一个标签，不超过40字" perhaps wants "多则不超过四行"? Hmm. Another possibility: each "行" is a pair "标签: value", not two lines. But the template shows separate. In a previous context in Chinese workflows, "请用中文回复四行" often implies answer as:
+[置信度] 中
+[相似度] ... 
+[海外] ...
+[风险] ...
+Thus yes.
+
+Potential issue: "[置信度] 中" is not a full sentence with content? It's okay.
+
+Let's think through the reasoning thoroughly, though not output. Maybe need mention "现价涨0.21% while IOPV溢价1.47%" meaning price paid above intrinsic. IOPV premium at 1.47% is somewhat high. Usually QDII ETF may have limits causing premium. If buying now, pay 1.47% premium. Δ溢价 +0.94 means premium expanding. If ETF price rises faster than NAV, maybe momentum/sentiment. But risk: premium can revert, causing price fall even if NAV flat. Signal strength weak_buy, amplitude 1.4%. Historical hit rate 67% average +0.48% for Δ0.5-1%. More data? "历史3笔" very small — low sample size. The three similar 100% examples have weird data including future dates 2026? But maybe synthetic. Note "2026-06-24" and "2026-06-25" similar to current? Similarity 100% is suspicious; likely repeated patterns due to recent period. But we can cite as provided. The most similar historical trades all had much larger Δ and premium, e.g., 2026-06-25 lost 2.20%. Actually one may argue historical sample contains large premium expansion episodes. Wait current Δ溢价 +0.94% compared to previous similar trades that maybe each day's Δ premium was +1.6%, +5.3%, +5.9%; there is a progression. It resembles 2024-06-19? Hmm.
+
+Let's examine "最相似历史交易" with similarity 100% Could include the day after? The dates: 2024-06-19, 2026-06-24, 2026-06-25. All similarity 100% weird. But price 2026? Current date presumably 2026-06-26 maybe? The current "最相似历史交易" includes 2026 dates (one day before), so the "history" is actually recent. If current date is 2026-06-26? Wait if today is 2026-06-26, then 2026-06-24 and 2026-06-25 are recent history, and perhaps 2024-06-19 also similar. In the data, "相似度100%" indicates same signal vector? Maybe pair of dates: 2024-06-19, 2026-06-24 and 2026-06-25? The task says "最相似历史交易:" and lists multiple, each with similarity 100%. "当前信号" perhaps based on pattern matching. In this hypothetical, 2026-06-25 is one day prior and lost 2.20%, and 2026-06-24 gained 1.97%. The fact that they include 2026 dates suggests current date is after June 25 2026. But not important.
+
+Maybe we should mention in "相似度" that history has 2 wins and 1 loss, but those days had much higher premium expansion (5.3%, 5.9%) and high premium (8.8%, 9.4%) vs current (0.94%,1.47%). The 2026-06-25 loss followed a high premium expansion; current is lower and less extreme. That makes current signal less risky than "extreme sample" but also less momentum. Overall weighted.
+
+Current "weak_buy" signal perhaps from a proprietary strategy. The premium expansion is positive for short term? In QDII ETF, premium expansion can push price upward but can also revert. Here the user expects signal analysis not financial advice.
+
+Let's think about if "海外市场是否支撑当前信号" has "富时亚太: +nan%" (missing). We should ignore missing. Asian markets: Nikkei -0.21, ASX -0.02, Hang Seng -0.23, Australia? ASX index includes BHP; Kospi +1.39; Taiwan +0.16. Not a broad rally. Weight stocks: SK hynix +3.35 (Korea), BHP +3.25 (Australia), Samsung +0.09, Toyota +0.59, AIA +0.33; negative: TSMC -0.20, Sony -0.25, Singtel -0.44, CBA -2.17, Nintendo -4.10. So Australian financial CBA down 2.17 and Nintendo down 4.1, TSMC slightly down. If the ETF weights TSMC 8.5% and Samsung 6.2%, TSMC drop could drag more than Samsung gain (mcap versus % return: TSMC -0.20%*8.5 = -0.017%, Samsung +0.09*6.2=+0.0056%; Toyota +0.59*4.8=0.028; BHP +3.25*2.9=0.094; SK +3.35*2.3=0.077; Nintendo -4.10*2.7=-0.111; CBA -2.17*3.2=-0.069; Sony -0.25*3.5=-0.009; TSM -0.017; overall rough contribution: -0.117? Let's calculate more careful:
+SK +3.35*2.3=+0.07705
+BHP +3.25*2.9=+0.09425
+Toyota +0.59*4.8=+0.02832
+AIA +0.33*2.5=+0.00825
+Samsung +0.09*6.2=+0.00558
+TSMC -0.20*8.5=-0.017
+Sony -0.25*3.5=-0.00875
+Singtel -0.44*2.1=-0.00924
+CBA -2.17*3.2=-0.06944
+Nintendo -4.10*2.7=-0.1107
+Sum ≈ -0.002? Let's sum positives: 0.07705+0.09425+0.02832+0.00825+0.00558 = 0.21345. Negatives: -0.017-0.00875-0.00924-0.06944-0.1107 = -0.21513. Net -0.00168 ≈ -0.002%. Actually total weighted return of listed weights maybe around -0.002%, essentially flat. So underlying holdings flat; but IOPV data would reflect actual. The ETF price +0.21 with premium expansion suggests price overvaluation independent of fundamentals. Good.
+
+Since current price +0.21, IOPV premium 1.47, Δpremium +0.94, the price rise partly driven by premium. The risk line could mention "溢价高企，回归风险". Good.
+
+Need maybe include "现价1.893，涨跌幅0.21%" not necessary.
+
+Let's decide final answer. But before final, I should make sure not to output reasoning steps in final. Four lines only. Let's carefully craft final under required char limit.
+
+Potential final:
+[置信度] 中
+[相似度] 与历史样本相比，Δ溢价与溢价均更低、更温和；历史2赢1输胜率67%。
+[海外] 海外涨跌互现，日恒澳偏弱，韩台偏强，整体支撑中性。
+[风险] 溢价1.47%偏高且溢价仍在扩大，若收敛或海外转弱，买入易回撤。
+
+Let's count each line under 40:
+1 "[置信度] 中" count 6.
+2 "[相似度] 与历史样本相比，Δ溢价与溢价均更低、更温和；历史2赢1输胜率67%。" Count without code? Let's count accurately:
+[相似度] = 5
+与1 历2 史3 样4 本5 相6 比7 ，8 Δ9 溢10 价11 与12 溢13 价14 均15 更16 低17 、18 更19 温20 和21 ；22 历23 史24 2 25 赢26 1 27 输28 胜29 率30 6 31 7 32 % 33 。34
+Total 39. Good under 40? 39 <= 40 yes. If count "2" and "1" etc as characters, yes 39. Fine.
+3 "[海外] 海外涨跌互现，日恒澳偏弱，韩台偏强，整体支撑中性。" count:
+[海外]=4, 海1 外2 涨3 跌4 互5 现6 ，7 日8 恒9 澳10 偏11 弱12 ，13 韩14 台15 偏16 强17 ，18 整19 体20 支21 撑22 中23 性24 。25 => total 29.
+4 "[风险] 溢价1.47%偏高且溢价仍在扩大，若收敛或海外转弱，买入易回撤。" Count:
+[风险]=4; 溢1价2 1 . 4 7 % maybe counts 5 symbols? Let's count: 溢(1)价(2)1(3).(4)4(5)7(6)%(7)偏(8)高(9)且(10)溢(11)价(12)仍(13)在(14)扩(15)大(16)，(17)若(18)收(19)敛(20)或(21)海(22)外(23)转(24)弱(25)，(26)买(27)入(28)易(29)回(30)撤(31)。(32) total 36. Good.
+
+Maybe "溢价仍在扩大" duplicates "溢价仍在扩大" but true Δ溢价+0.94. Actually if IOPV premium 1.47 and Δ+0.94, premium is expanding relative to previous? Maybe "当前溢价 1.47%" high. "若收敛或海外转弱，买入易回撤" is clear.
+
+Wait, IOPV premium 1.47% means price > fair value by 1.47%. Δpremium +0.94 means premium expanded during day. If you buy at price, you pay 1.47% over NAV. Even if NAV unchanged, premium mean-reverts to 0 implies loss. However QDII ETFs often maintain premiums due to quotas, but still.
+
+Line [海外] "海外涨跌互现，日恒澳偏弱，韩台偏强，整体支撑中性。" Actually current "信号" says weight stocks: some gain; the ocean market: kospi/taiwan positive, but others negative. The statement "日恒澳偏弱" (Japan, HS, Australia) correct. Maybe "澳洲ASX -0.02" essentially flat; BHP +3.25 but index negative due to CBA? Fine.
+
+But "整体支撑中性" not exactly "海外市场是否支撑当前信号" Should answer "中性" not "偏弱". Yes.
+
+Let's consider whether confidence should be "低" because overseas underlying is not "普涨" and 5 star weight holdings "majority" perhaps top heavy negative, and history "most similar" includes a loss and average negligible +0.48? The classification: 
+- 高: 海外普涨 + 权重股多数涨 + history win + premium non-extreme
+- 中: 部分条件满足，有正面也有负面信号
+- 低: 海外偏弱 + 权重股多数跌 + 历史相似日亏损 + 溢价极端
+The data: 海外中性偏弱 (not satisfied), 权重股 "多数涨"? Actually by count 5涨5跌. Not majority up. But in weight terms slightly negative. Historical: 2赢1输 "多数盈利" if considering count. Premium non-extreme. So exactly one to two signals negative, one positive. "低" requires overseas weak plus majority decline plus history losing plus premium extreme; not all met. Therefore "中" is correct. The final "置信度 中" should be a single word "中".
+
+Need not include "高/中/低，一个词" in final content? It says [置信度] <高/中/低，一个词>. So output [置信度] 中 exactly.
+
+Let's think about "相似度" line: The historical "most similar" data has "相似度100%" for 3 dates. In final "与历史样本相比..." maybe we should explicitly say "相似度高但样本少" because only 3? The user requests "1句话，与历史交易的相似度和差异". The "相似度" line should include "相似" and "差异". My line does not explicitly mention "相似度" word; it says "与历史样本相比，Δ溢价与溢价均更低、更温和；历史2赢1输胜率67%。" It includes difference (lower premium) and missing "similarity." Better to say "形态相似，但幅度不及历史样本". Let's craft:
+[相似度] 形态相似，但Δ溢价与溢价均低于历史样本；2赢1输胜率67%。
+Count: [相似度]=5 + 形1态2相3似4，5但6Δ7溢8价9与10溢11价12均13低14于15历16史17样18本19；202赢... Actually "样本" after "历史" but no "本? wait phrase: 形态相似，但Δ溢价与溢价均低于历史样本；2赢1输胜率67%。 Count:
+形(1)态(2)相(3)似(4)，(5)但(6)Δ(7)溢(8)价(9)与(10)溢(11)价(12)均(13)低(14)于(15)历(16)史(17)样(18)本(19)；(20)2(21)赢(22)1(23)输(24)胜(25)率(26)6(27)7(28)%(29)。(30) Total 35 with label 40? Actually label 5 + content 30 = 35. Good. This includes both "形态相似" and differences.
+
+Would "2赢1输胜率67%" refer to the "historical similar transactions" but in the same sentence after semicolon; yes.
+
+Maybe "均低于历史样本" not "历史样本" because current Δ0.94 vs historical examples Δ1.6/5.3/5.9; current premium 1.47% vs 2.4/8.8/9.4. yes. "均低于" correct.
+
+Line [海外] perhaps "整体支撑中性" but if asks "是否支撑", answer "中性偏弱，不构成明确支撑"? If the supporting market consists of KOSPI +1.39 and Taiwan +0.16 but not enough; Japan, Australia, HK negative. Weight top TSMC in Taiwan +0.16, Samsung etc. But "KOSPI +1.39%, 台湾+0.16%" yes, "SK海力士+3.35%, BHP+3.25%" weight stocks provide some positive. So not all weak. But if overseas index weighted average is negative maybe less support. Let's write "涨跌互现，韩台领涨但日恒澳走弱，中性偏弱，不构成强支撑。" Count:
+[海外] 4 + 涨跌互现(4) + ， + 韩台领涨但日恒澳走弱(10? 韩1台2领3涨4但5日6恒7澳8走9弱10) + ， + 中性偏弱不构成强支撑? Wait "中性偏弱，不构成强支撑" count 12. Total ~4+4+1+10+1+12=32.
+Maybe "中性偏弱，不构成强支撑" exactly answers.
+
+Need include "海外" content not over 40. Good.
+
+Let's reconsider if final should have no punctuation after tag? Fine.
+
+Now, any requirement "不要输出推理步骤" means no extra blank lines or explanations. We can include no reasoning. Good.
+
+Let's ensure "置信度" line is exactly one word high/中/低, no punctuation? The template says "中". Output [置信度] 中. Good.
+
+Now, let's verify our content based on "对买入信号做简短分析": We did: confidence, similarity, overseas, risk. Good.
+
+Let's think about "最相似历史交易" weirdness. In the final [相似度], should maybe mention "最相似历史交易中有2赢1输" but not "历史样本" because there were three. Since "历史样本" could refer to all samples. That's fine.
+
+Let's prepare final answer exactly 4 lines:
+[置信度] 中
+[相似度] 形态相似，但Δ溢价与溢价均低于历史样本；2赢1输胜率67%。
+[海外] 海外涨跌互现，韩台领涨但日恒澳走弱，中性偏弱，不构成强支撑。
+[风险] 溢价1.47%偏高且溢价仍在扩大，若收敛或海外转弱，买入易回撤。
+
+Check char lengths:
+[置信度] 中 = 5? [ = 1, 置=2, 信=3, 度=4, ]=5. "中"=6. Good.
+[相似度] line count: [相似度] 5 bytes? Actually "相似度" 3 Chinese + 2 brackets =5. "形"6 "态"7 "相"8 "似"9 "，"10 "但"11 "Δ"12 "溢"13 "价"14 "与"15 "溢"16 "价"17 "均"18 "低"19 "于"20 "历"21 "史"22 "样"23 "本"24 "；"25 "2"26 "赢"27 "1"28 "输"29 "胜"30 "率"31 "6"32 "7"33 "%"34 "。"35. Yes 35.
+[海外] line count: [海外] 4, 海5, 外6, 涨7, 跌8, 互9, 现10, ，11, 韩12, 台13, 领14, 涨15, 但16, 日17, 恒18, 澳19, 走20, 弱21, ，22, 中23, 性24, 偏25, 弱26, ，27, 不28, 构29, 成30, 强31, 支32, 撑33, 。34. OK.
+[风险] line count: [风险]4, 溢5, 价6, 1(7), .(8), 4(9), 7(10), %(11), 偏12, 高13, 且14, 溢15, 价16, 仍17, 在18, 扩19, 大20, ，21, 若22, 收23, 敛24, 或25, 海26, 外27, 转28, 弱29, ，30, 买31, 入32, 易33, 回34, 撤35, 。36. OK.
+
+Potential issue "溢价仍在扩大" — Δ溢价 +0.94% means today's premium changed +0.94, but "IOPV溢价: 1.47%" maybe current premium at time vs yesterday? So yes current expanding. If not, "偏高" enough. "溢价收敛" may occur at close/T+1 causing price drop. Good.
+
+Let's think if "海外涨跌互现，韩台领涨但日恒澳走弱" phrase: Hong Kong "恒生" called 恒; "日恒澳" = Japan, HS, Australia, plus perhaps "ASX" Australia. OK. "韩台" includes KOSPI and Taiwan. Maybe if output "韩台" is colloquial but acceptable.
+
+Alternative: "日经跌0.21%、恒指跌0.23%、ASX跌0.02%；韩国台湾涨，海外中性" — but over length? Under 40 maybe. More precise but not needed.
+
+Wait, "澳洲ASX -0.02%" essentially flat; "澳走弱" is slightly misleading because -0.02% is flat. But can say "日经、恒指走弱，韩台偏强". Avoid saying ASX weak. Maybe:
+[海外] 海外涨跌互现，韩台偏强但日经恒指偏弱，整体中性不构成强支撑。
+Count 35. This is more accurate because Australia flat. Let's change to:
+[海外] 海外涨跌互现，韩台偏强但日经恒指走弱，整体中性不构成强支撑。
+Actually "日经恒指" = two markets; doesn't mention Australia, okay. "海外涨跌互现" covers it. Good.
+
+What about "不构成强支撑" is a bit ambiguous; "中性" line enough.
+
+Let's craft final exactly:
+[置信度] 中
+[相似度] 形态相似，但Δ溢价与溢价均低于历史样本；2赢1输胜率67%。
+[海外] 海外涨跌互现，韩台偏强但日经恒指走弱，整体中性不构成强支撑。
+[风险] 溢价1.47%偏高且仍在扩大，若收敛或海外转弱，买入易回撤。
+
+Fine.
+
+Wait, [风险] line no "溢价仍在扩大"? If I say "溢价1.47%偏高且仍在扩大" good.
+
+Let's check "溢价1.47%偏高且仍在扩大" if "仍在扩大" refers to premium expansion from previous day, yes.
+
+Now I'm ready.
+----------------------------------------
