@@ -1,2 +1,4 @@
 
 # Runtime state files - tracked for transparency
+__pycache__/
+*.pyc
