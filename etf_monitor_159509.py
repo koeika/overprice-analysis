@@ -38,7 +38,7 @@ from datetime import datetime, timedelta, timezone
 
 # ====== 配置 ======
 ETF_CODE = "159509"
-MAX_EVIDENCE_CHARS = 4000  # 推导过程消息总字数上限（Seatalk 实测硬上限 4096 字符，留安全边距）
+MAX_EVIDENCE_CHARS = 4000  # Seatalk 单条消息字数上限（实测硬上限 4096 字符，留安全边距）
 TRADE_CAPITAL = float(os.environ.get("TRADE_CAPITAL", "20000"))
 COST_MODEL = os.environ.get("COST_MODEL", "realistic")
 SEATALK_APP_ID = os.environ.get("SEATALK_APP_ID", "")
@@ -592,11 +592,7 @@ def ai_analyze(analysis, mode="daily"):
 - 低: 海外偏弱+权重股多数跌+历史相似日亏损+溢价极端
 
 推理要求（仅用于思考过程，最终回复仍是上面四行，不要在回复里输出推理步骤）：
-思考中按以下步骤逐项核对，每步一两句话即可，整个思考过程控制在600字以内：
-① 数据核对: 列出海外指数与权重股涨跌的关键数据
-② 条件比对: 逐条比对判定标准，写出满足/不满足
-③ 相似日证据: 引用最相似历史日的Δ溢价/溢价/收益
-④ 最终判定: 定置信度；证据冲突时说明取舍理由"""
+思考从简：只比对最相似历史日与今日的Δ溢价/溢价/收益差异即可，其余不必展开，控制在200字以内。"""
     else:
         prompt = f"""你是量化交易分析师。请对纳指科技ETF(159509)做简短的**日常市场扫描**（今日无买入信号）。
 
@@ -801,28 +797,6 @@ def format_message(a):
     return m
 
 
-def format_ai_reasoning(text):
-    """把AI推理全文整理成可读格式：空行分段 + 长段按句拆行（每行≤120字）"""
-    import re
-    out = []
-    for para in [p.strip() for p in text.split("\n") if p.strip()]:
-        if len(para) <= 120:
-            out.append(para)
-            continue
-        # 长段按句号/问号/感叹号/分号拆行
-        cur = ""
-        for seg in re.split(r'(?<=[。！？；])', para):
-            if len(cur) + len(seg) <= 120:
-                cur += seg
-            else:
-                if cur.strip():
-                    out.append(cur.strip())
-                cur = seg
-        if cur.strip():
-            out.append(cur.strip())
-    return "\n\n".join(out)
-
-
 def build_evidence(a):
     """抄底信号时生成推导过程文本，附在信号消息的线程回复中佐证结论"""
     band = a.get("band")
@@ -863,21 +837,13 @@ def build_evidence(a):
         lines.append(f"⑥ 提示: 本档仅{band['n']}笔样本，统计意义有限，轻仓为宜")
     else:
         lines.append("⑥ 提示: 历史回测仅供参考，不构成投资建议")
-    # AI 推理过程（全文，分段可读；总长控制在 MAX_EVIDENCE_CHARS 内，超长按句截断）
-    reasoning = a.get("ai_reasoning", "")
-    if reasoning:
-        lines.append("⑦ AI推理过程(全文):")
-        fmt = format_ai_reasoning(reasoning)
-        budget = MAX_EVIDENCE_CHARS - len("  \n".join(lines)) - 60
-        if budget > 200 and len(fmt) > budget:
-            cut = fmt[:budget]
-            idx = max(cut.rfind("。"), cut.rfind("！"), cut.rfind("？"), cut.rfind("\n"))
-            cut = cut[:idx + 1] if idx > 0 else cut
-            lines.append(cut + f"\n（推理原文共{len(reasoning)}字，超出部分已存本地日志 run.log）")
-        else:
-            lines.append(fmt)
+    # ⑦ 只保留 AI 的历史相似度分析；推理全文仅存 run.log，不再发 Seatalk（省 token）
+    import re
+    sim_m = re.search(r'\[相似度\]\s*(.+)', a.get("ai_analysis") or "")
+    if sim_m:
+        lines.append(f"⑦ AI相似度分析: {sim_m.group(1).strip()}")
     else:
-        lines.append("⑦ AI推理: 本次AI调用超时或失败，无推理佐证（详见本地日志）")
+        lines.append("⑦ AI相似度分析: 本次AI未产出相似度分析（推理全文见本地日志 run.log）")
     # markdown 需"两个空格+换行"才是真换行；群聊纯文本模式下无影响
     return "  \n".join(lines)
 
@@ -963,7 +929,7 @@ def send_seatalk(message, mode="daily", evidence=None):
     evidence: 抄底信号的推导过程文本，发送后作为线程回复附在信号消息下"""
     # 长度保险：Seatalk 单条消息硬上限 4096 字符（实测：4093 过 / 4097 拒），
     # 超长会被整条拒收，必须截断保底（推导消息由 build_evidence 单独控制上限）
-    if len(message) > 4000:
+    if len(message) > MAX_EVIDENCE_CHARS:
         message = message[:4000] + "…（消息超长已截断，完整内容见本地日志 run.log）"
     if not SEATALK_APP_ID or not SEATALK_APP_SECRET:
         print("\n⚠️  未配置 SEATALK_APP_ID / SEATALK_APP_SECRET")
