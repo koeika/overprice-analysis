@@ -436,33 +436,38 @@ def _default_trades():
 
 
 def find_similar_days(current, trades, top_n=3):
-    """用特征向量找最相似的历史交易日"""
+    """用特征向量找最相似的历史交易日（z-score 标准化 + 欧氏距离）
+
+    不用余弦相似度：余弦只看特征比例、对大小不敏感，会把 Δ-1.5 与 Δ-15
+    判成 100% 相似。也不取 abs()：负溢价/下跌趋势与正的是两种形态，符号必须保留。
+    """
     import math
     features = ["delta", "premium", "trend_5d"]
 
-    def vector(t):
-        return [abs(t.get(f, 0) or 0) for f in features]
+    def raw(t):
+        return [t.get(f, 0) or 0 for f in features]
 
-    cur_vec = vector(current)
-    norm_c = sum(x*x for x in cur_vec) ** 0.5
-
-    if norm_c == 0 or math.isnan(norm_c):
+    rows = [t for t in trades if all(not math.isnan(v) for v in raw(t))]
+    if not rows:
         return []
 
+    # 用历史样本自身的均值/标准差做 z-score（数据驱动，无硬编码阈值）
+    stats = {}
+    for i, f in enumerate(features):
+        vals = [raw(t)[i] for t in rows]
+        mean = sum(vals) / len(vals)
+        std = (sum((v - mean) ** 2 for v in vals) / len(vals)) ** 0.5
+        stats[f] = (mean, std if std > 0 else 1.0)
+
+    def zvec(vals):
+        return [(v - stats[f][0]) / stats[f][1] for f, v in zip(features, vals)]
+
+    cur_z = zvec(raw(current))
     scored = []
-    for t in trades:
-        t_vec = vector(t)
-        # 跳过含 NaN 的记录
-        if any(math.isnan(v) for v in t_vec):
-            continue
-        norm_t = sum(x*x for x in t_vec) ** 0.5
-        if norm_t == 0 or math.isnan(norm_t):
-            continue
-        dot = sum(a*b for a,b in zip(cur_vec, t_vec))
-        sim = dot / (norm_c * norm_t)
-        if math.isnan(sim):
-            continue
-        scored.append({**t, "similarity": round(sim * 100)})
+    for t in rows:
+        tz = zvec(raw(t))
+        dist = sum((a - b) ** 2 for a, b in zip(cur_z, tz)) ** 0.5  # 标准化欧氏距离
+        scored.append({**t, "similarity": round(100 / (1 + dist))})  # 距离0→100%，越远越低
 
     scored.sort(key=lambda x: x["similarity"], reverse=True)
     return scored[:top_n]
@@ -505,7 +510,7 @@ def ai_analyze(analysis, mode="daily"):
     # 2. 相似日匹配
     trades = load_historical_trades()
     current_features = {
-        "delta": abs(delta), "premium": abs(premium),
+        "delta": delta, "premium": premium,
         "trend_5d": chg,  # 用当日涨跌近似
     }
     similar = find_similar_days(current_features, trades)
@@ -817,8 +822,8 @@ def build_evidence(a):
     try:
         trades = load_historical_trades()
         cur = {
-            "delta": abs(a.get("delta", 0)),
-            "premium": abs(a.get("iopv_premium") or a.get("nav_premium") or 0),
+            "delta": a.get("delta", 0),
+            "premium": a.get("iopv_premium") or a.get("nav_premium") or 0,
             "trend_5d": a.get("change_pct", 0),
         }
         similar = find_similar_days(cur, trades)
