@@ -7158,3 +7158,53 @@ AI推理全文(1954字):
 
 确保行内不超过40字。第一行 [置信度] 中。第二行 [相似度] 与90%历史日相比，溢价同为约0.3%，Δ略低，盈亏样本参半。 这算多少字？ [相似度] 4? 中文字符：与90%历史日相比，溢价同为约0.3%，Δ略低，盈亏样本参半。 大约31加标签6 =37。可以。第三行 [海外] 日韩台多数上涨、权重股偏强，但澳洲走弱，整体偏多。 字数大概29。第四行 [风险] Δ溢价偏高且溢价转正，海外回落或套利盘易引发回撤。 大约30。符合。最终不包含其他。
 ----------------------------------------
+
+============================================================
+运行时间: 2026-10-01 19:00:17 | 模式: daily
+行情: price=1.871 chg=1.2994044396318365%
+IOPV: 1.8658 溢价=0.28%
+NAV: 1.8536 (2026-09-29) 溢价=0.94%
+前日溢价: -1.03%
+Δ溢价: 1.31%
+信号: buy | 🟢 买入信号 Δ溢价 +1.31%
+AI: 已分析
+成本: 0.13%/笔 (实际预估（免五+万1.5+0.1%滑点）)
+预估净收益: 0.18%/笔
+AI分析: [置信度] 中
+[相似度] 最似2025-11-24和2026-02-11，溢价近；09-30同溢价曾亏。
+[海外] 日韩台港普涨，权重股多数上涨，仅澳洲明显拖累。
+[风险] 澳洲走弱及部分权重下跌，若溢价回落可能短线亏损。
+AI推理全文(2986字):
+Need answer in Chinese, strict 4 lines labels, each line label + one line no more? User says 四行（每行一个标签，不超过40字）。 Need provide [置信度], [相似度], [海外], [风险]. Need analyze.
+
+We have data. Need determine confidence. Criteria: high: overseas broad gains + weight stocks mostly up + historical similar days mostly profitable + premium not extreme. Here overseas mixed: Nikkei +3.3, Korea +1.95, Taiwan +0.86, Hang Seng +0.37, but ASX -1.99. Weight stocks: majority? SK Hynix, Samsung, TSMC, Sony, Singtel, Toyota up; Nintendo slight down, AIA down, CBA down, BHP down. Positive weights? Samsung 6.2 +2.79, TSMC 8.5 +1.21, SK Hynix 2.3 +3.21, Sony 3.5 +0.74, Toyota 4.8 +0.17, Singtel 2.1 +0.47, total positive about 27.4? Negative: Nintendo 2.7 -0.05, AIA 2.5 -0.41, CBA 3.2 -0.86, BHP 2.9 -0.92 total 11.3. Weighted positive likely strong. Historical similar: 3 trades: wins 2, loss 1. Overall stats Δ溢价 1-2%, 40 trades, win 62%, avg +0.31. Premium 0.28%, not extreme. Current Δ溢价 +1.31 (within 1-2). Similar days: 2026-02-11 Δ1.2 premium -0.2 win 0.69; 2026-09-30 Δ1.6 premium 0.3 loss -0.59; 2025-11-24 Δ1.1 premium 0.3 win 0.66. Today premium 0.28, similar to two with premium 0.3: one win one loss, plus win. So mixed but positive. Confidence perhaps 中. Need not high due ASX negative and some weight stocks negative and one similar loss. But criteria high if overseas普涨+权重多数涨+历史相似多数盈利+溢价非极端. "海外普涨" not true due ASX -1.99. So not high. Could be 中. Maybe low? No, positive signals. So 中.
+
+[相似度] Need 1 sentence: 与2025-11-24/2026-02-11最接近，溢价0.28%接近，Δ1.31%略高于1.1/1.2；但2026-09-30同溢价却亏损。 Need <40字. Could say "最像2025-11-24与2026-02-11，溢价相近；但2026-09-30同溢价曾亏0.59%。" Count? 约35 Chinese. Good.
+
+[海外] 1 sentence: 日韩台港上涨但澳洲独跌，权重股多数上涨，整体偏支撑。 <40字.
+
+[风险] 最大风险：ASX走弱及部分权重股下跌，且相似日存在亏损，溢价回落可能压制收益。 Need one sentence <40字. Maybe "澳洲跌且BHP、联邦银行等权重走弱，若溢价回落可能引发短线亏损。" Good.
+
+Need ensure format exactly four lines. Include labels. Each line? The label line and content? User says "[置信度]\n<高/中/低，一个词>\n\n[相似度]\n<1句话...>" But also says 严格按格式输出四行（每行一个标签，不超过40字）. Ambiguity: "四行（每行一个标签，不超过40字）" Means each line begins with label and content maybe. Example:
+[置信度] 中
+[相似度] ...
+[海外] ...
+[风险] ...
+That's four lines. Good. Keep each line <=40字? Need count. [置信度] 中 (maybe 5 chars). [相似度] content. Need <=40 Chinese chars? Let's craft.
+
+[置信度] 中
+[相似度] 最像2025-11-24与2026-02-11，溢价相近；但09-30同溢价曾亏0.59%。
+Count: [相似度] (4? brackets included) + 最像(2)+2025-11-24(10?) etc. Might exceed 40? But likely okay. Let's count Chinese characters not strict. Need maybe shorter: "最似2025-11-24和2026-02-11，溢价近；09-30同溢价曾亏。" This is concise. But maybe "2026-02-11" takes 10. Still under 40 maybe. We'll use.
+
+[海外] 日韩台港普涨，权重股多数上涨，仅澳洲明显拖累。
+[风险] 澳洲走弱及部分权重下跌，若溢价回落可能短线亏损。
+
+Need final only. Ensure no reasoning. 
+Should confidence be "中" exactly one word. Good.
+
+Potential issue: They ask "买入信号" analysis. Our confidence could be "中" due positive but mixed. Good.
+
+Need perhaps mention historical win rate 62% but similar 2/3. Fine.
+
+Final four lines. 
+----------------------------------------
