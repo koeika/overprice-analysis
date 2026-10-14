@@ -8422,3 +8422,96 @@ AI推理全文(4371字):
 
 现在最终。 
 ----------------------------------------
+
+============================================================
+运行时间: 2026-10-14 14:30:20 | 模式: intraday
+行情: price=3.248 chg=2.2026431718061765%
+IOPV: 2.3901 溢价=35.89%
+NAV: 2.3871 (2026-10-12) 溢价=36.06%
+前日溢价: 32.46%
+Δ溢价: 3.43%
+信号: danger | 🔴 溢价暴涨风险 Δ溢价 +3.43%
+AI: 已分析
+成本: 0.13%/笔 (实际预估（免五+万1.5+0.1%滑点）)
+预估净收益: -0.13%/笔
+AI分析: [概况]
+溢价35.89%处极端高位，泡沫化风险极大，已非正常套利区间
+
+[海外]
+纳指、标普、费半均小幅收跌，权重股涨幅有限，不支持溢价维持
+
+[关注]
+建议减仓或观望，勿追高；紧盯溢价是否快速收敛及停牌警示公告
+AI推理全文(1481字):
+The user wants a concise analysis in Chinese, three lines with labels. Let me think about the data.
+
+IOPV premium 35.89% — extremely high, huge risk. Δ溢价 +3.43% "收缩中" — hmm, labeled as 收缩中 (contracting). Actually Δ溢价 +3.43% with note "收缩中" suggests premium is narrowing. Wait, if Δ溢价 is +3.43%, that would be expanding... but the label says 收缩中. Let's interpret: premium change is +3.43% but described as contracting. Hmm, ambiguous. Actually maybe it means the premium has come down from higher levels. I'll treat it as premium remains extremely high but slightly narrowing.
+
+Overseas: Nasdaq -0.15%, S&P -0.02%, SOX -0.23%, NDX -0.31% — overseas flat to slightly down, not supporting such a high premium. Weighted stocks mostly positive but modest — Meta +2.63%, AMD +1.90%, NVDA +0.97%. But index slightly negative. So overseas doesn't support the premium.
+
+Actually with the index slightly negative but the ETF up 2.20%, that's all premium expansion — classic premium bubble.
+
+Key: 35.89% premium is extreme, risk of collapse (premium mean reversion). ETF at 3.248, IOPV would be ~2.39. If premium collapses, huge loss.
+
+Recommendation: 减仓/观望 — avoid chasing, reduce. Watch for premium contraction, 停牌/风险提示公告, subscription limits.
+
+Also worth noting: 高溢价QDII常有溢价风险提示和临时停牌。
+
+Format: three lines, each ≤40 characters (字). Chinese characters count.
+
+[概况] 溢价35.89%极端高位，追高风险极大 — that's fine.
+
+[海外] 美股全线小幅收跌，不支持当前溢价 — good.
+
+[关注] 建议减仓不追高，盯溢价回落与停牌风险 — good.
+
+Keep each under 40 chars.
+----------------------------------------
+
+============================================================
+运行时间: 2026-10-14 14:30:22 | 模式: intraday
+行情: price=1.803 chg=-0.6063947078280111%
+IOPV: 1.8039 溢价=-0.05%
+NAV: 1.8559 (2026-10-12) 溢价=-2.85%
+前日溢价: -2.28%
+Δ溢价: 2.23%
+信号: strong_buy | 🟢 强烈买入！ Δ溢价 +2.23%
+AI: 已分析
+成本: 0.13%/笔 (实际预估（免五+万1.5+0.1%滑点）)
+预估净收益: 0.26%/笔
+AI分析: [置信度]
+中
+
+[相似度]
+与历史Δ>2%负溢价相似，但今日溢价近0、海外略偏多
+
+[海外]
+海外指数分化，权重股多数涨但澳洲韩国偏弱，支撑有限
+
+[风险]
+相似历史日多亏损，溢价回落或权重股转弱是最大风险
+AI推理全文(1076字):
+我们需要回答中文，严格四行，每行标签，不超过40字。需要分析买入信号。注意用户要求最终只有四行。需要基于数据做置信度。需要思考从简，但最终不要推理步骤。
+
+我们需要判断置信度：信号 strong_buy，现价跌0.61，IOPV溢价 -0.05，Δ溢价 +2.23%，历史胜率49%，均收益+0.39%。相似历史多数亏损（86%亏0.05，73%赚0.1，73%亏0.08）。海外指数混合：日经+0.19，澳洲-0.64，韩国-0.54，恒生+0.23，台湾+0.59。权重股多数涨？索尼+1.6，任天堂+1.55，丰田+1.17，友邦+0.55，新电信+0.48，三星+0.43，台积电0，BHP-0.69，SK海力士-1.66，联邦银行-2.16。多数权重股上涨，但几个较大权重台积电持平，三星小涨，SK跌，联邦跌，澳洲弱。历史相似日多数亏损。溢价非极端（-0.05）。Δ溢价超2但历史胜率49%。置信度应中或低？标准：高需要海外普涨+权重多数涨+历史相似日多数盈利+溢价非极端。历史相似日多数亏损，海外非普涨。中: 部分条件满足，有正面也有负面。低: 海外偏弱+权重多数跌+历史相似日亏损+溢价极端。这里海外混合，权重多数涨，历史相似日多数亏损，溢价非极端。所以中。相似度: 与历史交易 Δ溢价约2.4/2.8且溢价负，今日Δ2.23溢价-0.05；相似但今日溢价更接近0，海外略偏多。 [相似度]不超过40字。例如：与2026/2025相似在Δ溢价>2%且负溢价，但今日溢价更接近0、海外略偏多。
+
+[海外] 海外指数分化，权重股多数上涨但澳洲/韩国偏弱，支撑有限。 [风险] 相似历史日多亏损，Δ溢价回落或权重股逆转导致买入后溢价收缩。 置信度中。
+
+需要严格四行，每行标签，不超过40字。每行一个标签。用[置信度]等。确保不超过40字。中文。标签后面内容。四行：
+
+[置信度]
+中
+
+[相似度]
+与历史Δ>2%负溢价相似，但今日溢价近0、海外略偏多
+
+[海外]
+海外指数分化，权重股多数涨但澳洲韩国偏弱，支撑有限
+
+[风险]
+相似历史日多亏损，溢价回落或权重股转弱是最大风险
+
+检查字数：标签行+内容。每行不超过40字？ [置信度] 中 很短。 [相似度] 与历史Δ>2%负溢价相似，但今日溢价近0、海外略偏多。 字数约29。 [海外] 海外指数分化，权重股多数涨但澳洲韩国偏弱，支撑有限。 约27。 [风险] 相似历史日多亏损，溢价回落或权重股转弱是最大风险。 约27。 OK.
+
+但可能要求每行一个标签，不超过40字。可以。最终只四行。
+----------------------------------------
