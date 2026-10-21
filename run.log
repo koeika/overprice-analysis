@@ -9198,3 +9198,50 @@ AI分析: [置信度]
 AI推理全文(935字):
 我们需要回答严格四行，每行标签。需要基于数据判断置信度。注意用户要求简短分析，买入信号。需要中文。最终只四行，无推理步骤。需要判定置信度标准。数据：现价涨0.92，IOPV溢价1.15%，Δ溢价+2.87%，信号强度strong_buy，振幅1.0%。历史胜率Δ溢价超2% 49笔胜率47%均收益+0.29%，略低于一半但正收益。最相似历史三笔都赚，相似度90/87/82。海外：日经+0.96 澳洲+0.16 韩国+3.07 恒生-0.70 台湾+1.28。权重股多数涨，尤其三星海力士大涨，台积电微涨，但丰田、友邦、新电信、BHP跌。溢价1.15%不算极端？Δ2.87较高。历史相似日：2026-09-04 Δ3.0 溢价0.8 赚1.30；2025-10-20 Δ2.8 溢价0.4 赚0.76；2026-08-26 Δ3.2 溢价1.2 赚0.43。今日Δ2.87，溢价1.15，与8/26最接近溢价更高。历史相似多数盈利，但总体胜率47。置信度标准：高需海外普涨+权重多数涨+历史相似日多数盈利+溢价非极端。海外并非普涨（恒生跌），权重多数涨但部分跌。溢价1.15非极端，但Δ较高。可能“中”。因为部分条件满足有正有负。 [相似度] 1句话：与三笔最相似交易高度接近（82%-90%），今日溢价1.15%略高于8/26的1.2%? 实际略低，但Δ2.87略低于3.2/3.0。收益历史均正，但样本相似日偏乐观，总体胜率仅47%。[海外] 海外分化：韩台日支撑，恒生拖累，不足以全面支撑。[风险] 最大风险：Δ溢价偏高且IOPV溢价1.15%，存在溢价回落/套利回撤风险，尤其恒生偏弱及历史总体胜率不足半。需要每行不超过40字。标签行。置信度一个词。中文。确保四行。第一行[置信度] 中。第二行[相似度] 与最相似三笔（82%-90%）接近，均盈利但总体胜率仅47%。 字数约30。第三行[海外] 韩台日偏强支撑，恒生下跌拖累，海外分化非全面普涨。第四行[风险] Δ溢价偏高叠加1.15%溢价，存在溢价回落和套利回撤风险。 字数？ 第四行包括标签可能超过40? 标签[风险] 2字+内容28。OK。注意“每行一个标签，不超过40字”包括标签？尽量短。最终只四行。
 ----------------------------------------
+
+============================================================
+运行时间: 2026-10-21 19:00:59 | 模式: daily
+行情: price=1.744 chg=0.7510109763142634%
+IOPV: 1.7269 溢价=0.99%
+NAV: 1.7609 (2026-10-19) 溢价=-0.96%
+前日溢价: -1.72%
+Δ溢价: 2.71%
+信号: strong_buy | 🟢 强烈买入！ Δ溢价 +2.71%
+AI: 已分析
+成本: 0.13%/笔 (实际预估（免五+万1.5+0.1%滑点）)
+预估净收益: 0.16%/笔
+AI分析: [置信度] 中
+[相似度] 相似度83%-85%，两胜一负，溢价接近但结果分化。
+[海外] 亚太多数上涨且韩股/半导体强，港股及少部分权重拖累。
+[风险] Δ溢价超2%但历史胜率仅47%，高溢价回落是最大风险。
+AI推理全文(3606字):
+Need answer four lines exactly. Need assess confidence. Data: signal strong buy but historical delta premium >2% win 47%, negative edge. Most similar three: one loss two gains, but similarity 85/85/83. Current price premium 0.99, delta 2.71. Similar Jan 2025 premium1.5 loss -0.39; Oct premium0.4 gain .76; Jul 2026 premium0.9 gain2.46. Current premium near 0.9-1.5. Overseas mostly positive, KOSPI strong, Nikkei/Taiwan/FTSE Asia up, HK down. Weighted stocks majority positive, but top SK Hynix Samsung strong. Conditions for high? Overseas普涨? Not all: HK down, but Asia mostly up. Weighted majority up. Similar days多数盈利 (2/3). Premium not extreme (0.99). So high perhaps? But overall historical stats for delta>2 win 47% neutral/negative, and current signal strong_buy doesn't guarantee. Confidence maybe 中 because historical win rate below 50 and similar day loss. Need exact format. [置信度] 中? Let's decide.
+
+Confidence criteria: High: overseas普涨 + majority weight stocks up + historical similar days多数盈利 + premium not extreme. Here overseas not普涨 due HK -0.9, but six indices mostly positive. Weighted majority up. Historical similar 2 of 3 profitable. Premium non-extreme. That seems high by stated criteria. However "Δ溢价超2%历史49笔胜率47%" is negative. The high criteria doesn't mention overall historical win rate, but similar日多数盈利. Current specific similar: 2 win 1 loss. So high could be justified. But "置信度" for buy signal? The "strong_buy" signal is based on Δ溢价 but history 47%, slight avg +0.29. Current overseas supportive. I'd choose 中 because条件部分满足, has positive and negative: overall historical edge weak, HK down and some weights down, one similar loss. But criteria high says overseas普涨. Is HK -0.9 enough to disqualify "普涨"? Could be "海外普涨" no, Asia ex HK. Weighted majority up yes. Historical similar majority profitable yes. Premium not extreme yes. So high if strict. But risk of mean reversion from high premium, Δ溢价 +2.71. Historical win rate below coin flip. "中" safer.
+
+Need [相似度] one sentence: 与2025-10-20/2026-07-14较像（溢价0.4/0.9、Δ2.8，均盈利），与2025-01-08更近但亏损。 Under 40 chars? Each line <=40 Chinese chars maybe. Need concise.
+
+[海外] one sentence: 亚太多数上涨、韩股和半导体权重强，但港股与部分权重拖累，整体偏支撑。 Count. 
+
+[风险] one sentence: Δ溢价处于2%以上且历史胜率仅47%，高溢价回落/追高回撤是最大风险。 Need <=40 chars. Let's craft exactly four lines with labels.
+
+Line 1 [置信度] 中
+
+Line2 [相似度] 与10-20和07-14较像且均盈利，与01-08最近但亏损。 Need mention similarity? "相似度83%-85%，两胜一负，溢价接近但结果分化。" 30 chars. Good.
+
+Line3 [海外] 亚太多数上涨且韩股/半导体权重强，仅港股等拖累，整体支撑信号。
+
+Line4 [风险] Δ溢价超2%而历史胜率仅47%，高溢价回落和追高回撤最大。
+
+Need ensure each line one label. They asked "严格按格式输出四行（每行一个标签，不超过40字）". We can do:
+[置信度] 中
+[相似度] 相似度83%-85%，两胜一负，溢价接近但结果分化。
+[海外] 亚太多数上涨且韩股/半导体强，港股及少部分权重拖累。
+[风险] Δ溢价超2%但历史胜率仅47%，高溢价回落是最大风险。
+
+Check line lengths under 40 Chinese chars. [相似度] line length maybe 29. Good. [海外] 31. [风险] 28. Good.
+
+Could confidence high? Let's revisit. User likely expects confidence based on criteria. Data: "信号强度 strong_buy", overseas mostly positive, weights majority up, similar days多数盈利, premium 0.99 not extreme. This screams 高 by their standard. But historical winrate 47% and one similar loss. The criterion high uses "海外普涨+权重股多数涨+历史相似日多数盈利+溢价非极端". Are all satisfied? "海外普涨" maybe yes: 日经 +0.85, ASX+0.16, KOSPI+3.29, 恒生 -0.9 (not up), 台湾+1.28, 富时亚太+1.0. Not all up. But "普涨" usually broad, but one major down. Weighted majority up? 6 up, 4 down. Historical similar日多数盈利 2/3. Premium non-extreme. So high could be. But overall historical win rate 47% is negative. In confidence standards for 中: 部分条件满足，有正面也有负面信号. This is exactly. So 中.
+
+Need final only four lines no reasoning. 
+----------------------------------------
